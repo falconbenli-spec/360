@@ -1,0 +1,50 @@
+{
+  "skill_name": "real-estate-marketing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "مطور عقاري بالرياض بيطلق مشروع ٣٠٠ فيلا على الخارطة بعد شهرين، الأسعار من ١.٢ مليون. يبي خطة تسويق كاملة للإطلاق.",
+      "expected_output": "Should check client context. Should ask about or list as MISSING: REGA advertisement licence and Wafi off-plan permit status, financing partners and Sakani eligibility, sales team size and CRM, units to sell in the launch window, and historical conversion rates. Should segment buyers (first-home families, upgraders, investors) with distinct messages and channels. Should build the funnel model backward from units to sell with rates labelled as assumptions where unproven, and define qualified lead with the sales team. Should design WhatsApp-first lead capture with tracked sources and a speed-to-lead standard. Should list assets with owners and dates (landing page, brochure, renderings, walkthrough video, portal listings, sales-center kit, creative angles). Should give a channel plan (Google search, Snapchat, Meta, X, portals, brokers, hoarding) with budget concentrated around launch. Should phase the launch (pre-launch teaser, launch week with event, sustain, close-out). Should include a compliance checklist and refuse to promise investment returns. Should define weekly reporting on cost per qualified lead and cost per site visit.",
+      "assertions": [
+        "Flags REGA licence and Wafi permit as items to confirm before ads run",
+        "Segments buyers with different messages and channels",
+        "Builds the funnel backward from units to sell with assumptions labelled",
+        "Defines qualified lead and a speed-to-lead standard",
+        "Designs WhatsApp-first capture with source tracking",
+        "Lists launch assets with owners and timing",
+        "Phases the launch from teaser to close-out",
+        "Includes a compliance checklist and avoids promised returns",
+        "Reports on cost per qualified lead and per site visit, not cost per form fill"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Snapchat campaign for a compound in Jeddah is getting 400 leads a month at 35 SAR each but sales says they're all garbage. What's wrong?",
+      "expected_output": "Should not accept cost per lead as the metric; should ask how 'qualified' is defined and whether it was agreed with sales. Should investigate capture design: lead forms without qualifying questions, instalment claims attracting out-of-budget audiences, targeting too broad, creative promising something the product does not deliver. Should check speed to lead and reachability: leads uncontacted for days read as garbage. Should check source tagging to confirm these are actually Snapchat leads and not mixed. Should recommend adding budget-band and timeline questions, switching to WhatsApp capture with a qualifying first message, tightening targeting and creative to the right segment, uploading qualified and visit outcomes as offline conversions so the platform optimises toward them, and reporting cost per qualified lead and per site visit instead. Should propose a two-week test and a review against the funnel model.",
+      "assertions": [
+        "Challenges cost per lead as the metric and asks for the qualified definition",
+        "Examines capture design, targeting, creative promise, and speed to lead as causes",
+        "Checks source tagging and reachability before blaming the audience",
+        "Recommends qualifying questions and WhatsApp-first capture",
+        "Recommends offline conversion uploads so platforms optimise for qualified outcomes",
+        "Switches reporting to cost per qualified lead and per site visit",
+        "Proposes a test with a review date"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write the landing page hero and payment plan section for our apartment project. Monthly instalments start at 3,900 SAR. Guaranteed 8% rental yield.",
+      "expected_output": "Should check client context and ask what the 3,900 SAR figure is based on (which financing partner, term, down payment) and require the assumptions to be stated on the page. Should decline to write 'guaranteed 8% rental yield' unless the client provides a documented, lawful basis, flag it as [NEED: basis], and offer a supportable alternative (location fundamentals, payment plan, developer track record). Should produce an Arabic-first hero (project name, one-line promise, location, verified instalment line, WhatsApp and call CTAs) and a payment plan table (booking, construction instalments, handover, post-handover). Should include the compliance footer items (REGA licence number, Wafi permit if off-plan) as placeholders. Should hand Arabic polishing to arabic-copywriting if available.",
+      "assertions": [
+        "Asks for the basis of the instalment figure and states assumptions on the page",
+        "Declines the guaranteed yield claim, flags [NEED: basis], and offers an alternative",
+        "Writes the hero in Arabic first with WhatsApp and call CTAs",
+        "Provides a payment plan table structure",
+        "Includes compliance footer placeholders"
+      ],
+      "files": []
+    }
+  ]
+}

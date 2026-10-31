@@ -1,0 +1,47 @@
+{
+  "skill_name": "government-marketing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "هيئة حكومية تبي حملة توعوية لتشجيع الناس يسجلون في خدمة رقمية جديدة. أعطني خطة الحملة.",
+      "expected_output": "Should check client context and the protocol sheet first, and ask for or list as MISSING the entity's brand guidelines, approval chain, SLA, and the verified service facts. Should define public-value objectives (awareness, understanding, registrations) with baselines and measurement sources, separating delivery inputs (reach) from outcomes. Should run a barrier analysis and note that friction in the service itself must be reported to the entity rather than papered over. Should design a know/feel/do message with Arabic master copy first and a faithful English rendering, in formal clear MSA. Should give campaign phases (baseline, launch, explain, motivate, remind, report), channels including the official X account, SPA for the announcement, search, outdoor at service centers, and entity-sent SMS. Should include an identity compliance sheet, accessibility requirements, and a reporting plan against the SLA. Should not fabricate statistics and should not decorate the campaign with Vision 2030 references unless the service genuinely links to a program.",
+      "assertions": [
+        "Checks protocol sheet, guidelines, approval chain, and SLA before planning",
+        "Writes objectives as public outcomes with baselines and measurement, separate from reach",
+        "Performs a barrier analysis and flags service friction back to the entity",
+        "Drafts Arabic master copy first with an English rendering",
+        "Phases the campaign and assigns channel roles including SPA and the official account",
+        "Includes identity compliance and accessibility requirements",
+        "Plans reporting against the SLA",
+        "Avoids fabricated figures and gratuitous national branding"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We manage the official X account for a ministry. A user replied to our post with a complaint about a political issue unrelated to the ministry, and it's getting likes. Draft a reply.",
+      "expected_output": "Should refuse to draft a substantive reply on a political topic. Should state that political, sectarian, and out-of-mandate content is never engaged on official accounts, log the interaction, and escalate to the entity's account owner if it targets the entity. Should offer at most the entity's approved standard line for out-of-mandate questions, only if the entity's protocol sheet includes one, and otherwise recommend no reply. Should note that the agency does not post on its own judgment and that nothing is deleted or hidden without the entity's instruction unless it is abuse per the entity's policy. Should mention monitoring whether it grows and the crisis-communications escalation path.",
+      "assertions": [
+        "Declines to engage on the political topic",
+        "Recommends logging and escalating to the entity rather than replying",
+        "Offers only an approved standard line if one exists in the protocol sheet",
+        "States the agency does not act on its own judgment or delete without instruction",
+        "References monitoring and the crisis escalation path"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our contract with a semi-government program requires a monthly report. Last month our paid reach was huge but registrations barely moved. The client contact wants the report to lead with reach. How do we write it?",
+      "expected_output": "Should insist the report follow the contract's specified format and lead with the public-value objective (registrations) honestly, presenting reach as a delivery input, not an outcome. Should decline to present selective data or inflate results, in writing, and offer an accurate framing: what was delivered against the SLA, what the outcome data shows, likely causes (barrier mismatch, service friction, message-to-action gap, measurement lag), and recommended adjustments. Should propose checking whether the service itself has friction and whether the action in the ads was reachable. Should use the standard report structure (executive summary against objectives, SLA deliverables, reach by channel with methodology, outcome indicators with baselines, media log, feedback themes, risks, next plan). Should hand the file structure to client-reporting.",
+      "assertions": [
+        "Leads with outcomes against objectives and presents reach as an input",
+        "Declines to inflate or selectively present results and documents the position in writing",
+        "Diagnoses likely causes for the outcome gap, including service friction",
+        "Follows the contract's report structure and SLA deliverables",
+        "Recommends adjustments for the next period"
+      ],
+      "files": []
+    }
+  ]
+}

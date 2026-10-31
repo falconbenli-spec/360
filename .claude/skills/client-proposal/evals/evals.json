@@ -1,0 +1,51 @@
+{
+  "skill_name": "client-proposal",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "اكتب عرض للعميل: مطعم سعودي له 4 فروع في الرياض يبي يزيد الطلبات الأونلاين. ميزانيته للخدمات تقريبًا 25 ألف ريال شهريًا وما عنده تتبع للتحويلات.",
+      "expected_output": "Should read .agents/product-marketing.md and any client file first. Should state which step it is on and list missing inputs as [NEED: ...] (e.g. current online order volume, delivery platforms used, media budget). Should not write the proposal from the one-line brief alone without discovery; should either ask the minimum discovery questions or clearly state assumptions. When it drafts, it should include a Phase 0 for tracking setup since no conversion tracking exists, a Situation section in the client's words, measurable objectives, a scope table with included/excluded, a tiered investment in SAR exclusive of VAT, and next steps. Headings should be bilingual with Arabic primary. No fabricated statistics or case study numbers.",
+      "assertions": [
+        "Reads agency context and client context files first",
+        "States current step and lists missing inputs as [NEED: ...]",
+        "Includes a tracking/foundations phase because no conversion tracking exists",
+        "Situation section reflects the client's stated goal of online orders",
+        "Scope table has included, excluded, and client dependencies",
+        "Investment is in SAR and states VAT treatment",
+        "Offers tiers or a recommended option around the stated budget",
+        "Uses bilingual headings with Arabic primary",
+        "Contains no invented statistics or case study results"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "The client says another agency quoted half our price for 'the same thing'. How do we respond? Our proposal was 40k SAR/month for paid media, content, and monthly reporting.",
+      "expected_output": "Should apply the objection handling guidance: compare scope line by line rather than cut price, ask what the other proposal excludes (shoots, revisions, tracking, reporting, media fee structure), avoid criticizing the competitor, and offer scope reduction options (e.g. start with fewer channels or a Foundation tier) instead of a discount. If any discount is offered it should be traded for something (longer term, advance payment, case study rights). Should provide a draft response message the account lead can send, in a professional tone.",
+      "assertions": [
+        "Recommends line-by-line scope comparison",
+        "Lists likely exclusions in a cheaper proposal",
+        "Does not disparage the competing agency",
+        "Offers to cut scope rather than price",
+        "Any discount is tied to a trade",
+        "Provides a draft reply the agency can send"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We got an RFP from a semi-government entity for a 12-month awareness campaign. Technical and financial proposals are separate. Help us structure the response.",
+      "expected_output": "Should follow the RFP guidance: answer in the tender's own order and numbering, build a compliance matrix first, keep prices out of the technical volume, list mandatory documents (CR, VAT, Zakat, GOSI, chamber, Saudization, Etimad registration if government), ask for the scoring weights and minimum technical score, mention bid bond and clarification window, and recommend verifying current rules in the tender document. Should produce a technical proposal outline and a financial proposal outline and a pre-submission QA checklist.",
+      "assertions": [
+        "Structures the response in the tender's order and numbering",
+        "Includes a compliance matrix",
+        "Keeps pricing out of the technical proposal",
+        "Lists required Saudi compliance documents",
+        "Asks for or references scoring weights",
+        "Mentions bid bond and clarification questions",
+        "Provides technical and financial outlines and a QA checklist"
+      ],
+      "files": []
+    }
+  ]
+}

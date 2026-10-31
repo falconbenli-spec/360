@@ -1,0 +1,52 @@
+{
+  "skill_name": "crisis-communications",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "عميلنا مطعم برجر في الرياض. قبل ساعة نزل مقطع على تيك توك لعميل يقول لقى شعرة في الوجبة والمقطع وصل ٢٠٠ ألف مشاهدة وبدأ ينتشر على إكس. العميل يبي يرد الحين. وش نسوي؟",
+      "expected_output": "Should check for .agents/product-marketing.md and the client context / crisis playbook. Should run triage: ask or infer what is confirmed, whether anyone was harmed, where it is spreading, who is amplifying. Should classify as Level 2 (spreading, crossover from TikTok to X) rather than Level 3 unless media or a regulator is engaged, and say so with evidence. Should recommend freezing scheduled posts and ads first. Should advise contacting the complaining customer directly before any public statement. Should draft an Arabic holding statement (acknowledge, state, act, commit) and an English translation, under 120 Arabic words, with no 'if', no 'but', no blame on the customer. Should give a front-line script for staff. Should mention that food safety issues may involve the Saudi Food and Drug Authority or municipality and that the client should verify obligations. Should list what not to do (do not stitch or duet the TikTok, do not delete comments, no discount promo). Should set a monitoring cadence and next review time.",
+      "assertions": [
+        "Checks for client context or crisis playbook before drafting",
+        "Classifies the incident with a level and evidence rather than jumping to a statement",
+        "Recommends pausing scheduled content and paid ads",
+        "Recommends direct contact with the complainant before or alongside the public reply",
+        "Provides an Arabic statement first, then English",
+        "Statement follows acknowledge, state, act, commit and contains no 'if' or 'but' hedging",
+        "Does not blame the customer or claim the video is fake without evidence",
+        "Names the relevant regulator and tells the client to verify obligations rather than stating deadlines from memory",
+        "Includes a what-not-to-do list and a monitoring cadence"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our fintech client had a 4-hour outage this morning where some users saw other users' names in their transaction history. It's been resolved. Legal says we must not use the word 'breach'. Write the statement.",
+      "expected_output": "Should treat this as Level 3 (data exposure, financial services) and say so. Should insist on confirming facts in writing: how many users, what data, whether payment data was exposed, whether forensics confirmed scope. Should note that personal data incidents may carry notification duties to the Saudi Data & AI Authority under the Personal Data Protection Law and to the Saudi Central Bank for a financial institution, and tell the client to confirm timelines with counsel without stating deadlines from memory. Should accept legal's constraint on wording but refuse to write anything untrue or evasive; should name the thing plainly (users could see other users' names) without the banned word. Should draft Arabic first then English, using the personal data incident template structure: what happened, what was stopped, what data was and was not affected, what users should do, direct contact with affected users, contact channel, next update time. Should not say 'no evidence of misuse' unless forensics confirmed it. Should include an internal staff note and a customer-service FAQ.",
+      "assertions": [
+        "Classifies as Level 3 due to data exposure in financial services",
+        "Lists facts that must be confirmed in writing before publishing",
+        "Mentions the Personal Data Protection Law / SDAIA and SAMA and defers deadlines to counsel",
+        "Respects the legal wording constraint while still describing the incident plainly",
+        "Arabic statement provided first, English as translation",
+        "Distinguishes affected data from unaffected data",
+        "Avoids 'no evidence of misuse' unless confirmed",
+        "Includes an internal note and front-line FAQ"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We just signed a retail chain client with 40 stores across Saudi. Build them a crisis playbook before anything happens.",
+      "expected_output": "Should read client context if it exists and ask for or infer the category-specific risks. Should produce the full playbook structure: risk register with five to ten scenarios relevant to retail (employee conduct videos, product quality, pricing or labelling complaints, store safety incident, counterfeit claims, data incident, cultural offence in a campaign, supplier issue) each with a pre-drafted Arabic and English holding statement; contact tree with roles and backups; channel of record; approval path with turnaround targets; monitoring setup and level thresholds; dark site or holding page spec; sensitive topics list; content-freeze rules. Should recommend an annual tabletop exercise. Should name the Ministry of Commerce as the likely consumer-complaint body and tell the client to verify. Should save or propose saving to .agents/clients/<client>/crisis-playbook.md.",
+      "assertions": [
+        "Produces a risk register with retail-relevant scenarios",
+        "Each scenario has a pre-drafted holding statement in Arabic and English",
+        "Includes contact tree, channel of record, approval path, monitoring thresholds, dark site, sensitive topics, and content-freeze rules",
+        "Recommends a tabletop exercise",
+        "Names the relevant regulator with a verify instruction",
+        "Proposes the playbook file location under .agents/clients/"
+      ],
+      "files": []
+    }
+  ]
+}

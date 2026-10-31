@@ -1,0 +1,48 @@
+{
+  "skill_name": "account-management",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "عميل جديد وقّع معنا أمس: شركة عقارية في جدة، باقة إعلانات مدفوعة ومحتوى. وش نسوي أول أسبوعين؟",
+      "expected_output": "Should read agency context and check for a client file, then create one from the template as a first deliverable. Should produce a kickoff agenda (intros, restated objectives/KPIs, timeline, access, approval workflow, cadence, brand/compliance rules including real-estate sector constraints and Arabic register, early win), the access and asset checklist with owners and dates (ad accounts via partner access, GA4, GTM, pixels, CRM, social roles, brand assets), and the week 2-4 foundations plan (audit, tracking plan, strategy sign-off, first weekly update, day-30 check-in). Should note that accounts are owned by the client and shared with the agency.",
+      "assertions": [
+        "Creates or references the client context file",
+        "Provides a kickoff agenda covering objectives, approvals, cadence, and brand rules",
+        "Provides an access checklist with owners and dates",
+        "Specifies partner/user access rather than shared passwords and client ownership of accounts",
+        "Plans an early win in the first 2-3 weeks",
+        "Includes a day-30 check-in",
+        "Mentions sector compliance considerations for real estate"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our client keeps sending 'quick' design requests on WhatsApp for their sales team — banners, brochures, a roll-up for an exhibition. None of it is in scope. How do I handle it without hurting the relationship?",
+      "expected_output": "Should apply the scope creep guidance: recognize it as a trust signal, say yes to the relationship then quote the work, present three options (paid add-on, swap within scope, schedule next month), allow one small goodwill favor explicitly labeled as such and logged, and recommend re-scoping at the QBR because the pattern repeats. Should provide draft wording in Arabic and English and reference the change order clause. Should advise moving decisions from WhatsApp to email for the record.",
+      "assertions": [
+        "Frames extra requests positively but as out of scope",
+        "Offers three options: paid add-on, swap, or defer",
+        "Allows a logged one-time goodwill gesture",
+        "Recommends re-scoping because of the repeated pattern",
+        "Provides draft wording in Arabic and English",
+        "Advises recording decisions outside WhatsApp"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Renewal for our biggest client is in 6 weeks. Their marketing manager (our champion) just left and the new one hasn't replied to two emails. Results have been fine. What do we do?",
+      "expected_output": "Should identify the churn risk signals (champion gone, new contact unresponsive) and score relationship breadth as red. Should recommend: agency lead reaches the client's decision maker directly, request an introductory meeting with the new manager positioned as a briefing not a sales call, prepare a year-in-review and switching-cost summary stated as value, offer a short trial period or adjusted terms under the new manager, and set a dated plan for the remaining weeks (day -45 document, day -30 negotiate, day -14 close). Should update the client file's stakeholder map and health score.",
+      "assertions": [
+        "Identifies champion departure and unresponsive new contact as churn signals",
+        "Recommends the agency lead contact the decision maker",
+        "Proposes a briefing meeting for the new manager",
+        "Prepares year-in-review and switching-cost value summary",
+        "Provides a dated plan for the six weeks",
+        "Updates stakeholder map and health score in the client file"
+      ],
+      "files": []
+    }
+  ]
+}

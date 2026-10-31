@@ -1,0 +1,53 @@
+{
+  "skill_name": "arabic-seo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our Shopify store sells furniture in Saudi Arabia. The site is English-only and we want to add Arabic and rank for Arabic searches. Where do we start?",
+      "expected_output": "Should check for product-marketing.md first. Should scope the situation (platform Shopify, bilingual target, Saudi audience). Should recommend subdirectory structure (/ar/) with hreflang ar-SA and en-SA plus x-default, a single slug policy, no IP redirects, and a visible switcher. Should explain Arabic keyword research with dialect and misspelled variants, transliterated brand terms, and intent modifiers, grouped into clusters with a ranking-language decision. Should insist Arabic pages be written natively with local detail (delivery per city, SAR VAT-inclusive prices, Saudi FAQs) rather than translated, and hand writing to arabic-copywriting. Should cover lang/dir attributes, Arabic font performance, Arabic schema with inLanguage and SAR, and measurement via Search Console filtered by Saudi Arabia and /ar/. Should caution that tool volumes for Arabic are partial and should not be presented as facts.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "Recommends /ar/ subdirectories with correct hreflang and x-default",
+        "Warns against IP-based auto-redirects",
+        "Describes Arabic keyword research including variants and intent modifiers",
+        "Requires native Arabic content with local detail, not translation, and hands off to arabic-copywriting",
+        "Covers lang/dir attributes and Arabic font performance",
+        "Specifies Arabic schema with inLanguage and SAR pricing",
+        "Sets up measurement segmented by language and country",
+        "Notes the limits of Arabic volume data"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "عندنا عيادة أسنان في الرياض وما نطلع في خرائط قوقل لما أحد يبحث 'عيادة اسنان قريب مني'. وش نسوي؟",
+      "expected_output": "Should trigger on Arabic. Should treat this as local SEO: verify and optimize Google Business Profile with the Arabic name matching signage and the commercial registration, the most specific primary category (dentist), Saudi National Address with precise pin, +966 phone, accurate hours including Friday and prayer-time breaks, Arabic description and posts, photos, and Q&A. Should set up a WhatsApp review request flow with Arabic replies to every review, and warn against buying reviews. Should recommend NAP consistency across website, Maroof, Apple Maps, and social. Should recommend a location page with LocalBusiness/Dentist schema in Arabic, district-level content, and Arabic FAQs. Should mention health advertising rules (Ministry of Health approvals) for claims. Should respond in Arabic or bilingual.",
+      "assertions": [
+        "Focuses on Google Business Profile optimization with Arabic name and specific category",
+        "Specifies Saudi National Address format and accurate hours including Friday",
+        "Recommends a WhatsApp review request flow and replying in Arabic, without buying reviews",
+        "Recommends NAP consistency across GBP, website, Maroof, and Apple Maps",
+        "Recommends LocalBusiness schema and a district-aware location page",
+        "Flags Ministry of Health rules on medical claims",
+        "Responds in Arabic or bilingual"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our Arabic pages are live at /ar/ but Search Console shows almost no impressions in Saudi Arabia, while the English pages get traffic. Here's our setup: hreflang tags on English pages point to Arabic, Arabic pages have no hreflang, and we redirect visitors from Saudi IPs to /ar/. Arabic slugs are mixed, some Arabic script and some English.",
+      "expected_output": "Should diagnose the three technical errors: missing return hreflang links on Arabic pages (invalidates the pairs), IP-based redirects that prevent Googlebot from crawling Arabic properly, and mixed slug policies. Should prescribe fixes: add self-referencing and reciprocal hreflang on Arabic pages with x-default, remove the IP redirect in favor of a switcher and suggestion banner, standardize slugs with a 301 redirect map, and verify with a crawler. Should also check lang/dir attributes, canonicals, sitemaps per language, content thinness of Arabic pages, and recommend Search Console segmentation to measure recovery. Should not invent a timeline for recovery as a fact.",
+      "assertions": [
+        "Identifies missing return hreflang links as invalidating the pairs",
+        "Identifies IP-based redirects as blocking proper crawling of Arabic pages",
+        "Identifies mixed slug policy and prescribes standardization with 301s",
+        "Prescribes self-referencing and reciprocal hreflang with x-default",
+        "Recommends crawler validation and per-language sitemaps",
+        "Checks lang/dir, canonicals, and Arabic content depth",
+        "Recommends Search Console segmentation to measure recovery",
+        "Avoids stating a fabricated recovery timeline as fact"
+      ],
+      "files": []
+    }
+  ]
+}
