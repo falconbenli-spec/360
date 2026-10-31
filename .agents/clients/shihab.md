@@ -24,7 +24,8 @@
 ## 3. Brand
 - **Visual:** deep maroon/burgundy with orange accent; bilingual wordmark "شهاب shihab". `[TODO: obtain brand guideline files]`
 - **Arabic voice (proposed):** white Arabic close to Saudi on X and TikTok, simplified MSA on LinkedIn. Clear, reassuring, no exaggeration, no fear-based selling.
-- **Creative platform (proposed, pending approval):** «مهما صار» — every post opens with a vehicle situation and ends with Shihab.
+- **Creative platform (proposed, pending approval):** «خلّها على شهاب» — every post opens with a situation the driver knows, shows the one service that solves it, and closes with «خلّها على شهاب» plus the request channel. B2B variant: «أسطولك في منظومة واحدة». Hashtag #خلها_على_شهاب. Never used in complaint replies.
+- **Shihab visual tokens (from profile):** wine `#4a1a2e`, deep `#260810`, coral `#f47a4d` (CTA only), blush `#fcefe9`. Logo files in `.agents/clients/shihab/`.
 - **Mandatories:** verify service availability before promotion; no unapproved partner or client names; no unverified numbers or timings.
 
 ## 4. Engagement (project brief)
@@ -35,7 +36,7 @@
 - **Existing handles:** X @ShihabCompany, LinkedIn shihabcompany. TikTok: `[TODO: confirm whether an account exists]`.
 
 ## 5. Goals and KPIs
-- Proposed in the technical proposal (see Claude Doc "شهاب — استراتيجية المنصات والمحتوى"). Targets to be set after a one-month baseline.
+- Proposed in the technical proposal v2 (`.agents/clients/shihab/proposal-v2.html`, published at https://claude.ai/artifact/WWiVdsbUTZRHAryLQZYuwL). Targets to be set after a one-month baseline.
 
 ## 6. Accounts and access
 - `[TODO: X, LinkedIn, TikTok roles; analytics; app/web tracking links; listening tool]` (no credentials in this file)
@@ -47,4 +48,5 @@
 <!-- Dated entries. -->
 
 ## Changelog
+- 2026-10-31 — v0.2 — Creative platform changed to «خلّها على شهاب»; proposal v2 (merged) saved; Shihab tokens and logos added.
 - 2026-10-31 — v0.1 — Created from brief and company profile.
