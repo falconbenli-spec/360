@@ -6,7 +6,7 @@
 **Last updated:** 2026-10-31
 
 ## 1. Product Overview
-- **One-line description:** 360 is a full-service marketing agency in Saudi Arabia serving Saudi and GCC brands. `[TODO: confirm]`
+- **One-line description:** 3,6T (Three Sixty Degree Marketing, تسويق ثلاثمائة وستين درجة) is a Saudi marketing and advertising agency based in Riyadh, one of the SAFCSP companies, serving Saudi and GCC brands. `[TODO: confirm]`
 - **What it does:** `[TODO: 2-3 sentences on services: strategy, brand, creative, performance media, social, content, PR, offline]`
 - **Category / shelf:** Marketing agency (integrated / 360-degree). `[TODO: confirm how clients search for you: "وكالة تسويق", "وكالة إعلانية", "digital agency Riyadh"]`
 - **Headquarters and coverage:** `[TODO: city, offices, markets served]`
@@ -28,7 +28,7 @@
 ## 5. Brand Voice
 - **Arabic voice:** `[TODO: register (white Arabic / Saudi dialect / MSA), tone words, words to avoid]`
 - **English voice:** `[TODO]`
-- **Visual identity notes:** `[TODO: link to brand guidelines]`
+- **Visual identity notes:** see `.agents/brand/README.md` (tokens, logo files, typography, pattern from Brand Facelift Guideline v1.0). Brand name written «3,6T» / تسويق ثلاثمائة وستين درجة.
 
 ## 6. Customer Language (verbatim)
 - `[TODO: exact phrases clients use when describing their problems, from calls and proposals]`
