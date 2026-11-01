@@ -1,0 +1,53 @@
+{
+  "skill_name": "arabic-copywriting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the Arabic hero section (headline, subheadline, CTA) for a Saudi grocery delivery app. We deliver in under 60 minutes in Riyadh and the first order has free delivery. Audience is busy families. This will run on the landing page and as a Snapchat ad.",
+      "expected_output": "Should check for product-marketing.md first. Should state the register decision in one line (e.g. white Arabic for the landing page, Najdi dialect variant for Snapchat, masculine singular or family-neutral address, Western numerals). Should write the Arabic from the brief, not translate an English line, leading with the benefit (under 60 minutes, free first delivery). Should provide two or three headline alternatives with rationale, a CTA such as 'اطلب الآن' or 'اطلب الحين' matching the register, and an English back-brief for approvers. Should avoid 'ليس X بل Y', filler words like 'حلول مبتكرة', exclamation marks, and em dashes. Should flag any guarantee wording as [NEED] if the policy is not confirmed.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "States register and gender address decision before the copy",
+        "Provides a landing page version in white Arabic and a Snapchat version with Saudi dialect",
+        "Leads with the specific benefit (60 minutes, free first delivery)",
+        "Provides 2-3 headline alternatives with rationale",
+        "CTA matches the register and is an imperative verb",
+        "Includes an English back-brief",
+        "No 'ليس X بل Y', no filler buzzwords, no exclamation marks",
+        "Marks unconfirmed guarantee wording with [NEED]"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "راجع هذا النص لصفحة بنك رقمي: 'نحن نقدم لكم حلولاً مصرفية مبتكرة ومتكاملة! ليس مجرد تطبيق، بل شريك مالي لرحلتك نحو النجاح. لا تتردد في فتح حسابك الآن وسواء كنت موظفاً أو صاحب عمل، فإن تجربتنا الفريدة من نوعها ستلبي احتياجاتك.'",
+      "expected_output": "Should trigger on Arabic. Should diagnose the text as translated-sounding and full of AI tells: 'نحن نقدم' opener, 'حلول مبتكرة ومتكاملة' filler, 'ليس مجرد X بل Y' reveal, 'لا تتردد', 'سواء كنت X أو Y' hedge, 'تجربتنا الفريدة', exclamation mark, 'رحلتك نحو'. Should recommend white Arabic with a calm, specific register suitable for a bank, and rewrite with concrete benefits, marking any specifics it cannot verify with [NEED]. Should deliver diagnosis first, then revised lines with one-line reasons, then open items. Should respond in Arabic or bilingual to match the user.",
+      "assertions": [
+        "Identifies the 'نحن' opener, filler buzzwords, and the 'ليس X بل Y' reveal as tells",
+        "Identifies 'لا تتردد' and 'سواء كنت' as banned or capped patterns",
+        "Removes the exclamation mark",
+        "Recommends a register appropriate for banking (white Arabic or restrained MSA)",
+        "Rewrites with specific benefits and marks unverifiable specifics with [NEED]",
+        "Delivers diagnosis before the rewrite",
+        "Responds in Arabic or bilingual"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We have an English landing page for our B2B invoicing SaaS and need an Arabic version for Saudi SMEs. Here is the English hero: 'Invoicing that runs itself. Create ZATCA-compliant e-invoices in seconds, get paid faster, and stop chasing clients. Start free.' How should we handle the Arabic version and what would you write?",
+      "expected_output": "Should explain the bilingual workflow: treat the English as a brief, decide which language leads, keep parity on facts (ZATCA compliance, free start) while allowing structure to differ, and maintain a terminology glossary (e.g. how to render ZATCA, e-invoice, 'Fatoora'). Should choose white Arabic for a B2B SME audience with possible light Saudi touch, masculine singular address. Should write the Arabic hero leading with the ZATCA compliance and speed benefit, with a CTA like 'ابدأ مجانًا', and provide an English back-brief. Should flag 'get paid faster' as a claim needing support or softer phrasing. Should note bidi testing for 'ZATCA' inside Arabic text and recommend arabic-seo for the Arabic title and meta description.",
+      "assertions": [
+        "Explains transcreation from the English as a brief, not translation",
+        "Addresses which language leads and parity of facts",
+        "Mentions a terminology glossary for ZATCA/e-invoice terms",
+        "Chooses and states white Arabic register and address form",
+        "Writes an Arabic hero with headline, subheadline, and CTA",
+        "Flags 'get paid faster' as needing evidence or softer wording",
+        "Notes bidi rendering for Latin terms inside Arabic",
+        "Hands off Arabic meta tags to arabic-seo"
+      ],
+      "files": []
+    }
+  ]
+}

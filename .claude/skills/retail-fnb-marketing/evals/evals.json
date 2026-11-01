@@ -1,0 +1,50 @@
+{
+  "skill_name": "retail-fnb-marketing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "عندنا كافيه قهوة مختصة بالرياض، ٣ فروع، المبيعات ضعيفة في الفرع الجديد بحي النرجس. وش نسوي؟",
+      "expected_output": "Should check client context. Should diagnose before prescribing: ask for or list as MISSING the branch's transactions by daypart and channel, Google Business Profile status and actions, delivery-app presence and ratings, review themes, and operational readiness (staffing, stock). Should prioritise Google Business Profile and Maps for the branch (claimed, categories, hours, photos, reviews replied), delivery-app listing quality and ranking inputs, geo-targeted Snapchat and TikTok content within the branch radius, local creators in the district, and a database capture mechanism. Should propose a reason-to-return offer with a contribution check rather than a blanket discount. Should define how footfall will be measured for the branch (POS transactions, Google direction requests, codes). Should give a 90-day plan with weekly review. Should not quote fabricated benchmark numbers.",
+      "assertions": [
+        "Requests branch-level data and operational readiness before recommending",
+        "Prioritises Google Business Profile and Maps fixes for the branch",
+        "Covers delivery-app listing and ranking inputs owned by operations",
+        "Recommends radius-targeted Snapchat/TikTok content and local creators",
+        "Proposes an offer with a contribution check, not a blanket discount",
+        "Defines the footfall measure for the branch",
+        "Gives a 90-day plan with a review cadence",
+        "Avoids fabricated benchmarks"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Jahez is offering us a 30% off campaign they'll co-fund 10% of. Our burger chain has 12 branches. Should we take it?",
+      "expected_output": "Should ask for the commission rate from the client's Jahez contract, food cost, packaging and delivery-related costs, and current baseline orders and contribution per order on the app. Should run the promotion economics model: contribution per promoted order after commission and the merchant-funded 20% share, break-even order lift, and expected lift from past promotions labelled approximate. Should state that a promotion losing contribution is only justified for a defined purpose (new branches, ranking push, slow daypart) with an end date. Should suggest alternatives: a bundle built for delivery margin, a smaller discount on hero items, or limiting to weak branches or dayparts. Should recommend tracking the net weekly change and logging the result. Should remind that ranking is mostly earned through operations (acceptance, prep-time accuracy, rating).",
+      "assertions": [
+        "Requests the contract commission rate and cost inputs rather than assuming",
+        "Computes contribution per promoted order and the break-even lift",
+        "Labels expected lift as approximate and based on past data",
+        "States when a loss-making promotion is acceptable and requires an end date",
+        "Proposes alternatives such as margin-built bundles or branch/daypart limits",
+        "Recommends measuring the net change and logging the outcome"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Plan Ramadan for our 8-branch Lebanese restaurant chain in Jeddah and Riyadh. We do dine-in and delivery.",
+      "expected_output": "Should check client context and last year's Ramadan learnings. Should note that Ramadan dates shift annually and must be confirmed. Should address the daypart inversion: iftar rush, late-night, and suhoor; family group sizes; delivery peaks before iftar. Should propose iftar set menus and family boxes with contribution checks, suhoor hours and offers, pre-ordering for iftar through own channels, delivery prep-time accuracy and app hour settings near iftar, special hours on Google Business Profile and apps, and possibly a Ramadan majlis or tent setup where branches allow. Should include a content and creator plan (iftar table content, creators hosting iftar), database sends (WhatsApp/SMS) for pre-orders and suhoor, and an operations readiness checklist (staffing shifts, stock, packaging for family boxes). Should define measurement per branch by daypart and channel, and an Eid follow-on (gift boxes, extended hours, closures posted). Should coordinate with saudi-market for calendar details.",
+      "assertions": [
+        "Confirms Ramadan dates must be verified annually",
+        "Plans around the daypart inversion and iftar delivery peaks",
+        "Proposes set menus and family boxes with contribution checks",
+        "Covers own-channel pre-ordering and app/Google hour settings",
+        "Includes content, creator, and database-send plans",
+        "Includes an operations readiness checklist",
+        "Defines per-branch measurement by daypart and channel and an Eid follow-on"
+      ],
+      "files": []
+    }
+  ]
+}

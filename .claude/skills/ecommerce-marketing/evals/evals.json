@@ -1,0 +1,48 @@
+{
+  "skill_name": "ecommerce-marketing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "عندي متجر على سلة أبيع عطور، متوسط الطلب ٢٨٠ ريال وهامش الربح بعد التكلفة حوالي ٤٥٪. أصرف ١٥ ألف بالشهر على إعلانات ميتا وسناب والعائد ١.٨. هل أزيد الميزانية؟",
+      "expected_output": "Should check client context first. Should refuse to answer 'increase or not' before computing economics: should walk through contribution per order (AOV minus COGS, payment fees, unrecovered shipping, packaging, returns), note that '45% margin' needs clarifying whether it is before or after payment fees and shipping, and compute break-even ROAS from contribution (roughly 2.2 if 45% is the full contribution, so 1.8 is below break-even on first orders). Should ask whether purchase tracking is verified with values before trusting the 1.8. Should ask about repeat purchase rate since perfume has reorder potential, and show how repeat changes the allowable first-order ROAS. Should recommend fixing retention flows (abandoned cart on WhatsApp, post-purchase) and product page trust signals (Mada, BNPL instalment amount, delivery estimate) before scaling. Should not invent industry benchmarks. Should give a clear recommendation: do not increase until ROAS exceeds the computed target or repeat data justifies it, with a 2-week test plan.",
+      "assertions": [
+        "Computes break-even ROAS from contribution rather than accepting the stated margin at face value",
+        "States that 1.8 ROAS is below break-even on first orders given the numbers, with the math shown",
+        "Asks whether the purchase event and values are verified before trusting platform ROAS",
+        "Considers repeat purchase rate and shows how it changes the allowable first-order ROAS",
+        "Recommends retention flows and product-page trust fixes before scaling spend",
+        "Does not cite fabricated industry benchmarks",
+        "Gives a concrete recommendation and a test plan"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Plan our Ramadan and Eid campaign. We sell home decor and tableware on Shopify, ship across Saudi, and last year we ran 30% off sitewide and barely made money.",
+      "expected_output": "Should check client context and last year's learnings. Should run the promotion impact check: show why a sitewide 30% discount destroyed margin and propose alternative mechanics (gifting bundles, free shipping threshold above AOV, gift with purchase, early access for subscribers, tiered thresholds). Should lay out the timeline relative to Ramadan: pre-Ramadan home and hosting push, iftar and suhoor tableware themes, Eid gifting in the last ten days, with delivery cut-off dates stated to customers. Should note Ramadan dates shift each year and must be confirmed. Should cover channel allocation (Meta, Snapchat, Google Shopping with seasonal custom labels), creative themes, the retention sequence (email and WhatsApp), landing page or collection plan, and an operations checklist (stock, carriers, support hours during late-night shopping). Should define targets derived from margin and a measurement plan.",
+      "assertions": [
+        "Explains why the sitewide discount failed using the promotion impact logic",
+        "Proposes non-discount or structured mechanics instead of sitewide percentage off",
+        "Sequences the campaign across pre-Ramadan, Ramadan, and Eid phases with delivery cut-offs",
+        "Notes that Ramadan dates shift annually and must be confirmed",
+        "Covers channels, creative, retention sequence, landing pages, and operations",
+        "Sets targets derived from margin and a measurement plan"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our Zid store's checkout conversion is terrible on mobile. Customers add to cart but don't pay. What should we check?",
+      "expected_output": "Should ask for or request the funnel numbers by step and device to confirm the leak is at checkout. Should run through the Saudi checkout checklist: guest checkout, phone-first identification and OTP friction, shipping cost and delivery time shown before payment, all payment methods visible (Mada, Apple Pay, BNPL like Tamara and Tabby, COD if relevant), address form fit for Saudi addresses, Arabic error messages, trust line near the pay button, speed on 4G. Should recommend verifying the checkout-start and purchase events fire correctly so the measured rate is real. Should recommend an abandoned-cart flow on WhatsApp or SMS as a parallel fix. Should produce a prioritised fix list and suggest handing deeper page analysis to the cro skill. Should not quote a fabricated 'average checkout conversion rate'.",
+      "assertions": [
+        "Requests funnel data by step and device before diagnosing",
+        "Covers Saudi-specific checkout items: payment methods, BNPL, COD, address format, OTP friction",
+        "Recommends verifying tracking events so the measured rate is trustworthy",
+        "Recommends an abandoned-cart recovery flow",
+        "Produces a prioritised fix list",
+        "Does not cite fabricated benchmark conversion rates"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "skill_name": "campaign-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "العميل (سلسلة مطاعم سعودية) يبي حملة رمضان. الميزانية الإعلانية 300 ألف ريال. وش نسوي؟",
+      "expected_output": "Should read the client file and learnings log first. Should interrogate the ask to find the objective (e.g. iftar bookings, delivery orders, or family gatherings) and list [NEED: ...] items (objective and KPI, last Ramadan results, production budget, approval windows, branches). Should produce a one-page brief draft with background, objective placeholder, audience as a person, candidate insights around Ramadan rituals, a single-minded proposition, tone with Arabic register, mandatories including cultural and religious sensitivities, channel roles (Snapchat, TikTok, Instagram, X, search, OOH), and a timeline that starts at least 8 to 12 weeks before Ramadan with approvals before Sha'ban. Should note separate Eid creative and verifying current-year dates. Should not invent metrics.",
+      "assertions": [
+        "Reads the client file and checks past learnings",
+        "Interrogates the tactic to identify the business objective",
+        "Lists missing inputs as [NEED: ...]",
+        "Includes an audience described as a person and candidate insights",
+        "Includes a single-minded proposition",
+        "Addresses cultural and religious sensitivities for Ramadan",
+        "Assigns roles to channels",
+        "Timeline starts 8-12 weeks before Ramadan with approvals before Sha'ban",
+        "Mentions separate Eid creative and verifying dates"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Here is our concept for a National Day campaign for a bank: green-themed visuals, the flag, 'We are proud of our nation' line, 10% off personal loans. Critique it.",
+      "expected_output": "Should run the critique questions: one-sentence test, logo-cover test (fails: any brand could run it), product role, audience action, predicted first comment on X, CEO/family test, Arabic line strength, 6-second cut. Should flag that the loan discount tied to national pride may draw criticism and that national symbols must follow official guidelines. Should then propose how to fix it: find an insight about the bank's actual role in people's lives, offer two or three alternative directions that pass the logo-cover test, or recommend a simple greeting if no distinctive idea exists. Should be direct, not flattering.",
+      "assertions": [
+        "Applies the logo-cover test and identifies the concept as generic",
+        "Flags the risk of tying a loan discount to national pride",
+        "Mentions respecting official guidelines for national symbols",
+        "Predicts audience reaction on X",
+        "Proposes alternative directions grounded in an insight",
+        "Offers the option of a simple greeting if no distinctive idea exists"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We're presenting campaign routes to a client next week for a new fintech app launch. How should we structure the three routes and the deck?",
+      "expected_output": "Should recommend three routes that differ in kind (safe, stretch, bold) rather than variations, each with name, one-sentence idea, insight, hero execution, three extensions, Arabic and English lines as separate pieces, production cost band, and main risk. Deck structure: ask restated as objective, audience and insight, proposition, three routes, side-by-side comparison, recommendation, next steps and decisions. Should recommend showing hero executions visually, saying the Arabic line aloud, presenting the recommended route with the most time, and asking for a decision in the room. Should mention launch phases (tease, launch, sustain) and fintech compliance mandatories.",
+      "assertions": [
+        "Three routes differ in kind: safe, stretch, bold",
+        "Each route includes the required elements including Arabic and English lines",
+        "Deck structure matches the skill's presentation outline",
+        "Recommends visual hero executions and asking for a decision in the room",
+        "References launch phases",
+        "Mentions compliance mandatories for a fintech client"
+      ],
+      "files": []
+    }
+  ]
+}

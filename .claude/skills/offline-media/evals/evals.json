@@ -1,0 +1,52 @@
+{
+  "skill_name": "offline-media",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're opening a new premium gym in north Riyadh in two months. The client wants billboards. Budget is limited. How should we plan OOH and prove it worked?",
+      "expected_output": "Should check for product-marketing.md first. Should question whether and how OOH fits (local footfall objective, catchment geography) and recommend a tight route of boards and DOOH on the roads feeding north Riyadh districts (e.g. Northern Ring Road, King Abdulaziz Road, Al Malqa and Hittin area) rather than scattered city-wide faces, plus mall media in the catchment and possibly radio morning drive. Should specify creative: three-second rule, heavy Arabic typeface, Arabic-dominant bilingual layout, a measurable CTA such as a unique promo code, WhatsApp number, or QR with UTM. Should require photo proof of posting and ask for current rate cards without quoting prices as fact. Should design measurement: branded search lift in Riyadh, promo code redemptions, GBP direction requests, geo-targeted social retargeting around the boards, and a pre-period baseline. Should include a compliance note on promotion permits if a discount is advertised.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "Builds a catchment-focused route rather than scattered faces",
+        "Recommends complementary formats such as mall media or radio drive time",
+        "Specifies OOH creative rules including Arabic legibility and bilingual hierarchy",
+        "Includes a measurable CTA device per placement",
+        "Requires proof of posting and current rate cards, without stating prices as fact",
+        "Designs measurement with a baseline, branded search lift, and code redemptions",
+        "Adds digital geo-retargeting around the boards",
+        "Notes the promotion permit if a discount is advertised"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "نبي نسوي إعلان تلفزيوني في رمضان لتطبيق توصيل. وش الخطوات ووش لازم نسأل قناة MBC؟",
+      "expected_output": "Should trigger on Arabic. Should explain Ramadan TV is the premium window, sells months ahead, and that drama series and late-night dayparts carry the audience. Should outline steps: define target and reach/frequency goals, decide spot length, request the sales house proposal with programs, dayparts, guaranteed GRPs or spots, the research currency and target definition, make-good terms, and production deadlines. Should cover creative: brand in the first three seconds, Arabic VO in the right register, GCAM content compliance, music licensing. Should recommend coordinating with Shahid and YouTube connected TV through the ads skill, raising search bids after spot times, and measuring with as-run logs, post-buy analysis, and spot-time traffic spikes. Should not quote rates or ratings as facts. Should respond in Arabic or bilingual.",
+      "assertions": [
+        "Explains Ramadan TV timing and the need to book early",
+        "Lists what to request from the sales house including guaranteed GRPs, research currency, and make-goods",
+        "Covers creative requirements including early branding and GCAM compliance",
+        "Recommends streaming and connected TV coordination and search bid timing after spots",
+        "Sets up post-buy analysis and spot-time measurement",
+        "Avoids quoting rates or ratings as facts",
+        "Responds in Arabic or bilingual"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A client ran unipoles in Riyadh and Jeddah for six weeks and now asks whether it worked. We have Google Trends, Search Console, site analytics, and the media owner's impression report. No promo codes were used.",
+      "expected_output": "Should explain what can and cannot be measured after the fact. Should use branded search lift (Arabic and transliterated brand terms) in Riyadh and Jeddah versus a pre-period baseline and versus non-exposed cities such as Dammam as a control, site traffic by city during the flight, and direct and organic traffic changes. Should treat the owner's impression report as a modelled estimate, not proof, and ask for proof of posting. Should warn that without codes or QR the result is directional, recommend a brand-tracking survey if budget allows, and prescribe for next time: unique codes, QR with UTM, geo-lift design with holdout cities, and attribution reconciliation. Should hand the modelling question to attribution.",
+      "assertions": [
+        "Uses branded search lift with pre-period baseline and a control city",
+        "Analyzes city-level site traffic during the flight",
+        "Treats the owner's impression report as an estimate and asks for proof of posting",
+        "States that the result is directional without codes or QR",
+        "Recommends a brand-tracking survey as an option",
+        "Prescribes a proper measurement design for the next flight",
+        "Hands modelling to attribution"
+      ],
+      "files": []
+    }
+  ]
+}
