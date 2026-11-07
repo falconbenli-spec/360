@@ -28,7 +28,9 @@
 - **Shihab visual tokens (from profile):** wine `#4a1a2e`, deep `#260810`, coral `#f47a4d` (CTA only), blush `#fcefe9`. Logo files in `.agents/clients/shihab/`.
 - **Mandatories:** verify service availability before promotion; no unapproved partner or client names; no unverified numbers or timings.
 
-## 4. Engagement (project brief)
+## 4. Engagement (project brief and agreed scope)
+- **Agreed scope (six tracks, from the agency's base technical proposal):** 1) strategy and setup package (one); 2) 12 monthly content packages of 20 posts (12 X + 8 LinkedIn), 16 static designs + 4 carousels; 3) account management, publishing and community for 12 months, proposed coverage 8h/day, 5 days/week; 4) 12 motion-graphic videos up to 30s (one per month); 5) 12 monthly reports with annual summary, quarterly review within follow-up; 6) project management 12 months. Paid campaigns, PR, and field shooting are out of scope; integrated campaign is a separate opportunity.
+- **Facts from the base proposal:** Shihab is a Tawuniya subsidiary, launched 3 Sept 2026. X account created July 2026, 43 followers and 5 posts (1 to 29 Sept) as of 24 Oct 2026; LinkedIn page not auditable without login; website has 9 descriptive services and email-only contact, map pin shows "tree Digital Insurance".
 - **Scope:** 12-month management of X, LinkedIn, TikTok: strategy and messaging, monthly content calendar, writing/design/adaptation, scheduling and publishing, community management and escalation, photography and video/motion production, monthly reports and periodic reviews, benchmarking per service track.
 - **Platform roles:** X = services, updates and offers, daily engagement. LinkedIn = operational capabilities, business solutions, partnerships, achievements. TikTok = simplify services via field video, specialists, service experiences, daily situations.
 - **Objectives:** awareness of Shihab and its ecosystem; clarify services and how to use them; build trust by showing operational capability and specialists; move audience to service-request channels; presence with companies, entities, and partners.
@@ -48,5 +50,6 @@
 <!-- Dated entries. -->
 
 ## Changelog
+- 2026-11-07 — v0.3 — Management feedback applied: base technical proposal (six-track scope) merged with «خلّها على شهاب»; proposal v3 saved (`proposal-v3.html`, https://claude.ai/artifact/TVwrzQand3mrAEqrNFDLoV). Field shooting removed from scope; TikTok limited to monthly motion.
 - 2026-10-31 — v0.2 — Creative platform changed to «خلّها على شهاب»; proposal v2 (merged) saved; Shihab tokens and logos added.
 - 2026-10-31 — v0.1 — Created from brief and company profile.
