@@ -363,6 +363,36 @@ footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
 .mock span{font-size:12.5px;color:var(--ink-soft)}
 .cover-tag{display:inline-block;background:var(--saffron);color:var(--char);font-weight:700;font-size:12.5px;padding:4px 12px;transform:skewX(var(--slant));margin-bottom:14px}
 .cover-tag span{display:inline-block;transform:skewX(15deg)}
+/* gap to post */
+.g2p{display:grid;gap:22px}
+.g2p .pr{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1.15fr);gap:14px;align-items:center}
+.g2p .obs{background:var(--white);border:1px solid var(--line);border-inline-start:5px solid var(--red);border-radius:12px;padding:18px 20px;display:grid;gap:8px}
+.g2p .obs.y{border-inline-start-color:var(--saffron)}
+.g2p .obs .lbl{font-size:11.5px;font-weight:600;letter-spacing:.06em;color:var(--red)}
+.g2p .obs.y .lbl{color:#9a7a00}
+.g2p .obs h4{font-size:17px}
+.g2p .obs p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.g2p .obs .fix{font-size:13.5px;color:var(--turq-ink);background:var(--turq-tint);border-radius:8px;padding:8px 10px}
+.g2p .arw{display:grid;place-items:center}
+.g2p .arw i{display:block;width:34px;height:22px;background:var(--turq);transform:skewX(var(--slant));clip-path:polygon(100% 0,40% 0,40% 0,0 50%,40% 100%,100% 100%,100% 0)}
+.g2p .sol{position:relative}
+.g2p .sol .post{max-width:520px}
+.badge{position:absolute;top:-11px;inset-inline-end:16px;z-index:2;background:var(--saffron);color:var(--char);font:700 11.5px/1 var(--font);padding:6px 10px;transform:skewX(var(--slant))}
+.badge span{display:inline-block;transform:skewX(15deg)}
+.steps3{display:grid;gap:2.2cqi;position:relative;counter-reset:k;padding:0;margin:0;list-style:none}
+.steps3 li{display:flex;align-items:center;gap:3cqi;font:600 clamp(11px,4.6cqi,17px)/1.3 var(--font-sh);color:var(--sh-wine)}
+.steps3 li::before{counter-increment:k;content:counter(k);flex:none;width:8cqi;height:8cqi;display:grid;place-items:center;background:var(--sh-coral);color:var(--sh-wine);font-weight:700;border-radius:50%}
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.week .d{display:grid;gap:8px;align-content:start}
+.week .day{font-weight:700;font-size:13px;color:var(--char);display:flex;justify-content:space-between}
+.week .day small{font-weight:500;color:var(--ink-soft)}
+.week .art{box-shadow:var(--shadow)}
+.week .art h5{font-size:clamp(18px,12cqi,30px)}
+.week .w-cap{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+.week .w-cap b{display:block;color:var(--char);font-size:13px}
+@media (max-width:900px){.g2p .pr{grid-template-columns:minmax(0,1fr)}.g2p .arw i{transform:rotate(-90deg) skewX(var(--slant))}.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.week{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.hl{white-space:normal}}
 </style>
 </head>
 <body>
@@ -370,7 +400,7 @@ footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
   <img src="logo-dark.png" alt="3,6T">
   <span class="tag">تقرير خط الأساس · شهاب · نوفمبر 2026</span>
   <nav>
-    <a href="#r1">الملخص</a><a href="#r2">بطاقة التقييم</a><a href="#r3">القنوات</a><a href="#r4">المقارنة</a><a href="#r5">الفجوات</a><a href="#r6">خط الأساس</a><a href="#r7">التوصيات</a><a href="#r8">التقرير الشهري</a>
+    <a href="#r1">الملخص</a><a href="#r2">بطاقة التقييم</a><a href="#r3">القنوات</a><a href="#r4">المقارنة</a><a href="#r5">الفجوات</a><a href="#r6">النماذج</a><a href="#r7">خط الأساس</a><a href="#r8">التوصيات</a><a href="#r9">التقرير الشهري</a>
   </nav>
 </div></header>
 
@@ -501,8 +531,59 @@ footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
     </tbody></table></div>
 </div></section>
 
-<section class="sec" id="r6"><div class="wrap">
-  <div class="head"><div class="num"><span>06</span></div><div class="t"><div class="eyebrow">خط الأساس للقياس</div><h2>ما نقيس عليه الأشهر القادمة</h2></div></div>
+<section class="sec band-white" id="r6"><div class="wrap">
+  <div class="head"><div class="num"><span>06</span></div><div class="t"><div class="eyebrow">من الفجوة إلى أول منشور</div><h2>كل فجوة رصدناها.. <span class="hl">وشكل حلها</span></h2></div></div>
+  <p class="intro">على اليمين ما رصدناه فعلًا، وعلى اليسار المنشور الذي يعالجه بشعار شهاب وخدمتها الحقيقية ودعوة واحدة إلى الطلب. كل النماذج مقترحة للاعتماد وليست منشورة، ولا تحمل أرقامًا تشغيلية قبل اعتماد صياغتها من شهاب.</p>
+  <div class="g2p">
+
+    <div class="pr">
+      <div class="obs"><div class="lbl">فجوة عاجلة · رُصدت 20 و24 أكتوبر</div><h4>لا قناة طلب ثابتة</h4><p>الموقع يعرض تسع خدمات بلا رابط للتطبيق أو زر طلب، وحساب إكس بلا رابط طلب في النبذة أو المنشورات.</p><div class="fix"><b>الحل:</b> منشور مثبّت «اطلبها بثلاث خطوات» يحمل رابط القناة المعتمدة، ويتكرر الرابط في نبذة كل حساب.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">عطل، غسيل، فحص، أو بطارية؟<br>كل خدمات شهاب تبدأ من مكان واحد، بثلاث خطوات.<br>الرابط في النبذة.. وخلّها على شهاب. <span class="tag">#خلها_على_شهاب</span></div><div class="x-media"><div class="art art-blush wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine);font-size:clamp(16px,6.4cqi,26px)">اطلبها بثلاث خطوات</div><ol class="steps3"><li>افتح القناة المعتمدة</li><li>اختر الخدمة وحدد موقعك</li><li>تابع طلبك لين ينتهي</li></ol><div class="meta">منشور مثبّت · كل خدمات شهاب</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs"><div class="lbl">فجوة عاجلة · رُصدت 24 أكتوبر</div><h4>الحساب صامت منذ 29 سبتمبر</h4><p>خمسة منشورات في سبتمبر ثم توقف، والزخم الذي صنعه الإطلاق يتلاشى.</p><div class="fix"><b>الحل:</b> أول منشور في سلسلة «مهما صار»، يفتتح الإيقاع الثابت: 12 منشورًا شهريًا على إكس.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">بنشرت وأنت راجع من الدوام، والشمس فوق راسك؟<br>لا تنزل تفك الكفر في هالحر.<br>حدد موقعك واطلب المساعدة على الطريق.. وخلّها على شهاب.<br>متاحة في المدن المشمولة بالخدمة.</div><div class="x-media"><div class="art art-wine wide sh"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">مهما صار · المساعدة على الطريق</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة مرتفعة · وفق الملف التعريفي</div><h4>المراكز والفريق غائبان عن القنوات</h4><p>مراكز «شهاب للإصلاح» وفنيوها لم يظهروا إلا في توثيق إطلاق الورشة، رغم أنهم أقوى دليل ثقة تملكه شهاب.</p><div class="fix"><b>الحل:</b> سلسلة «سؤال للفني»: وجه حقيقي واسم وتخصص من مواد شهاب بموافقة موقعة، والمعلومة يراجعها مختص.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">سيارتك تصدر صرير وأنت توقف؟<br>سألنا فني من مركز شهاب للإصلاح، وهذا جوابه.<br>احجز فحصك.. وخلّها على شهاب.</div><div class="x-media"><div class="art art-white wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-photo">صورة الفني من مواد شهاب بعد موافقته</div><div class="art-q" style="color:var(--sh-wine)">«الصرير غالبًا يعني إن الفحمات تحتاج فحص»</div><div class="meta">سؤال للفني · مركز شهاب للإصلاح</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة مرتفعة · رُصدت 20 أكتوبر</div><h4>الخدمات تُعرض بلا مدن إتاحة</h4><p>الخدمات المتنقلة لا تذكر أين تتوفر، فيصل الوعد إلى متابع قد لا تشمله الخدمة.</p><div class="fix"><b>الحل:</b> «بطاقة خدمة» تذكر ما تشمله الخدمة والمدن المشمولة من سجل الإتاحة المعتمد.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">وش تشمل المساعدة على الطريق من شهاب؟<br>أربع خدمات، وطلب واحد.<br>وتشوف المدن المشمولة في البطاقة.</div><div class="x-media"><div class="art art-blush wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine);font-size:clamp(16px,6.4cqi,26px)">المساعدة على الطريق</div><ul class="art-list"><li>سحب المركبة</li><li>تشغيل البطارية وتغييرها</li><li>إصلاح الإطار</li><li>توصيل الوقود</li></ul><div class="meta">متاحة في: [المدن من سجل الإتاحة المعتمد]</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة عاجلة · رُصدت 20 أكتوبر</div><h4>لينكدإن خارج الرصد والحضور</h4><p>الصفحة موجودة ومرتبطة من الموقع، لكن لا يظهر منها ما يخاطب مسؤولي الأساطيل والشركاء.</p><div class="fix"><b>الحل:</b> كاروسيل «شهاب للأعمال» من أربع شرائح: الغلاف، التحدي، الإثبات، الدعوة.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av" style="border-radius:8px;width:48px;height:48px"><img src="shihab-logo-white.png" alt=""></div><div class="li-id"><b>شهاب | Shihab</b><span>خدمات المركبات والتنقل · الآن</span></div></div>
+        <div class="li-text">أكثر من ورشة. أكثر من فاتورة. ومتابعة موزعة بين الجداول والإيميلات. هذا يوم عادي عند كثير من مسؤولي الأساطيل.
+في شهاب نربط احتياجات مركبات الشركات بخدمات الصيانة والإصلاح، ونتابع تنفيذ الطلبات في منظومة رقمية واحدة.</div>
+        <div class="x-media"><div class="art art-wine wide sh"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="sm"><h5>مركبات شركتك.. صيانة من طلب واحد</h5></div><div class="meta">شهاب للأعمال · 1 / 4</div></div></div>
+        <div class="li-actions"><span>أعجبني</span><span>تعليق</span><span>إعادة نشر</span><span>إرسال</span></div></div></div>
+    </div>
+  </div>
+
+  <h3>أول أسبوع على إكس، بالترتيب</h3>
+  <p>خمسة منشورات من الاثني عشر في الشهر الأول، كل منها من سلسلة مختلفة، وكلها تنتهي بالدعوة نفسها.</p>
+  <div class="week sh">
+    <div class="d"><div class="day">الأحد <small>منشور مثبّت</small></div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">اطلبها بثلاث خطوات</div><div class="meta">كل الخدمات</div></div><div class="w-cap"><b>قناة الطلب</b>يفتح الأسبوع ويُثبّت أعلى الحساب.</div></div>
+    <div class="d"><div class="day">الاثنين <small>تصميم ثابت</small></div><div class="art art-wine"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">مهما صار</div></div><div class="w-cap"><b>مهما صار</b>موقف يومي، والحل في آخره.</div></div>
+    <div class="d"><div class="day">الثلاثاء <small>ثريد</small></div><div class="art art-white"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">الصيانة الدورية أو الإصلاح؟ الفرق في ثلاث تغريدات</div><div class="meta">خدمة في دقيقة</div></div><div class="w-cap"><b>خدمة في دقيقة</b>خدمة واحدة بفائدة واحدة.</div></div>
+    <div class="d"><div class="day">الأربعاء <small>صورة وسؤال</small></div><div class="art art-wine"><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="art-photo">صورة الفني</div><div class="art-q">سؤال للفني</div></div><div class="w-cap"><b>من داخل شهاب للإصلاح</b>وجه حقيقي من المراكز.</div></div>
+    <div class="d"><div class="day">الخميس <small>استطلاع</small></div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">تعطلت سيارتك فجأة.. أول شي تسويه؟</div><div class="meta">وش تختار</div></div><div class="w-cap"><b>المكافآت والمجتمع</b>تفاعل يختم الأسبوع.</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="r7"><div class="wrap">
+  <div class="head"><div class="num"><span>07</span></div><div class="t"><div class="eyebrow">خط الأساس للقياس</div><h2>ما نقيس عليه الأشهر القادمة</h2></div></div>
   <p class="intro">القيم أدناه هي الوضع الحالي كما رُصد. المستهدفات الرقمية تُقترح مع شهاب بعد الشهر الأول وفق الكميات المعتمدة، دون ضمان نتائج مسبقًا.</p>
   <div class="tbl wide"><table>
     <thead><tr><th>المؤشر</th><th>القيمة الحالية</th><th>المصدر</th><th>كيف يُقاس شهريًا</th></tr></thead>
@@ -519,8 +600,8 @@ footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
   <div class="note warn"><b>قاعدة ثابتة:</b> لا تُنشر أرقام شهاب التشغيلية ولا أرقام الأداء في أي محتوى عام قبل اعتماد صياغتها من شهاب، ولا تُقارن أرقام شهاب بأرقام جهة أخرى علنًا.</div>
 </div></section>
 
-<section class="sec band-white" id="r7"><div class="wrap">
-  <div class="head"><div class="num"><span>07</span></div><div class="t"><div class="eyebrow">التوصيات والخطوات التالية</div><h2>عشرة أيام تفصلنا عن <span class="hl">أول منشور</span></h2></div></div>
+<section class="sec band-white" id="r8"><div class="wrap">
+  <div class="head"><div class="num"><span>08</span></div><div class="t"><div class="eyebrow">التوصيات والخطوات التالية</div><h2>عشرة أيام تفصلنا عن <span class="hl">أول منشور</span></h2></div></div>
   <ol class="steps">
     <li><b>الصلاحيات</b><span>صلاحية تحليلات إكس، وصفحة لينكدإن، وحساب تيك توك، وأدوات التحليل في الموقع.</span></li>
     <li><b>قناة الطلب</b><span>اعتماد القناة الرسمية الواحدة، وتثبيتها في النبذ والمنشورات.</span></li>
@@ -535,8 +616,8 @@ footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
   </div>
 </div></section>
 
-<section class="sec" id="r8"><div class="wrap">
-  <div class="head"><div class="num"><span>08</span></div><div class="t"><div class="eyebrow">شكل التقرير الشهري</div><h2>التقرير القادم بنفس القالب.. وبالأرقام</h2></div></div>
+<section class="sec" id="r9"><div class="wrap">
+  <div class="head"><div class="num"><span>09</span></div><div class="t"><div class="eyebrow">شكل التقرير الشهري</div><h2>التقرير القادم بنفس القالب.. وبالأرقام</h2></div></div>
   <p class="intro">هذا التقرير هو الشهر صفر. من الشهر الأول يصلكم تقرير شهري بالهيكل نفسه، تُعبّأ مؤشراته من تحليلات الحسابات وروابط التتبع، ويحمل التقرير الأخير ملخصًا سنويًا.</p>
   <div class="mock">
     <div><b>··</b><span>الوصول ومرات الظهور</span></div>
