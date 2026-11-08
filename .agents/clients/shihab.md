@@ -50,6 +50,7 @@
 <!-- Dated entries. -->
 
 ## Changelog
+- 2026-11-08 — v0.5 — Baseline and benchmark report (setup-package deliverable) built in the same deck template: executive summary, qualitative scorecard, channel audit with X post reach bars, per-service benchmark, gap table mapped to scope tracks, measurement baseline (observed values only, no targets), next steps, and the monthly report structure. Saved as `baseline-report.html`, https://claude.ai/artifact/3ugCxkBig1GgMhWJj1mnst.
 - 2026-11-07 — v0.4 — Proposal redesigned as a presentation-style deck in 3,6T identity (sticky nav, hero with stacked Shihab mock, proof strip, skewed section numerals, status-dot audit cards, per-service benchmark grid, scope rail, template gallery, LinkedIn carousel, motion storyboard, Gantt, team cards with photo slots). Saved as `proposal-v4.html`, https://claude.ai/artifact/8xdzAtS6cR1qXv84otv22j. Team photos pending from the agency (PDF in Drive could not be extracted here).
 - 2026-11-07 — v0.3 — Management feedback applied: base technical proposal (six-track scope) merged with «خلّها على شهاب»; proposal v3 saved (`proposal-v3.html`, https://claude.ai/artifact/TVwrzQand3mrAEqrNFDLoV). Field shooting removed from scope; TikTok limited to monthly motion.
 - 2026-10-31 — v0.2 — Creative platform changed to «خلّها على شهاب»; proposal v2 (merged) saved; Shihab tokens and logos added.
