@@ -1,0 +1,655 @@
+<title>تقرير خط الأساس لشهاب</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Readex+Pro:wght@400;500;700&display=swap">
+<style>
+/* Layout: a scrolling presentation in 3,6T identity. Full-bleed bands alternate off-white, white, charcoal and turquoise; the brand's slanted parallelogram is the structural motif (numerals, bars, dividers, pattern). Shihab's work sits in framed client surfaces in Shihab's wine and coral. Single light theme by brand decision. */
+:root{
+  --turq:#16a086; --turq-deep:#0f7a66; --turq-ink:#0b4f43; --turq-tint:#e3f4ef;
+  --char:#353535; --char-deep:#262626; --slate:#dde6ed; --slate-soft:#eef2f6; --page:#faf9ff; --white:#fff;
+  --ink:#353535; --ink-soft:#5f6670; --line:#d3dbe2;
+  --saffron:#f1c40f; --amber:#f39c11; --red:#e84c3d; --sky:#5dade2;
+  --sh-wine:#4a1a2e; --sh-deep:#260810; --sh-coral:#f47a4d; --sh-blush:#fcefe9; --sh-ink:#3d1a2b; --sh-line:#f1d9ce;
+  --pf-ink:#0f1419; --pf-muted:#536471; --pf-line:#e6ecf0; --pf-blue:#1d9bf0; --li-blue:#0a66c2;
+  --font:'Alexandria','Segoe UI',Tahoma,Arial,sans-serif; --font-sh:'Readex Pro','Alexandria',Tahoma,Arial,sans-serif;
+  --slant:-15deg; --shadow:0 1px 2px rgba(20,48,44,.06),0 12px 32px rgba(20,48,44,.10);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.85;direction:rtl;text-align:right;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--page)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+h1{font-weight:800;font-size:clamp(40px,7.5vw,96px);line-height:1.05;color:var(--white);letter-spacing:-.01em}
+h2{font-weight:700;font-size:clamp(26px,3.4vw,40px);color:var(--char)}
+h3{font-weight:600;font-size:19px;color:var(--char);margin-top:30px;margin-bottom:10px}
+h4{font-weight:600;font-size:15.5px;color:var(--char)}
+p{margin:0 0 12px}
+a{color:var(--turq-deep)}
+strong{font-weight:600;color:var(--char)}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.eyebrow{font-size:12.5px;letter-spacing:.1em;font-weight:600;color:var(--turq);text-transform:uppercase}
+
+/* slanted motif helpers */
+.para{display:inline-block;transform:skewX(var(--slant))}
+.para>*{display:inline-block;transform:skewX(15deg)}
+.hl{position:relative;z-index:0;white-space:nowrap}
+.hl::before{content:"";position:absolute;z-index:-1;inset-inline:-.12em;bottom:.08em;height:.42em;background:var(--saffron);transform:skewX(var(--slant));opacity:.9}
+.hl.turq::before{background:var(--turq-tint)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(250,249,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.top img{height:32px;width:auto;flex:none}
+.top .tag{font-size:12.5px;font-weight:600;color:var(--ink-soft);padding-inline-start:14px;border-inline-start:1px solid var(--line);white-space:nowrap}
+.top nav{margin-inline-start:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{font-size:13px;font-weight:600;color:var(--char);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:6px}
+.top nav a:hover{background:var(--turq-tint);color:var(--turq-deep)}
+@media (max-width:1600px){.top .tag{display:none}}
+.top nav{mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent);-webkit-mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent)}
+@media (min-width:1280px){.top nav{mask-image:none;-webkit-mask-image:none}}
+
+/* hero */
+.hero{background:var(--turq);color:var(--white);position:relative;overflow:hidden}
+.hero .pat{position:absolute;inset-inline-start:-40px;bottom:-30px;width:min(640px,80%);height:auto;pointer-events:none}
+.hero .slash{position:absolute;inset-inline-end:-80px;top:-40px;width:420px;height:auto;pointer-events:none;opacity:.6}
+.hero .wrap{position:relative;padding-block:clamp(44px,7vw,88px) clamp(48px,7vw,96px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:999px}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);max-width:34em;opacity:.95;margin-top:18px;font-weight:400}
+.hero .facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.35);font-size:13.5px}
+.hero .facts b{display:block;font-size:12px;opacity:.8;font-weight:500}
+.stack{position:relative;justify-self:end;width:min(360px,100%);aspect-ratio:4/5}
+.stack .cardx{position:absolute;inset:0;border-radius:14px;box-shadow:var(--shadow)}
+.stack .cardx.back{transform:rotate(6deg) translate(-18px,14px);background:var(--sh-blush);border:1px solid var(--sh-line)}
+.stack .cardx.back2{transform:rotate(-7deg) translate(16px,-10px);background:var(--sh-deep)}
+.stack .art{position:absolute;inset:0;border-radius:14px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.stack{justify-self:center;max-width:320px}}
+
+/* proof strip */
+.proof{background:var(--char);color:var(--white)}
+.proof .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding-block:24px}
+.proof b{display:block;font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.1;color:var(--white)}
+.proof span{font-size:13px;opacity:.8}
+.proof small{grid-column:1/-1;font-size:12px;opacity:.65}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:460px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* sections */
+.sec{padding-block:clamp(48px,7vw,88px)}
+.sec .wrap{display:grid;gap:18px}
+.band-white{background:var(--white);border-block:1px solid var(--line)}
+.band-char{background:var(--char);color:#eef2f3}
+.band-char h2,.band-char h3,.band-char h4,.band-char strong{color:var(--white)}
+.band-char .eyebrow{color:var(--saffron)}
+.band-char .muted{color:#c9d1d5}
+.band-turq{background:var(--turq);color:var(--white)}
+.band-turq h2,.band-turq h3,.band-turq h4,.band-turq strong{color:var(--white)}
+.band-turq .eyebrow{color:var(--saffron)}
+.head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;margin-bottom:8px}
+.num{display:grid;place-items:center;width:64px;height:56px;background:var(--turq);color:var(--white);font-weight:800;font-size:24px;transform:skewX(var(--slant));border-radius:6px;flex:none}
+.num span{transform:skewX(15deg)}
+.band-char .num,.band-turq .num{background:var(--saffron);color:var(--char)}
+.head .t{display:grid;gap:4px}
+.intro{font-size:clamp(16px,1.5vw,18px);line-height:1.8;max-width:62ch;font-weight:400;color:var(--char)}
+.band-char .intro,.band-turq .intro{color:#eef2f3}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 22px;min-width:0}
+.card.lift{box-shadow:var(--shadow);border-color:transparent}
+.card.tint{background:var(--turq-tint);border-color:transparent}
+.card.dark{background:var(--char-deep);color:#eef2f3;border-color:transparent}
+.card.dark h4,.card.dark strong{color:var(--white)}
+.card.deep{background:var(--turq-ink);color:#e6f3ef;border-color:transparent}
+.card.deep h4,.card.deep strong{color:var(--white)}
+.note{background:var(--slate);border-radius:10px;padding:14px 18px;font-size:14px}
+.note b{font-weight:600;color:var(--char)}
+.note.warn{background:#fff7e0;border:1px solid var(--saffron)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--slate-soft);color:var(--char);border:1px solid var(--line)}
+.chip.red{background:#fdeae7;color:#9c2f22;border-color:#f6c5bf}
+.chip.yellow{background:#fff8d6;color:#7a5c00;border-color:#f3dd7a}
+.chip.green{background:var(--turq-tint);color:var(--turq-ink);border-color:#bfe6da}
+.chip.wine{background:var(--sh-blush);color:var(--sh-wine);border-color:var(--sh-line)}
+.chip.sky{background:#e6f2fb;color:#1f5f8b;border-color:#bcdbf2}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kpi b{display:block;font-size:30px;font-weight:800;color:var(--turq);line-height:1.1}
+.kpi span{font-size:12.5px;color:var(--ink-soft)}
+.band-turq .kpi{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:var(--white)}
+.band-turq .kpi b{color:var(--white)}
+.band-turq .kpi span{color:rgba(255,255,255,.85)}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:11px 13px;vertical-align:top;border-bottom:1px solid var(--line);text-align:right}
+th{background:var(--char);color:var(--white);font-weight:600;white-space:nowrap;font-size:12.5px;letter-spacing:.02em}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;color:var(--char);white-space:nowrap}
+.tbl.wide td:first-child{white-space:normal}
+.tbl.gantt td{text-align:center;padding:9px 6px}
+.tbl.gantt td:first-child{text-align:right;white-space:nowrap}
+.tbl.gantt i{display:block;height:14px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.tbl.gantt i.lite{background:var(--slate)}
+.tbl.gantt i.gate{background:var(--saffron);width:14px;margin:0 auto;transform:rotate(45deg);border-radius:2px}
+.bar{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.bar i{display:inline-block;height:12px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.bar.z span{color:var(--ink-soft)}
+
+/* audit cards */
+.audit{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.audit .card{display:grid;gap:10px;align-content:start}
+.audit .ch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.audit .ch h4{font-size:17px}
+.audit .ch small{font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.audit ul{margin:0;padding-inline-start:18px;font-size:14px}
+.audit .st{display:grid;gap:6px}
+.audit .st div{display:flex;gap:8px;align-items:flex-start;font-size:13.5px}
+.audit .st i{flex:none;width:10px;height:10px;border-radius:50%;margin-top:9px}
+.i-red{background:var(--red)} .i-yel{background:var(--saffron)} .i-grn{background:var(--turq)} .i-sky{background:var(--sky)}
+
+/* services icons row */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.svc .card{display:grid;gap:8px;padding:16px}
+.svc .ic{width:44px;height:44px;border-radius:10px;background:var(--turq-tint);display:grid;place-items:center;color:var(--turq-deep)}
+.svc .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h4{font-size:15px}
+.svc p{font-size:13px;color:var(--ink-soft);margin:0}
+
+/* needs */
+.needs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:n}
+.needs div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px;position:relative;padding-top:44px}
+.needs div::before{counter-increment:n;content:"0" counter(n);position:absolute;top:12px;inset-inline-start:16px;font-weight:800;font-size:22px;color:var(--turq);line-height:1}
+.needs b{display:block;font-weight:600;margin-bottom:4px}
+.needs span{font-size:13.5px;color:var(--ink-soft)}
+
+/* benchmark */
+.bench{display:grid;gap:14px}
+.bench .row{background:var(--white);border:1px solid var(--line);border-radius:12px;display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:0;overflow:hidden}
+.bench .row>div{padding:16px 18px;min-width:0}
+.bench .k{background:var(--char);color:var(--white);display:grid;gap:8px;align-content:start}
+.bench .k h4{color:var(--white);font-size:15.5px}
+.bench .k .chips .chip{background:rgba(255,255,255,.12);color:var(--white);border-color:rgba(255,255,255,.25)}
+.bench .o{border-inline-end:1px solid var(--line)}
+.bench .lbl{font-size:11.5px;font-weight:600;color:var(--turq);letter-spacing:.06em;margin-bottom:6px}
+.bench p{font-size:13.5px;margin:0}
+@media (max-width:760px){.bench .row{grid-template-columns:minmax(0,1fr)}.bench .o{border-inline-end:0;border-bottom:1px solid var(--line)}}
+
+/* idea */
+.formula{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
+.f-step{border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:20px;background:rgba(255,255,255,.04)}
+.f-step small{display:block;font-size:12px;font-weight:600;color:var(--saffron)}
+.f-step b{display:block;font-size:26px;font-weight:800;color:var(--white);margin-top:2px}
+.f-step span{display:block;font-size:14px;color:#c9d1d5;margin-top:6px}
+.f-arrow{align-self:center;font-size:30px;font-weight:800;color:var(--turq)}
+@media (max-width:640px){.formula{grid-template-columns:minmax(0,1fr)}.f-arrow{justify-self:center;transform:rotate(90deg)}}
+.band-char .tbl{background:transparent;border-color:rgba(255,255,255,.18)}
+.band-char table{color:#eef2f3}
+.band-char th{background:rgba(255,255,255,.08);color:var(--saffron)}
+.band-char td{border-color:rgba(255,255,255,.14)}
+.band-char td:first-child{color:var(--white)}
+.band-char .note{background:rgba(255,255,255,.08);color:#eef2f3}
+.band-char .note b{color:var(--white)}
+.band-char .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#eef2f3}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.pillar{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0;border-top:4px solid var(--turq)}
+.pillar .fn{font-size:12px;color:var(--turq);font-weight:600}
+.pillar .nm{font-weight:700;font-size:18px;color:var(--char);margin-top:2px}
+.pillar .sr{font-size:12.5px;color:var(--ink-soft);margin-top:4px}
+.pillar .ex{font-size:13.5px;margin-top:8px}
+
+/* platforms */
+.plat{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.plat .card{display:grid;gap:12px;align-content:start;padding:0;overflow:hidden}
+.plat .ph{display:flex;align-items:center;gap:12px;padding:16px 20px;color:var(--white)}
+.plat .ph.x{background:#0f1419}.plat .ph.li{background:var(--li-blue)}.plat .ph.tt{background:#111;background-image:linear-gradient(90deg,#111 60%,#25f4ee22,#fe2c5522)}
+.plat .ph .mark{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.14);display:grid;place-items:center;font-weight:800;font-size:18px;font-family:var(--font-sh)}
+.plat .ph h3{margin:0;color:var(--white);font-size:18px}
+.plat .ph small{display:block;font-size:12px;opacity:.85}
+.plat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px;padding:0 20px 18px}
+.plat dt{font-weight:600;color:var(--ink-soft);white-space:nowrap}
+.plat dd{margin:0}
+.plat .qty{margin:0 20px;background:var(--turq-tint);border-radius:8px;padding:8px 12px;font-weight:600;color:var(--turq-ink);font-size:13.5px}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.steps li{position:relative;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px;padding-top:50px;min-width:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:12px;inset-inline-start:14px;width:30px;height:30px;display:grid;place-items:center;background:var(--turq);color:#fff;font-weight:800;transform:skewX(var(--slant));border-radius:4px}
+.steps b{display:block;font-weight:600;margin-bottom:4px}
+.steps span{font-size:13.5px;color:var(--ink-soft)}
+
+/* scope rail */
+.rail{display:grid;gap:12px}
+.rail .tr{display:grid;grid-template-columns:72px minmax(0,1fr) 110px minmax(0,.8fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rail .tr>div{padding:16px 18px;min-width:0;font-size:13.5px}
+.rail .n{background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:26px}
+.rail .t b{display:block;font-size:15.5px;font-weight:700;color:var(--char);margin-bottom:4px}
+.rail .q{background:var(--slate-soft);display:grid;place-items:center;text-align:center;font-weight:700;color:var(--turq-ink);border-inline:1px solid var(--line)}
+.rail .q b{font-size:24px;display:block;line-height:1.1}
+.rail .q span{font-size:12px;font-weight:500;color:var(--ink-soft)}
+.rail .r{color:var(--ink-soft)}
+.rail .r b{display:block;font-size:11.5px;letter-spacing:.06em;color:var(--turq);font-weight:600;margin-bottom:4px}
+@media (max-width:760px){.rail .tr{grid-template-columns:56px minmax(0,1fr)}.rail .q,.rail .r{grid-column:2;border-inline:0;border-top:1px solid var(--line)}.rail .q{place-items:start;text-align:right}}
+
+/* Shihab surfaces */
+.sh{font-family:var(--font-sh)}
+.art{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;font-family:var(--font-sh);display:flex;flex-direction:column;justify-content:space-between;padding:7%;container-type:inline-size;border-radius:12px}
+.art.wide{aspect-ratio:1.25/1}
+.art-wine{background:var(--sh-wine);color:var(--white)}
+.art-blush{background:var(--sh-blush);color:var(--sh-ink)}
+.art-white{background:var(--white);color:var(--sh-ink);border:1px solid var(--sh-line)}
+.art-logo{height:clamp(14px,7cqi,26px);width:auto;align-self:flex-start;position:relative}
+.art h5{position:relative;margin:0;font:700 clamp(26px,13cqi,58px)/1.22 var(--font-sh)}
+.art .sm h5{font-size:clamp(20px,9cqi,40px);line-height:1.25}
+.art .cta{position:relative;align-self:flex-start;display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 clamp(13px,6cqi,24px)/1.3 var(--font-sh);padding:.15em .45em .25em;margin-top:5cqi}
+.art .meta{position:relative;font:500 clamp(10px,3.6cqi,14px)/1.5 var(--font-sh);opacity:.85}
+.art-list{display:grid;gap:2cqi;position:relative;padding:0;margin:0;list-style:none}
+.art-list li{font:500 clamp(11px,4.4cqi,16px)/1.35 var(--font-sh);background:var(--white);padding:2cqi 3.2cqi;border:1px solid var(--sh-line);margin:0;display:flex;gap:2.5cqi;align-items:center}
+.art-list li::before{content:"";width:2.4cqi;height:2.4cqi;background:var(--sh-coral);flex:none}
+.art-big{font:700 clamp(40px,24cqi,110px)/1 var(--font-sh);color:var(--sh-coral);direction:ltr;text-align:right}
+.art-q{position:relative;font:700 clamp(14px,5.6cqi,22px)/1.45 var(--font-sh)}
+.art-photo{position:relative;flex:1;margin:3cqi 0;background:linear-gradient(160deg,#5a3a46,#1f151a);display:grid;place-items:center;color:rgba(255,255,255,.65);font:500 clamp(10px,3.4cqi,13px) var(--font-sh);border:1px dashed rgba(255,255,255,.35);text-align:center;padding:4cqi;border-radius:8px}
+.swoosh{position:absolute;inset-inline-start:-18%;bottom:-20%;width:75%;height:auto;opacity:.12;pointer-events:none}
+.tpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tpl .art{box-shadow:var(--shadow)}
+.tpl-cap{margin-top:10px;font-size:13.5px;font-weight:600}
+.tpl-cap span{display:block;font-weight:400;font-size:12.5px;color:var(--ink-soft)}
+.mock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:start}
+.mock-col{display:grid;gap:20px;min-width:0}
+.mock-note{margin-top:8px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.mock-note b{color:var(--turq-deep)}
+.post{background:var(--white);color:var(--pf-ink);border:1px solid var(--pf-line);border-radius:14px;padding:14px 16px 8px;font-family:var(--font-sh);box-shadow:var(--shadow)}
+.x-row{display:flex;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--sh-wine);display:grid;place-items:center;flex:none;overflow:hidden}
+.av img{width:70%;height:auto}
+.x-main{min-width:0;flex:1}
+.x-id{font-size:14.5px;line-height:1.3}
+.x-id b{font-weight:700}
+.x-id span{color:var(--pf-muted);font-weight:400}
+.x-text{font-size:15px;line-height:1.65;margin-top:6px;white-space:pre-line}
+.x-text .tag{color:var(--pf-blue)}
+.x-media{margin-top:12px;border-radius:14px;overflow:hidden;border:1px solid var(--pf-line)}
+.x-media .art{border-radius:0}
+.x-actions{display:flex;justify-content:space-between;max-width:360px;color:var(--pf-muted);padding:10px 0 4px;font-size:12.5px}
+.poll{display:grid;gap:8px;margin-top:10px}
+.poll span{display:block;border:1.5px solid var(--pf-blue);color:var(--pf-blue);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;text-align:center}
+.poll small{color:var(--pf-muted);font-size:12.5px}
+.thread .x-row+.x-row{margin-top:12px}
+.li-id b{display:block;font-size:14.5px}
+.li-id span{display:block;font-size:12px;color:var(--pf-muted)}
+.li-text{font-size:14.5px;line-height:1.65;margin:12px 0;white-space:pre-line}
+.li-actions{display:flex;justify-content:space-around;color:var(--pf-muted);border-top:1px solid var(--pf-line);margin-top:4px;padding:8px 0 2px;font-size:13px;font-weight:600}
+.carousel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.carousel .art{aspect-ratio:1/1;padding:9%}
+@media (max-width:640px){.carousel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.phone-wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.phone-wrap{grid-template-columns:minmax(0,1fr)}}
+.phone{width:min(230px,70vw);aspect-ratio:9/18;background:#111;border-radius:36px;padding:9px;justify-self:center;box-shadow:var(--shadow)}
+.screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(170deg,#3a1226,#150509);color:#fff;font-family:var(--font-sh)}
+.screen .cap{position:absolute;inset-inline:14px 36px;top:48%;text-align:center}
+.screen .cap span{display:inline;background:#fff;color:#111;font:700 13px/1.8 var(--font-sh);padding:2px 7px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.screen .cta{position:absolute;inset-inline:14px 36px;top:64%;text-align:center}
+.screen .cta span{display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 12px/1.5 var(--font-sh);padding:3px 10px}
+.screen .meta{position:absolute;inset-inline:12px 36px;bottom:16px;font-size:11px;line-height:1.5}
+.screen .meta b{display:block;font-size:12px}
+.screen .logo{position:absolute;top:20px;inset-inline-start:14px;height:15px;width:auto}
+.screen .ic{position:absolute;top:26%;inset-inline:0;text-align:center;font-size:36px}
+.screen .prog{position:absolute;top:10px;inset-inline:10px;display:flex;gap:3px}
+.screen .prog i{flex:1;height:3px;background:rgba(255,255,255,.3)}
+.screen .prog i.on{background:#fff}
+
+/* community */
+.sla{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.sla div{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--turq);border-radius:10px;padding:12px 14px}
+.sla b{display:block;font-size:24px;font-weight:800;color:var(--char);line-height:1.2}
+.sla span{font-size:13px;color:var(--ink-soft)}
+.convo{display:grid;gap:8px;font-family:var(--font-sh)}
+.bubble{max-width:90%;padding:10px 14px;font-size:14px;line-height:1.6;border-radius:12px}
+.bubble small{display:block;font:600 11.5px var(--font);margin-bottom:2px;opacity:.75}
+.bubble.in{background:var(--slate-soft);border:1px solid var(--line);justify-self:start}
+.bubble.out{background:var(--sh-wine);color:var(--white);justify-self:end}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.member{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.member .ph{position:relative;background:var(--char);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.member .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.member .ph .init{width:52%;aspect-ratio:1;border-radius:50%;background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:34px;border:4px solid rgba(255,255,255,.9);position:relative}
+.member .ph .pt{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'><polygon points='8,2 20,2 14,18 2,18' fill='%2316a086'/></svg>");background-size:26px 26px;opacity:.22;mask-image:linear-gradient(90deg,#000 20%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 20%,transparent 80%)}
+.member .ph .hint{position:absolute;bottom:8px;inset-inline:8px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
+.member .bd{padding:14px 16px;display:grid;gap:4px;align-content:start}
+.member .bd b{font-weight:700;font-size:15.5px;color:var(--char)}
+.member .bd .role{font-size:13px;color:var(--turq-deep);font-weight:600}
+.member .bd span{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+
+/* closing */
+.closing{background:var(--char);color:var(--white);position:relative;overflow:hidden}
+.closing .pat{position:absolute;inset-inline-end:-30px;top:-20px;width:min(520px,70%);height:auto;pointer-events:none;opacity:.5}
+.closing .wrap{position:relative;padding-block:56px;display:grid;gap:16px}
+.closing h2{color:var(--white);font-size:clamp(28px,4vw,44px)}
+.closing .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;font-weight:500}
+.closing img{width:130px;height:auto}
+footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
+.check{list-style:none;padding:0;display:grid;gap:8px}
+.check li{display:flex;gap:10px;align-items:flex-start}
+.check li::before{content:"";flex:0 0 18px;height:18px;border:2px solid var(--turq);border-radius:4px;margin-top:4px}
+/* report additions */
+.score{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+.score table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+.score th{background:var(--char);color:var(--white);font-weight:600;padding:12px 14px;text-align:right;font-size:13px}
+.score th:not(:first-child){text-align:center}
+.score td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top}
+.score td:first-child{font-weight:600;color:var(--char);white-space:nowrap}
+.score td:not(:first-child){text-align:center}
+.score .dot{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-inline-end:6px}
+.score small{display:block;font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-soft)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.bars{display:grid;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.bars .b{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) 56px;gap:12px;align-items:center;font-size:13.5px}
+.bars .b span:first-child{color:var(--char)}
+.bars .b i{display:block;height:16px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px;transform-origin:right}
+.bars .b b{font-weight:700;color:var(--char);text-align:left;direction:ltr}
+.bars small{font-size:12px;color:var(--ink-soft)}
+.gaps td .chip{white-space:nowrap}
+.mock{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.mock div{background:var(--white);border:1px dashed var(--line);border-radius:12px;padding:14px;text-align:center}
+.mock b{display:block;font-size:26px;font-weight:800;color:var(--slate);line-height:1.1}
+.mock span{font-size:12.5px;color:var(--ink-soft)}
+.cover-tag{display:inline-block;background:var(--saffron);color:var(--char);font-weight:700;font-size:12.5px;padding:4px 12px;transform:skewX(var(--slant));margin-bottom:14px}
+.cover-tag span{display:inline-block;transform:skewX(15deg)}
+/* gap to post */
+.g2p{display:grid;gap:22px}
+.g2p .pr{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1.15fr);gap:14px;align-items:center}
+.g2p .obs{background:var(--white);border:1px solid var(--line);border-inline-start:5px solid var(--red);border-radius:12px;padding:18px 20px;display:grid;gap:8px}
+.g2p .obs.y{border-inline-start-color:var(--saffron)}
+.g2p .obs .lbl{font-size:11.5px;font-weight:600;letter-spacing:.06em;color:var(--red)}
+.g2p .obs.y .lbl{color:#9a7a00}
+.g2p .obs h4{font-size:17px}
+.g2p .obs p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.g2p .obs .fix{font-size:13.5px;color:var(--turq-ink);background:var(--turq-tint);border-radius:8px;padding:8px 10px}
+.g2p .arw{display:grid;place-items:center}
+.g2p .arw i{display:block;width:34px;height:22px;background:var(--turq);transform:skewX(var(--slant));clip-path:polygon(100% 0,40% 0,40% 0,0 50%,40% 100%,100% 100%,100% 0)}
+.g2p .sol{position:relative}
+.g2p .sol .post{max-width:520px}
+.badge{position:absolute;top:-11px;inset-inline-end:16px;z-index:2;background:var(--saffron);color:var(--char);font:700 11.5px/1 var(--font);padding:6px 10px;transform:skewX(var(--slant))}
+.badge span{display:inline-block;transform:skewX(15deg)}
+.steps3{display:grid;gap:2.2cqi;position:relative;counter-reset:k;padding:0;margin:0;list-style:none}
+.steps3 li{display:flex;align-items:center;gap:3cqi;font:600 clamp(11px,4.6cqi,17px)/1.3 var(--font-sh);color:var(--sh-wine)}
+.steps3 li::before{counter-increment:k;content:counter(k);flex:none;width:8cqi;height:8cqi;display:grid;place-items:center;background:var(--sh-coral);color:var(--sh-wine);font-weight:700;border-radius:50%}
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.week .d{display:grid;gap:8px;align-content:start}
+.week .day{font-weight:700;font-size:13px;color:var(--char);display:flex;justify-content:space-between}
+.week .day small{font-weight:500;color:var(--ink-soft)}
+.week .art{box-shadow:var(--shadow)}
+.week .art h5{font-size:clamp(18px,12cqi,30px)}
+.week .w-cap{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+.week .w-cap b{display:block;color:var(--char);font-size:13px}
+@media (max-width:900px){.g2p .pr{grid-template-columns:minmax(0,1fr)}.g2p .arw i{transform:rotate(-90deg) skewX(var(--slant))}.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.week{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.hl{white-space:normal}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="logo-dark.png" alt="3,6T">
+  <span class="tag">تقرير خط الأساس · شهاب · نوفمبر 2026</span>
+  <nav>
+    <a href="#r1">الملخص</a><a href="#r2">بطاقة التقييم</a><a href="#r3">القنوات</a><a href="#r4">المقارنة</a><a href="#r5">الفجوات</a><a href="#r6">النماذج</a><a href="#r7">خط الأساس</a><a href="#r8">التوصيات</a><a href="#r9">التقرير الشهري</a>
+  </nav>
+</div></header>
+
+<section class="hero" id="start">
+  <svg class="slash" viewBox="0 0 420 300" aria-hidden="true"><polygon points="120,0 420,0 300,300 0,300" fill="#0f7a66" opacity=".55"/></svg>
+  <svg class="pat" viewBox="0 0 640 220" aria-hidden="true"><defs><pattern id="pp" width="30" height="30" patternUnits="userSpaceOnUse"><polygon points="9,0 24,0 15,22 0,22" fill="#ffffff"/></pattern><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk"><rect width="640" height="220" fill="url(#fade)"/></mask></defs><rect width="640" height="220" fill="url(#pp)" mask="url(#mk)" opacity=".32"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="kicker">تقرير مقدم إلى شركة شهاب · حزمة التأسيس · تقرير خط الأساس والمقارنة المعيارية</span>
+      <h1 style="margin-top:22px;font-size:clamp(32px,5.2vw,66px);line-height:1.2">وين نقف اليوم؟<br>قبل أول منشور</h1>
+      <p class="lead">قراءة لحضور شهاب الرقمي كما رصدناه بين 20 و24 أكتوبر 2026، ومقارنة ممارسات لكل مجموعة خدمات بمن يشبهها، وخط أساس تُقاس عليه الأشهر الاثنا عشر القادمة. كل رقم هنا مرصود مباشرة أو من الملف التعريفي لشهاب، ولا نضع مستهدفات قبل الشهر الأول.</p>
+      <div class="facts">
+        <div><b>فترة الرصد</b>20 إلى 24 أكتوبر 2026</div>
+        <div><b>القنوات</b>الموقع · إكس · لينكدإن · تيك توك</div>
+        <div><b>جهات المقارنة</b>12 جهة في 5 مجموعات خدمات</div>
+        <div><b>الحالة</b>نسخة للمراجعة والاعتماد</div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="cardx back"></div><div class="cardx back2"></div>
+      <div class="art art-wine sh">
+        <svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg>
+        <img class="art-logo" src="shihab-logo-white.png" alt="شهاب">
+        <div><h5>قبل ما نتكلم.. نسمع ونرصد</h5><span class="cta">خط الأساس</span></div>
+        <div class="meta">تقرير التأسيس · أكتوبر 2026 · إعداد تسويق ثلاثمائة وستين درجة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof"><div class="wrap">
+  <div><b>43</b><span>متابعًا على إكس</span></div>
+  <div><b>5</b><span>منشورات بين 1 و29 سبتمبر</span></div>
+  <div><b>903</b><span>أعلى مشاهدات لمنشور</span></div>
+  <div><b>0</b><span>منشورات بعد 29 سبتمبر</span></div>
+  <div><b>9</b><span>خدمات معروضة على الموقع</span></div>
+  <small>المصدر: رصد مباشر لحساب @ShihabCompany والموقع الإلكتروني بين 20 و24 أكتوبر 2026. لينكدإن طلب تسجيل الدخول فلم يُرصد، وتيك توك يُجهّز في التأسيس.</small>
+</div></div>
+
+<section class="sec" id="r1"><div class="wrap">
+  <div class="head"><div class="num"><span>01</span></div><div class="t"><div class="eyebrow">الملخص التنفيذي</div><h2>الأساس موجود.. <span class="hl">والانتظام غائب</span></h2></div></div>
+  <p class="intro">شهاب يملك ما لا يملكه كثير من الحسابات في بدايتها: هوية واضحة، وعلامة توثيق، وجمهور شركة أم جاهز، وأرقام تشغيل حقيقية. ما ينقصه هو الإيقاع والمسار: حضور يومي يشرح الخدمات، ورابط طلب واحد يُحوّل الاهتمام إلى حجز.</p>
+  <div class="grid3">
+    <div class="card lift"><div class="eyebrow" style="color:var(--turq)">ما يعمل</div><h4 style="margin:6px 0 8px">يُبنى عليه فورًا</h4><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li>رسالة الموقع واضحة ومتسقة مع الملف التعريفي.</li><li>حساب إكس موثق، بنبذة عربية وغلاف بالهوية.</li><li>منشور الإطلاق المقتبس من التعاونية حقق أعلى وصول مرصود (903)، أي أن جمهور الشركة الأم يستجيب.</li></ul></div>
+    <div class="card lift"><div class="eyebrow" style="color:var(--red)">ما يحتاج معالجة</div><h4 style="margin:6px 0 8px">قبل الحزمة الأولى</h4><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li>لا منشور على إكس منذ 29 سبتمبر؛ الحساب صامت وقت الرصد.</li><li>الموقع يعرض الخدمات بلا رابط للتطبيق أو زر طلب؛ المسار الوحيد هو البريد.</li><li>دبوس الخريطة يحمل اسم جهة أخرى، والمراكز والمحفظة غير مذكورة.</li></ul></div>
+    <div class="card lift"><div class="eyebrow" style="color:var(--amber)">ما نحتاجه من شهاب</div><h4 style="margin:6px 0 8px">قرارات تفتح الطريق</h4><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li>صلاحية على صفحة لينكدإن وحساب تيك توك لإكمال الرصد والتهيئة.</li><li>اعتماد قناة الطلب الرسمية التي يُوجَّه إليها كل منشور.</li><li>سجل الخدمات المتاحة لكل مدينة، واعتماد الأرقام القابلة للنشر.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec band-white" id="r2"><div class="wrap">
+  <div class="head"><div class="num"><span>02</span></div><div class="t"><div class="eyebrow">بطاقة التقييم</div><h2>ستة معايير على أربع قنوات</h2></div></div>
+  <p class="intro">تقييم نوعي من الرصد المباشر، لا درجات رقمية. تتحول البطاقة إلى أرقام في التقرير الشهري الأول بعد فتح تحليلات الحسابات.</p>
+  <div class="legend"><span><i style="background:var(--turq)"></i>جاهز للبناء عليه</span><span><i style="background:var(--saffron)"></i>يحتاج انتظامًا أو استكمالًا</span><span><i style="background:var(--red)"></i>يحتاج معالجة</span><span><i style="background:var(--slate)"></i>لم يُرصد بعد</span></div>
+  <div class="score"><table>
+    <thead><tr><th>المعيار</th><th>الموقع الإلكتروني</th><th>إكس</th><th>لينكدإن</th><th>تيك توك</th></tr></thead>
+    <tbody>
+      <tr><td>الهوية والتعريف</td><td><span class="dot" style="background:var(--turq)"></span><small>رسالة واضحة وهوية متسقة</small></td><td><span class="dot" style="background:var(--turq)"></span><small>نبذة عربية، توثيق، غلاف بالهوية</small></td><td><span class="dot" style="background:var(--slate)"></span><small>الصفحة طلبت تسجيل الدخول</small></td><td><span class="dot" style="background:var(--slate)"></span><small>يُجهّز في التأسيس</small></td></tr>
+      <tr><td>الانتظام</td><td><span class="dot" style="background:var(--saffron)"></span><small>محتوى ثابت بلا مستجدات</small></td><td><span class="dot" style="background:var(--red)"></span><small>5 منشورات في سبتمبر ثم صمت</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td></tr>
+      <tr><td>الوصول والتفاعل</td><td><span class="dot" style="background:var(--slate)"></span><small>يُقاس بعد ربط التحليلات</small></td><td><span class="dot" style="background:var(--saffron)"></span><small>43 متابعًا، أعلى منشور 903 مشاهدة</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td></tr>
+      <tr><td>مسار الطلب</td><td><span class="dot" style="background:var(--red)"></span><small>لا رابط تطبيق ولا زر طلب؛ البريد فقط</small></td><td><span class="dot" style="background:var(--red)"></span><small>لا رابط طلب ثابت في الملف أو المنشورات</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td></tr>
+      <tr><td>المجتمع والردود</td><td><span class="dot" style="background:var(--slate)"></span><small>لا ينطبق</small></td><td><span class="dot" style="background:var(--saffron)"></span><small>لا دليل ردود معتمد بعد</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td><td><span class="dot" style="background:var(--slate)"></span><small>لم يُرصد</small></td></tr>
+      <tr><td>الجاهزية للقياس</td><td><span class="dot" style="background:var(--saffron)"></span><small>نحتاج صلاحية أدوات التحليل</small></td><td><span class="dot" style="background:var(--saffron)"></span><small>نحتاج صلاحية تحليلات الحساب</small></td><td><span class="dot" style="background:var(--saffron)"></span><small>نحتاج صلاحية على الصفحة</small></td><td><span class="dot" style="background:var(--saffron)"></span><small>يُنشأ مع الصلاحيات</small></td></tr>
+    </tbody></table></div>
+</div></section>
+
+<section class="sec" id="r3"><div class="wrap">
+  <div class="head"><div class="num"><span>03</span></div><div class="t"><div class="eyebrow">القنوات واحدة واحدة</div><h2>ما رصدناه بين 20 و24 أكتوبر 2026</h2></div></div>
+  <p class="intro">لقطات الشاشة في ملحق التقرير. الألوان: أحمر يحتاج معالجة، أصفر يحتاج انتظامًا، أخضر جاهز للبناء عليه، أزرق معلومة للقياس.</p>
+  <div class="audit">
+    <div class="card lift"><div class="ch"><h4>الموقع الإلكتروني</h4><small>20 أكتوبر</small></div>
+      <div class="st"><div><i class="i-grn"></i><span><strong>الواجهة:</strong> رسالة واضحة «شهاب، شريكك الموثوق لجميع احتياجات مركبتك» بهوية متسقة مع الملف التعريفي.</span></div><div><i class="i-red"></i><span><strong>الخدمات:</strong> تسع خدمات تعريفية، بلا رابط للتطبيق أو طلب خدمة؛ مسار الطلب هو البريد فقط.</span></div><div><i class="i-yel"></i><span><strong>تفاصيل تحتاج مراجعة:</strong> دبوس الخريطة يحمل اسم «tree Digital Insurance»، والمراكز والمحفظة غير مذكورة.</span></div></div></div>
+    <div class="card lift"><div class="ch"><h4>منصة إكس</h4><small>24 أكتوبر · @ShihabCompany</small></div>
+      <div class="chips"><span class="chip">43 متابعًا</span><span class="chip">أُنشئ يوليو 2026</span><span class="chip yellow">5 منشورات 1 إلى 29 سبتمبر</span><span class="chip red">لا منشور بعدها</span></div>
+      <div class="st"><div><i class="i-grn"></i><span><strong>التعريف:</strong> نبذة عربية واضحة، وعلامة توثيق، وغلاف بهوية شهاب.</span></div><div><i class="i-sky"></i><span><strong>الوصول:</strong> المنشور المقتبس من حساب التعاونية هو الأعلى (903)، أي أن جمهور الشركة الأم هو الرافعة الأولى.</span></div><div><i class="i-grn"></i><span><strong>الفرصة:</strong> حضور يومي يشرح الخدمات ويقود إلى الطلب.</span></div></div></div>
+    <div class="card lift"><div class="ch"><h4>لينكدإن وتيك توك</h4><small>20 أكتوبر</small></div>
+      <div class="st"><div><i class="i-yel"></i><span><strong>لينكدإن:</strong> الصفحة مذكورة في الملف التعريفي ومرتبطة من الموقع، لكنها طلبت تسجيل الدخول عند الرصد، فلم نطلع على منشوراتها أو متابعيها.</span></div><div><i class="i-yel"></i><span><strong>تيك توك:</strong> لم يُدرج في الرصد؛ يُنشأ أو يُهيّأ في التأسيس بصلاحيات شهاب، ويقتصر دوره على فيديو الموشن الشهري ضمن النطاق.</span></div><div><i class="i-grn"></i><span>نكمل رصد القناتين خلال أول أسبوع من التأسيس عبر الصلاحيات.</span></div></div></div>
+  </div>
+  <h3>أبرز منشورات إكس المرصودة ومشاهداتها</h3>
+  <div class="bars">
+    <div class="b"><span>إعلان الإطلاق مقتبسًا من حساب التعاونية</span><i style="width:100%"></i><b>903</b></div>
+    <div class="b"><span>صورة تعريفية بالخدمات</span><i style="width:37.7%"></i><b>340</b></div>
+    <div class="b"><span>إطلاق أول ورشة «شهاب للإصلاح»</span><i style="width:31.3%"></i><b>283</b></div>
+    <div class="b"><span>فيديو الإطلاق</span><i style="width:26.7%"></i><b>241</b></div>
+    <small>أربعة من المنشورات الخمسة كما ظهرت أرقامها وقت الرصد في 24 أكتوبر 2026. القراءة: المحتوى المرتبط بالشركة الأم والمحتوى التعريفي البسيط يتقدمان على الفيديو الطويل.</small>
+  </div>
+  <h3>أصول جاهزة للمحتوى، وفق الملف التعريفي لشهاب</h3>
+  <div class="grid2">
+    <div class="card"><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li><strong>المراكز والفريق:</strong> مراكز «شهاب للإصلاح» وفريقها لم يظهرا بعد في القنوات إلا في توثيق إطلاق الورشة.</li><li><strong>رحلة العميل:</strong> من الطلب إلى المتابعة والتقييم، كما يعرضها الملف التعريفي.</li></ul></div>
+    <div class="card"><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li><strong>المحفظة والتليماتكس:</strong> قصص مكافآت وقيادة آمنة بعد تأكيد إتاحتها للجمهور.</li><li><strong>أرقام التشغيل:</strong> 500 ألف مستخدم و200 ألف+ سيارة و30 مليون مكافأة، تُنشر بعد اعتماد صياغتها من شهاب.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec band-white" id="r4"><div class="wrap">
+  <div class="head"><div class="num"><span>04</span></div><div class="t"><div class="eyebrow">المقارنة المعيارية</div><h2>نقارن كل خدمة <span class="hl">بمن يشبهها</span></h2></div></div>
+  <p class="intro">لا توجد جهة واحدة تنافس منظومة شهاب كاملة؛ فالمنافس يتغير بتغير الخدمة، والشراكة لا تنفي التقاطع في خدمة بعينها. رصدنا الممارسة الفعلية في الموقع وإكس وتيك توك خلال أكتوبر 2026.</p>
+  <div class="bench">
+    <div class="row"><div class="k"><h4>الصيانة والإصلاح</h4><div class="chips"><span class="chip">مسمار · عميل</span><span class="chip">أزهلها</span><span class="chip">بترومين إكسبريس · شريك</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>منشور لكل خدمة بعبارة قصيرة وزر «اطلب مسمار». عرض شاشة الطلب الفعلية والإجابة عن عائق التكلفة. شرح الخدمة كرحلة من النقل حتى التسليم. لهجة قريبة «سيارتك تستاهل» وصورة ورشة حقيقية.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>محتوى من داخل المراكز المملوكة يشرح كل خدمة كرحلة بخطوات، مع دعوة واحدة إلى قناة الطلب، بمواد مرئية تزودنا بها شهاب من مراكزها.</p></div></div>
+    <div class="row"><div class="k"><h4>المساعدة على الطريق والخدمات المتنقلة</h4><div class="chips"><span class="chip">مرني</span><span class="chip">مسمار</span><span class="chip">سيارتك</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>مرني: عروض مرتبطة بمبادرات ومناسبات مع ما يشمله العرض ومدته. مسمار: «سطحتنا تجيك وين ما كنت» مع زر الطلب. سيارتك: «نجيك بـ3 خطوات» وزر حجز وواتساب ظاهر.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>قالب ثابت «اطلبها بثلاث خطوات» لكل خدمة متنقلة، ومحتوى موسمي للسفر والصيف مع ذكر المدن المشمولة.</p></div></div>
+    <div class="row"><div class="k"><h4>الغسيل والعناية والحماية</h4><div class="chips"><span class="chip">سويتر · شريك</span><span class="chip">سيارتك</span><span class="chip">مسمار</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>فريق حقيقي بزي العلامة في الموقع والفيديو. سلاسل ثابتة في قوائم تشغيل على تيك توك (كيف ننظفها، قبل | بعد، عروضنا). منشورات حوارية يومية قصيرة على إكس.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>سلسلة «قبل وبعد» من صور ومقاطع شهاب الفعلية بزي موحد، وحضور يومي على إكس.</p></div></div>
+    <div class="row"><div class="k"><h4>بيع وشراء المركبات والتأجير</h4><div class="chips"><span class="chip">سيارة · شريك</span><span class="chip">موتري</span><span class="chip">يلو · لومي · المفتاح · شركاء</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>سيارة: وعود محددة (فحص +200 نقطة، ضمان، 10 أيام تجربة) وحملة «11 سنة» بعجلة جوائز. موتري: أدوات تقييم ومقارنة وحاسبة تمويل وفيديوهات. يلو: «الاشتراك الشهري» و«تأجير طويل الأجل» في واجهة الحجز.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>سلسلة «قبل لا تشتري» تربط الفحص والتقييم بقرار الشراء، وتوضيح خيارات التأجير للأفراد والشركات.</p></div></div>
+    <div class="row"><div class="k"><h4>قطع الغيار وبيانات المركبة والمكافآت</h4><div class="chips"><span class="chip">سبيرو · شريك</span><span class="chip">بترومين مع قطاف · شريك</span><span class="chip">التعاونية درايف · الشركة الأم</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>سبيرو: البحث بالسيارة أو رقم القطعة وإشارات ثقة (أصلية، مفحوصة، إرجاع 7 أيام). بترومين: معادلة مكافأة واضحة «6 نقاط قطاف لكل 25 ريال» وزر «ابحث عن الورشة». التعاونية درايف: نقاط أسبوعية للقيادة الآمنة تُستبدل بمكافآت.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>شرح محفظة شهاب بمعادلة كسب وأمثلة بعد تأكيدها، وإبراز ضمانات القطع وربطها بالصيانة في المراكز.</p></div></div>
+  </div>
+  <h3>ست ممارسات تتكرر عند الأقوى.. وشهاب يملك مقوماتها</h3>
+  <div class="needs">
+    <div><b>خدمة واحدة في كل منشور</b><span>الأقوى لا يشرح المنظومة كلها في منشور؛ يشرح خدمة واحدة بفائدة واحدة ودعوة واحدة.</span></div>
+    <div><b>صورة حقيقية بزي موحد</b><span>الورشة الحقيقية والفريق بالزي يتفوقان على الصور الجاهزة في الثقة والتفاعل.</span></div>
+    <div><b>سلاسل ثابتة بأسماء واضحة</b><span>قوائم تشغيل وسلاسل متكررة تجعل المتابع يعرف ماذا ينتظر.</span></div>
+    <div><b>وعود محددة قابلة للإثبات</b><span>أرقام ومدد وضمانات محددة، لا عبارات عامة.</span></div>
+    <div><b>محتوى موسمي ومناسباتي</b><span>السفر والصيف والمناسبات الوطنية تحرك الطلب على الخدمات المتنقلة.</span></div>
+    <div><b>المكافأة بمعادلة واضحة</b><span>«كم أكسب مقابل كم أدفع» في جملة واحدة.</span></div>
+  </div>
+  <div class="note"><b>تنبيه:</b> عدد من الجهات المرصودة شركاء أو عملاء لشهاب، فالمقارنة هنا مقارنة ممارسات لا منافسة. القائمة النهائية لجهات المقارنة الدورية تُعتمد مع شهاب في التأسيس، وتُحدّث كل ربع سنة.</div>
+</div></section>
+
+<section class="sec band-char" id="r5"><div class="wrap">
+  <div class="head"><div class="num"><span>05</span></div><div class="t"><div class="eyebrow">الفجوات والفرص</div><h2>سبع فجوات.. ولكل فجوة مسار في النطاق</h2></div></div>
+  <p class="intro muted">رتبنا الفجوات بأثرها على هدف الانتقال من المحتوى إلى الطلب، وربطنا كل واحدة بالمسار الذي يعالجها من مسارات العمل الستة.</p>
+  <div class="tbl wide gaps"><table>
+    <thead><tr><th>الفجوة</th><th>أثرها</th><th>الإجراء</th><th>المسار</th><th>الأولوية</th></tr></thead>
+    <tbody>
+      <tr><td>لا قناة طلب ثابتة في الموقع أو الملفات الشخصية</td><td>كل منشور ينتهي بلا خطوة تالية</td><td>اعتماد قناة الطلب الرسمية وتثبيتها في النبذة وفي كل منشور خدمة</td><td>التأسيس</td><td><span class="chip red">عاجلة</span></td></tr>
+      <tr><td>صمت حساب إكس منذ 29 سبتمبر</td><td>فقدان الزخم الذي صنعه الإطلاق</td><td>إيقاع 12 منشورًا شهريًا بسلاسل ثابتة، وأول منشور خلال أول أسبوعين من التأسيس</td><td>المحتوى والنشر</td><td><span class="chip red">عاجلة</span></td></tr>
+      <tr><td>لينكدإن وتيك توك خارج الرصد</td><td>لا خط أساس لقناتين من ثلاث</td><td>صلاحيات خلال الأسبوع الأول، واستكمال بطاقة التقييم</td><td>التأسيس</td><td><span class="chip red">عاجلة</span></td></tr>
+      <tr><td>الخدمات تُعرض بلا مدن إتاحة</td><td>وعود قد لا تنطبق على كل متابع</td><td>سجل الإتاحة والتغطية لكل خدمة ومدينة قبل الترويج</td><td>التأسيس</td><td><span class="chip yellow">مرتفعة</span></td></tr>
+      <tr><td>المراكز والفريق غائبان عن القنوات</td><td>ثقة أقل مما يستحقه التشغيل الفعلي</td><td>سلسلة «من داخل شهاب للإصلاح» من مواد شهاب المصورة</td><td>المحتوى</td><td><span class="chip yellow">مرتفعة</span></td></tr>
+      <tr><td>لا دليل ردود ولا أزمنة استجابة</td><td>أسئلة بلا رد أو ردود غير متسقة</td><td>دليل ردود معتمد وتغطية 8 ساعات يوميًا 5 أيام أسبوعيًا</td><td>إدارة الحسابات</td><td><span class="chip yellow">مرتفعة</span></td></tr>
+      <tr><td>دبوس الخريطة باسم جهة أخرى، والمحفظة غير مذكورة</td><td>تشويش على زائر الموقع</td><td>إحالة إلى فريق الموقع لدى شهاب للتصحيح؛ خارج نطاقنا لكنه يؤثر على المسار</td><td>شهاب</td><td><span class="chip green">متوسطة</span></td></tr>
+    </tbody></table></div>
+</div></section>
+
+<section class="sec band-white" id="r6"><div class="wrap">
+  <div class="head"><div class="num"><span>06</span></div><div class="t"><div class="eyebrow">من الفجوة إلى أول منشور</div><h2>كل فجوة رصدناها.. <span class="hl">وشكل حلها</span></h2></div></div>
+  <p class="intro">على اليمين ما رصدناه فعلًا، وعلى اليسار المنشور الذي يعالجه بشعار شهاب وخدمتها الحقيقية ودعوة واحدة إلى الطلب. كل النماذج مقترحة للاعتماد وليست منشورة، ولا تحمل أرقامًا تشغيلية قبل اعتماد صياغتها من شهاب.</p>
+  <div class="g2p">
+
+    <div class="pr">
+      <div class="obs"><div class="lbl">فجوة عاجلة · رُصدت 20 و24 أكتوبر</div><h4>لا قناة طلب ثابتة</h4><p>الموقع يعرض تسع خدمات بلا رابط للتطبيق أو زر طلب، وحساب إكس بلا رابط طلب في النبذة أو المنشورات.</p><div class="fix"><b>الحل:</b> منشور مثبّت «اطلبها بثلاث خطوات» يحمل رابط القناة المعتمدة، ويتكرر الرابط في نبذة كل حساب.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">عطل، غسيل، فحص، أو بطارية؟<br>كل خدمات شهاب تبدأ من مكان واحد، بثلاث خطوات.<br>الرابط في النبذة.. وخلّها على شهاب. <span class="tag">#خلها_على_شهاب</span></div><div class="x-media"><div class="art art-blush wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine);font-size:clamp(16px,6.4cqi,26px)">اطلبها بثلاث خطوات</div><ol class="steps3"><li>افتح القناة المعتمدة</li><li>اختر الخدمة وحدد موقعك</li><li>تابع طلبك لين ينتهي</li></ol><div class="meta">منشور مثبّت · كل خدمات شهاب</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs"><div class="lbl">فجوة عاجلة · رُصدت 24 أكتوبر</div><h4>الحساب صامت منذ 29 سبتمبر</h4><p>خمسة منشورات في سبتمبر ثم توقف، والزخم الذي صنعه الإطلاق يتلاشى.</p><div class="fix"><b>الحل:</b> أول منشور في سلسلة «مهما صار»، يفتتح الإيقاع الثابت: 12 منشورًا شهريًا على إكس.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">بنشرت وأنت راجع من الدوام، والشمس فوق راسك؟<br>لا تنزل تفك الكفر في هالحر.<br>حدد موقعك واطلب المساعدة على الطريق.. وخلّها على شهاب.<br>متاحة في المدن المشمولة بالخدمة.</div><div class="x-media"><div class="art art-wine wide sh"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">مهما صار · المساعدة على الطريق</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة مرتفعة · وفق الملف التعريفي</div><h4>المراكز والفريق غائبان عن القنوات</h4><p>مراكز «شهاب للإصلاح» وفنيوها لم يظهروا إلا في توثيق إطلاق الورشة، رغم أنهم أقوى دليل ثقة تملكه شهاب.</p><div class="fix"><b>الحل:</b> سلسلة «سؤال للفني»: وجه حقيقي واسم وتخصص من مواد شهاب بموافقة موقعة، والمعلومة يراجعها مختص.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">سيارتك تصدر صرير وأنت توقف؟<br>سألنا فني من مركز شهاب للإصلاح، وهذا جوابه.<br>احجز فحصك.. وخلّها على شهاب.</div><div class="x-media"><div class="art art-white wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-photo">صورة الفني من مواد شهاب بعد موافقته</div><div class="art-q" style="color:var(--sh-wine)">«الصرير غالبًا يعني إن الفحمات تحتاج فحص»</div><div class="meta">سؤال للفني · مركز شهاب للإصلاح</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة مرتفعة · رُصدت 20 أكتوبر</div><h4>الخدمات تُعرض بلا مدن إتاحة</h4><p>الخدمات المتنقلة لا تذكر أين تتوفر، فيصل الوعد إلى متابع قد لا تشمله الخدمة.</p><div class="fix"><b>الحل:</b> «بطاقة خدمة» تذكر ما تشمله الخدمة والمدن المشمولة من سجل الإتاحة المعتمد.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">وش تشمل المساعدة على الطريق من شهاب؟<br>أربع خدمات، وطلب واحد.<br>وتشوف المدن المشمولة في البطاقة.</div><div class="x-media"><div class="art art-blush wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine);font-size:clamp(16px,6.4cqi,26px)">المساعدة على الطريق</div><ul class="art-list"><li>سحب المركبة</li><li>تشغيل البطارية وتغييرها</li><li>إصلاح الإطار</li><li>توصيل الوقود</li></ul><div class="meta">متاحة في: [المدن من سجل الإتاحة المعتمد]</div></div></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div></div>
+    </div>
+
+    <div class="pr">
+      <div class="obs y"><div class="lbl">فجوة عاجلة · رُصدت 20 أكتوبر</div><h4>لينكدإن خارج الرصد والحضور</h4><p>الصفحة موجودة ومرتبطة من الموقع، لكن لا يظهر منها ما يخاطب مسؤولي الأساطيل والشركاء.</p><div class="fix"><b>الحل:</b> كاروسيل «شهاب للأعمال» من أربع شرائح: الغلاف، التحدي، الإثبات، الدعوة.</div></div>
+      <div class="arw"><i></i></div>
+      <div class="sol"><div class="badge"><span>نموذج مقترح للاعتماد</span></div><div class="post"><div class="x-row"><div class="av" style="border-radius:8px;width:48px;height:48px"><img src="shihab-logo-white.png" alt=""></div><div class="li-id"><b>شهاب | Shihab</b><span>خدمات المركبات والتنقل · الآن</span></div></div>
+        <div class="li-text">أكثر من ورشة. أكثر من فاتورة. ومتابعة موزعة بين الجداول والإيميلات. هذا يوم عادي عند كثير من مسؤولي الأساطيل.
+في شهاب نربط احتياجات مركبات الشركات بخدمات الصيانة والإصلاح، ونتابع تنفيذ الطلبات في منظومة رقمية واحدة.</div>
+        <div class="x-media"><div class="art art-wine wide sh"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="sm"><h5>مركبات شركتك.. صيانة من طلب واحد</h5></div><div class="meta">شهاب للأعمال · 1 / 4</div></div></div>
+        <div class="li-actions"><span>أعجبني</span><span>تعليق</span><span>إعادة نشر</span><span>إرسال</span></div></div></div>
+    </div>
+  </div>
+
+  <h3>أول أسبوع على إكس، بالترتيب</h3>
+  <p>خمسة منشورات من الاثني عشر في الشهر الأول، كل منها من سلسلة مختلفة، وكلها تنتهي بالدعوة نفسها.</p>
+  <div class="week sh">
+    <div class="d"><div class="day">الأحد <small>منشور مثبّت</small></div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">اطلبها بثلاث خطوات</div><div class="meta">كل الخدمات</div></div><div class="w-cap"><b>قناة الطلب</b>يفتح الأسبوع ويُثبّت أعلى الحساب.</div></div>
+    <div class="d"><div class="day">الاثنين <small>تصميم ثابت</small></div><div class="art art-wine"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">مهما صار</div></div><div class="w-cap"><b>مهما صار</b>موقف يومي، والحل في آخره.</div></div>
+    <div class="d"><div class="day">الثلاثاء <small>ثريد</small></div><div class="art art-white"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">الصيانة الدورية أو الإصلاح؟ الفرق في ثلاث تغريدات</div><div class="meta">خدمة في دقيقة</div></div><div class="w-cap"><b>خدمة في دقيقة</b>خدمة واحدة بفائدة واحدة.</div></div>
+    <div class="d"><div class="day">الأربعاء <small>صورة وسؤال</small></div><div class="art art-wine"><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="art-photo">صورة الفني</div><div class="art-q">سؤال للفني</div></div><div class="w-cap"><b>من داخل شهاب للإصلاح</b>وجه حقيقي من المراكز.</div></div>
+    <div class="d"><div class="day">الخميس <small>استطلاع</small></div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">تعطلت سيارتك فجأة.. أول شي تسويه؟</div><div class="meta">وش تختار</div></div><div class="w-cap"><b>المكافآت والمجتمع</b>تفاعل يختم الأسبوع.</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="r7"><div class="wrap">
+  <div class="head"><div class="num"><span>07</span></div><div class="t"><div class="eyebrow">خط الأساس للقياس</div><h2>ما نقيس عليه الأشهر القادمة</h2></div></div>
+  <p class="intro">القيم أدناه هي الوضع الحالي كما رُصد. المستهدفات الرقمية تُقترح مع شهاب بعد الشهر الأول وفق الكميات المعتمدة، دون ضمان نتائج مسبقًا.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>المؤشر</th><th>القيمة الحالية</th><th>المصدر</th><th>كيف يُقاس شهريًا</th></tr></thead>
+    <tbody>
+      <tr><td>متابعو إكس</td><td>43</td><td>رصد 24 أكتوبر 2026</td><td>تحليلات الحساب، صافي النمو الشهري</td></tr>
+      <tr><td>الانتظام على إكس</td><td>0 منشورات بعد 29 سبتمبر (5 في سبتمبر)</td><td>رصد 24 أكتوبر 2026</td><td>الالتزام بالتقويم: المنشورات المنفذة من 12</td></tr>
+      <tr><td>أعلى وصول لمنشور على إكس</td><td>903 مشاهدة</td><td>رصد 24 أكتوبر 2026</td><td>متوسط المشاهدات للمنشور، وأعلى منشور وسببه</td></tr>
+      <tr><td>متابعو لينكدإن ومنشوراته</td><td>غير مرصود (الصفحة تطلب تسجيل الدخول)</td><td>رصد 20 أكتوبر 2026</td><td>تحليلات الصفحة بعد الصلاحية</td></tr>
+      <tr><td>تيك توك</td><td>يُجهّز في التأسيس</td><td>نطاق العمل</td><td>مشاهدات فيديو الموشن الشهري ومعدل إكماله</td></tr>
+      <tr><td>مسار الطلب من المنصات</td><td>لا رابط طلب في الموقع أو الملفات الشخصية</td><td>رصد 20 و24 أكتوبر 2026</td><td>نقرات الروابط المتتبعة (UTM) والزيارات المحالة</td></tr>
+      <tr><td>زمن الرد على الأسئلة</td><td>غير مقاس (لا دليل ردود)</td><td>رصد 24 أكتوبر 2026</td><td>متوسط زمن الرد داخل ساعات التغطية</td></tr>
+      <tr><td>الإشارات إلى شهاب</td><td>تُقاس من الشهر الأول</td><td>أداة الرصد</td><td>عدد الإشارات وتصنيفها: إيجابية، سلبية، محايدة</td></tr>
+    </tbody></table></div>
+  <div class="note warn"><b>قاعدة ثابتة:</b> لا تُنشر أرقام شهاب التشغيلية ولا أرقام الأداء في أي محتوى عام قبل اعتماد صياغتها من شهاب، ولا تُقارن أرقام شهاب بأرقام جهة أخرى علنًا.</div>
+</div></section>
+
+<section class="sec band-white" id="r8"><div class="wrap">
+  <div class="head"><div class="num"><span>08</span></div><div class="t"><div class="eyebrow">التوصيات والخطوات التالية</div><h2>أسبوعان يفصلاننا عن <span class="hl">أول منشور</span></h2></div></div>
+  <ol class="steps">
+    <li><b>الصلاحيات</b><span>صلاحية تحليلات إكس، وصفحة لينكدإن، وحساب تيك توك، وأدوات التحليل في الموقع.</span></li>
+    <li><b>قناة الطلب</b><span>اعتماد القناة الرسمية الواحدة، وتثبيتها في النبذ والمنشورات.</span></li>
+    <li><b>سجل الإتاحة</b><span>الخدمات المتاحة لكل مدينة، واعتماد ما يُروَّج له.</span></li>
+    <li><b>استكمال الرصد</b><span>بطاقة تقييم لينكدإن وتيك توك، واعتماد قائمة جهات المقارنة.</span></li>
+    <li><b>دليل الردود</b><span>الأسئلة المتكررة وردودها المعتمدة ومسار التصعيد.</span></li>
+    <li><b>الحزمة الأولى</b><span>تقويم الشهر الأول و20 منشورًا وأول فيديو موشن للاعتماد.</span></li>
+  </ol>
+  <div class="grid2" style="margin-top:8px">
+    <div class="card tint"><h4>ما نحتاجه من شهاب خلال الأسبوع الأول</h4><ul class="check" style="margin-top:8px;font-size:14px"><li>نقطة اتصال واحدة وصاحب صلاحية للاعتماد</li><li>صلاحيات الحسابات وأدوات التحليل، وروابط التتبع للتطبيق والموقع</li><li>دليل الهوية البصرية والملفات المصدرية</li><li>معلومات الخدمات، وسجل الإتاحة لكل مدينة، وقنوات الطلب الرسمية</li><li>مواد المراكز والفريق المتاحة، ونماذج موافقة الظهور</li></ul></div>
+    <div class="card"><h4>ما يصلكم منا بعد الاعتماد</h4><ul class="check" style="margin-top:8px;font-size:14px"><li>النسخة المعتمدة من هذا التقرير مع ملحق لقطات الشاشة</li><li>بطاقة التقييم المستكملة للقنوات الأربع</li><li>قائمة جهات المقارنة الدورية المعتمدة</li><li>تقويم الشهر الأول والحزمة الأولى للاعتماد</li><li>أول تقرير شهري بعد أربعة أسابيع من بدء النشر</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec" id="r9"><div class="wrap">
+  <div class="head"><div class="num"><span>09</span></div><div class="t"><div class="eyebrow">شكل التقرير الشهري</div><h2>التقرير القادم بنفس القالب.. وبالأرقام</h2></div></div>
+  <p class="intro">هذا التقرير هو الشهر صفر. من الشهر الأول يصلكم تقرير شهري بالهيكل نفسه، تُعبّأ مؤشراته من تحليلات الحسابات وروابط التتبع، ويحمل التقرير الأخير ملخصًا سنويًا.</p>
+  <div class="mock">
+    <div><b>··</b><span>الوصول ومرات الظهور</span></div>
+    <div><b>··</b><span>صافي نمو المتابعين</span></div>
+    <div><b>··</b><span>معدل التفاعل</span></div>
+    <div><b>··</b><span>نقرات روابط الطلب</span></div>
+    <div><b>··</b><span>متوسط زمن الرد</span></div>
+    <div><b>··</b><span>الالتزام بالتقويم</span></div>
+  </div>
+  <div class="tbl wide" style="margin-top:6px"><table>
+    <thead><tr><th>القسم</th><th>ما يحويه</th><th>مصدر البيانات</th></tr></thead>
+    <tbody>
+      <tr><td>1 · الملخص</td><td>ثلاث نتائج وثلاث توصيات وقرار واحد مطلوب من شهاب</td><td>التقرير كاملًا</td></tr>
+      <tr><td>2 · بطاقة المؤشرات</td><td>المؤشرات الستة مقابل الشهر السابق وخط الأساس</td><td>تحليلات إكس ولينكدإن وتيك توك، وروابط التتبع</td></tr>
+      <tr><td>3 · ما نُشر</td><td>20 منشورًا وفيديو الموشن: المنفذ من المخطط، وأداء كل سلسلة مقابل متوسط الحساب</td><td>التقويم وتحليلات المنصات</td></tr>
+      <tr><td>4 · المجتمع</td><td>الأسئلة المتكررة، الاستفسارات المحالة، الشكاوى وزمن معالجتها، الإشارات وتصنيفها</td><td>سجل الردود وأداة الرصد</td></tr>
+      <tr><td>5 · المقارنة</td><td>تحديث ممارسات جهات المقارنة المعتمدة، بالقالب نفسه الوارد في هذا التقرير</td><td>رصد شهري</td></tr>
+      <tr><td>6 · التعلّم والشهر القادم</td><td>ما نكرره وما نوقفه، وتعديلات التقويم القادم</td><td>تحليل الفريق</td></tr>
+      <tr><td>7 · الملحق</td><td>لقطات الشاشة، وجداول البيانات الخام</td><td>تصدير المنصات</td></tr>
+    </tbody></table></div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">المراجعة الربع سنوية تُقدَّم ضمن تقرير الشهر الثالث والسادس والتاسع والثاني عشر دون بند مستقل، ويحمل التقرير الثاني عشر الملخص السنوي.</p>
+</div></section>
+
+<div class="closing">
+  <svg class="pat" viewBox="0 0 520 170" aria-hidden="true"><defs><pattern id="pp2" width="28" height="28" patternUnits="userSpaceOnUse"><polygon points="8,0 22,0 14,20 0,20" fill="#16a086"/></pattern><linearGradient id="fade2" x1="1" x2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk2"><rect width="520" height="170" fill="url(#fade2)"/></mask></defs><rect width="520" height="170" fill="url(#pp2)" mask="url(#mk2)" opacity=".7"/></svg>
+  <div class="wrap">
+    <img src="logo-white.png" alt="3,6T">
+    <h2>نعرف وين نقف.. وخلّها علينا</h2>
+    <p style="max-width:42em;color:#c9d1d5">هذا التقرير أساس الاتفاق على المؤشرات والمستهدفات. بعد اعتماده يبدأ العد: أول منشور خلال أسبوعين، واكتمال التأسيس خلال أربعة أسابيع، ثم أول تقرير شهري بعد أربعة أسابيع من بدء النشر.</p>
+    <div class="contact"><span>www.360.sa</span><span>Business@360.sa</span><span class="ltr">+966 592 360 360</span><span>طريق الدائري الشمالي، النفل، الرياض 13312</span></div>
+  </div>
+</div>
+<footer><div class="wrap">© جميع الحقوق الإبداعية لـشركة ثلاثمائة وستون درجة للدعاية والإعلان · تقرير خط الأساس والمقارنة المعيارية لشركة شهاب · نوفمبر 2026 · شعار شهاب وألوانها من ملفها التعريفي. أسماء الجهات المرصودة وممارساتها كما ظهرت علنًا وقت الرصد.</div></footer>
+</body>
+</html>

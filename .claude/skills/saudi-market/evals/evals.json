@@ -1,0 +1,51 @@
+{
+  "skill_name": "saudi-market",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a UK-based meal-kit subscription launching in Saudi Arabia next quarter. Our current plan is Instagram and Facebook ads, email nurture, and a Black Friday promotion. Localize the plan for Saudi.",
+      "expected_output": "Should check for product-marketing.md first. Should clarify scope (cities, nationals vs expats, Arabic-first). Should reprioritize channels toward Snapchat, TikTok, Instagram, YouTube, and WhatsApp over Facebook, with evening ad scheduling. Should replace Black Friday framing with White Friday and flag Ramadan and Eid as the key food moments with lead times. Should include a compliance block covering PDPL consent for email/WhatsApp, Ministry of Commerce promotion permits, SFDA/food labeling, and VAT-inclusive pricing. Should list trust and payment signals: Mada, Apple Pay, Tamara/Tabby, commercial registration, Maroof, Saudi WhatsApp support, Arabic returns policy. Should give language and creative direction (Arabic-first, family and hospitality themes, no daytime food imagery in Ramadan) and hand off to arabic-copywriting, ads, sms, and emails. Must not invent penetration statistics.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "Clarifies geography, audience, and language default",
+        "Reprioritizes channels toward Snapchat, TikTok, and WhatsApp with evening scheduling",
+        "Replaces Black Friday with White Friday and adds Ramadan/Eid with lead times",
+        "Includes a compliance block naming PDPL, Ministry of Commerce promotion permit, and VAT-inclusive pricing",
+        "Lists Mada, BNPL, commercial registration, and Maroof as trust signals",
+        "Gives Arabic-first language and family-oriented creative direction",
+        "Hands off execution to the channel skills",
+        "Cites no fabricated statistics"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "وش أفضل وقت نطلق فيه حملة اليوم الوطني لمتجر عطور سعودي، ووش نتجنب؟",
+      "expected_output": "Should trigger on Arabic. Should explain National Day is 23 September, that OOH and TV book months ahead and creative needs 8 to 10 weeks, and that the moment is over-saturated so the brand needs a product-relevant angle rather than generic flags. Should mention year-number offers as a common mechanic and warn about getting the year number right. Should warn about Ministry of Commerce promotion permits and honest pricing. Should suggest tying into gifting and Saudi identity for perfume, and recommend Snapchat, TikTok, and Instagram with evening delivery. Should answer in Arabic or bilingual, matching the user.",
+      "assertions": [
+        "States the date and realistic lead times",
+        "Warns about over-saturation and recommends a product-relevant angle",
+        "Mentions year-number offers and the need to verify the year",
+        "Flags the promotion permit and honest pricing",
+        "Recommends Saudi-appropriate channels with evening scheduling",
+        "Responds in Arabic or bilingual to match the user"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We sell cybersecurity software to enterprises. In the US we run cold email and LinkedIn ads. How should we approach Saudi government and large enterprises?",
+      "expected_output": "Should explain that Saudi B2B and government buying is relationship-led and tender-based (Etimad), that marketing's role is pre-tender credibility, and that vendor registration, local content, NCA cybersecurity controls, data residency, Saudization, and Arabic UI are decision criteria. Should recommend events (LEAP, Black Hat MEA), partnerships, LinkedIn thought leadership in Arabic and English, and WhatsApp or call follow-up alongside email. Should recommend Saudi or GCC case studies and Vision 2030 alignment in messaging. Should hand off to cold-email, sales-enablement, and events. Should not promise outcomes or cite fabricated win rates.",
+      "assertions": [
+        "Explains tender-based procurement via Etimad and pre-tender credibility",
+        "Lists compliance and localization criteria such as NCA controls, data residency, and local content",
+        "Recommends events and relationship channels over cold email alone",
+        "Recommends WhatsApp or call steps in the outreach sequence",
+        "Recommends GCC case studies and Vision 2030 alignment",
+        "Hands off to cold-email, sales-enablement, and events",
+        "Avoids fabricated statistics"
+      ],
+      "files": []
+    }
+  ]
+}

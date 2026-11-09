@@ -1,0 +1,50 @@
+{
+  "skill_name": "client-reporting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "اكتب التقرير الشهري لعميل متجر إلكتروني. هذا الشهر: مبيعات 410 ألف ريال (المستهدف 500 ألف)، صرف إعلاني 95 ألف، 2,150 طلب، الشهر الماضي 465 ألف مبيعات. سناب شات كان الأضعف.",
+      "expected_output": "Should read the client context file for objectives, KPI definitions and baselines first, and note any missing data as [DATA MISSING]. Should lead with the verdict (82% of target, down vs last month) in the executive summary, state causes with evidence (asking for or noting what is known about Snapchat), separate causes into agency/client/external buckets, give actions with owners and dates, compute MER (410/95) and AOV (410,000/2,150) correctly, and use the monthly report structure with scorecard table. Arabic formal register for the executive summary, bilingual headings. No invented benchmarks.",
+      "assertions": [
+        "Reads client context file first and flags missing data",
+        "Executive summary opens with the verdict and percentage of target",
+        "Computes MER and AOV correctly from the given numbers",
+        "Separates causes into agency, client, and external buckets",
+        "Every finding is paired with an action, owner, and date",
+        "Includes a scorecard table with this month, last month, target, variance",
+        "Addresses Snapchat underperformance with evidence or a request for data",
+        "Uses Arabic formal register and bilingual headings",
+        "States no unsourced industry benchmarks"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Leads are down 40% this month because the client took 2 weeks to approve the new creative and Google CPCs went up. How do I write this without sounding like I'm blaming them?",
+      "expected_output": "Should apply the bad-month guidance: state the miss plainly first, put causes in the three buckets (and check whether anything was agency-controlled, e.g. not escalating approvals sooner or not shifting budget), reference the weekly updates where it was flagged, quantify what was done mid-month, raise the approval delay factually with a constructive proposal (backup approver, agreed window), and commit to a realistic next-month target with conditions. Should provide draft wording in English and Arabic.",
+      "assertions": [
+        "Leads with the plain statement of the miss",
+        "Uses the agency/client/external bucket framing",
+        "Checks for agency-side responsibility rather than only blaming client and CPCs",
+        "Raises the approval delay factually with a proposed fix",
+        "Commits to a realistic conditional target for next month",
+        "Provides draft wording in both languages"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our client says our reports are too long and he never reads them. He's the CEO. What should the report look like?",
+      "expected_output": "Should recommend an executive-first structure: a one-page executive summary with verdict, three causes, three actions, and requests; a single scorecard table; a weekly 10-line email to prevent surprises; a dashboard for self-service detail; and moving channel detail to appendix. Should recommend confirming the three to five KPIs tied to objectives with the CEO and dropping vanity metrics. Should provide the executive summary template in Arabic and English.",
+      "assertions": [
+        "Recommends a one-page executive summary first",
+        "Limits to three to five objective-tied KPIs",
+        "Suggests a short weekly email and a dashboard",
+        "Moves detail to an appendix",
+        "Provides the summary template in Arabic and English",
+        "Advises confirming KPIs with the CEO"
+      ],
+      "files": []
+    }
+  ]
+}

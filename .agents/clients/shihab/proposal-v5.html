@@ -1,0 +1,1011 @@
+<title>العرض الفني لشهاب</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Readex+Pro:wght@400;500;700&display=swap">
+<style>
+/* Layout: a scrolling presentation in 3,6T identity. Full-bleed bands alternate off-white, white, charcoal and turquoise; the brand's slanted parallelogram is the structural motif (numerals, bars, dividers, pattern). Shihab's work sits in framed client surfaces in Shihab's wine and coral. Single light theme by brand decision. */
+:root{
+  --turq:#16a086; --turq-deep:#0f7a66; --turq-ink:#0b4f43; --turq-tint:#e3f4ef;
+  --char:#353535; --char-deep:#262626; --slate:#dde6ed; --slate-soft:#eef2f6; --page:#faf9ff; --white:#fff;
+  --ink:#353535; --ink-soft:#5f6670; --line:#d3dbe2;
+  --saffron:#f1c40f; --amber:#f39c11; --red:#e84c3d; --sky:#5dade2;
+  --sh-wine:#4a1a2e; --sh-deep:#260810; --sh-coral:#f47a4d; --sh-blush:#fcefe9; --sh-ink:#3d1a2b; --sh-line:#f1d9ce;
+  --pf-ink:#0f1419; --pf-muted:#536471; --pf-line:#e6ecf0; --pf-blue:#1d9bf0; --li-blue:#0a66c2;
+  --font:'Alexandria','Segoe UI',Tahoma,Arial,sans-serif; --font-sh:'Readex Pro','Alexandria',Tahoma,Arial,sans-serif;
+  --slant:-15deg; --shadow:0 1px 2px rgba(20,48,44,.06),0 12px 32px rgba(20,48,44,.10);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.85;direction:rtl;text-align:right;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--page)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+h1{font-weight:800;font-size:clamp(40px,7.5vw,96px);line-height:1.05;color:var(--white);letter-spacing:-.01em}
+h2{font-weight:700;font-size:clamp(26px,3.4vw,40px);color:var(--char)}
+h3{font-weight:600;font-size:19px;color:var(--char);margin-top:30px;margin-bottom:10px}
+h4{font-weight:600;font-size:15.5px;color:var(--char)}
+p{margin:0 0 12px}
+a{color:var(--turq-deep)}
+strong{font-weight:600;color:var(--char)}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.eyebrow{font-size:12.5px;letter-spacing:.1em;font-weight:600;color:var(--turq);text-transform:uppercase}
+
+/* slanted motif helpers */
+.para{display:inline-block;transform:skewX(var(--slant))}
+.para>*{display:inline-block;transform:skewX(15deg)}
+.hl{position:relative;z-index:0;white-space:nowrap}
+.hl::before{content:"";position:absolute;z-index:-1;inset-inline:-.12em;bottom:.08em;height:.42em;background:var(--saffron);transform:skewX(var(--slant));opacity:.9}
+.hl.turq::before{background:var(--turq-tint)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(250,249,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.top img{height:32px;width:auto;flex:none}
+.top .tag{font-size:12.5px;font-weight:600;color:var(--ink-soft);padding-inline-start:14px;border-inline-start:1px solid var(--line);white-space:nowrap}
+.top nav{margin-inline-start:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{font-size:13px;font-weight:600;color:var(--char);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:6px}
+.top nav a:hover{background:var(--turq-tint);color:var(--turq-deep)}
+@media (max-width:1600px){.top .tag{display:none}}
+.top nav{mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent);-webkit-mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent)}
+@media (min-width:1280px){.top nav{mask-image:none;-webkit-mask-image:none}}
+
+/* hero */
+.hero{background:var(--turq);color:var(--white);position:relative;overflow:hidden}
+.hero .pat{position:absolute;inset-inline-start:-40px;bottom:-30px;width:min(640px,80%);height:auto;pointer-events:none}
+.hero .slash{position:absolute;inset-inline-end:-80px;top:-40px;width:420px;height:auto;pointer-events:none;opacity:.6}
+.hero .wrap{position:relative;padding-block:clamp(44px,7vw,88px) clamp(48px,7vw,96px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:999px}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);max-width:34em;opacity:.95;margin-top:18px;font-weight:400}
+.hero .facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.35);font-size:13.5px}
+.hero .facts b{display:block;font-size:12px;opacity:.8;font-weight:500}
+.stack{position:relative;justify-self:end;width:min(360px,100%);aspect-ratio:4/5}
+.stack .cardx{position:absolute;inset:0;border-radius:14px;box-shadow:var(--shadow)}
+.stack .cardx.back{transform:rotate(6deg) translate(-18px,14px);background:var(--sh-blush);border:1px solid var(--sh-line)}
+.stack .cardx.back2{transform:rotate(-7deg) translate(16px,-10px);background:var(--sh-deep)}
+.stack .art{position:absolute;inset:0;border-radius:14px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.stack{justify-self:center;max-width:320px}}
+
+/* proof strip */
+.proof{background:var(--char);color:var(--white)}
+.proof .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding-block:24px}
+.proof b{display:block;font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.1;color:var(--white)}
+.proof span{font-size:13px;opacity:.8}
+.proof small{grid-column:1/-1;font-size:12px;opacity:.65}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:460px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* sections */
+.sec{padding-block:clamp(48px,7vw,88px)}
+.sec .wrap{display:grid;gap:18px}
+.band-white{background:var(--white);border-block:1px solid var(--line)}
+.band-char{background:var(--char);color:#eef2f3}
+.band-char h2,.band-char h3,.band-char h4,.band-char strong{color:var(--white)}
+.band-char .eyebrow{color:var(--saffron)}
+.band-char .muted{color:#c9d1d5}
+.band-turq{background:var(--turq);color:var(--white)}
+.band-turq h2,.band-turq h3,.band-turq h4,.band-turq strong{color:var(--white)}
+.band-turq .eyebrow{color:var(--saffron)}
+.head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;margin-bottom:8px}
+.num{display:grid;place-items:center;width:64px;height:56px;background:var(--turq);color:var(--white);font-weight:800;font-size:24px;transform:skewX(var(--slant));border-radius:6px;flex:none}
+.num span{transform:skewX(15deg)}
+.band-char .num,.band-turq .num{background:var(--saffron);color:var(--char)}
+.head .t{display:grid;gap:4px}
+.intro{font-size:clamp(16px,1.5vw,18px);line-height:1.8;max-width:62ch;font-weight:400;color:var(--char)}
+.band-char .intro,.band-turq .intro{color:#eef2f3}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 22px;min-width:0}
+.card.lift{box-shadow:var(--shadow);border-color:transparent}
+.card.tint{background:var(--turq-tint);border-color:transparent}
+.card.dark{background:var(--char-deep);color:#eef2f3;border-color:transparent}
+.card.dark h4,.card.dark strong{color:var(--white)}
+.card.deep{background:var(--turq-ink);color:#e6f3ef;border-color:transparent}
+.card.deep h4,.card.deep strong{color:var(--white)}
+.note{background:var(--slate);border-radius:10px;padding:14px 18px;font-size:14px}
+.note b{font-weight:600;color:var(--char)}
+.note.warn{background:#fff7e0;border:1px solid var(--saffron)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--slate-soft);color:var(--char);border:1px solid var(--line)}
+.chip.red{background:#fdeae7;color:#9c2f22;border-color:#f6c5bf}
+.chip.yellow{background:#fff8d6;color:#7a5c00;border-color:#f3dd7a}
+.chip.green{background:var(--turq-tint);color:var(--turq-ink);border-color:#bfe6da}
+.chip.wine{background:var(--sh-blush);color:var(--sh-wine);border-color:var(--sh-line)}
+.chip.sky{background:#e6f2fb;color:#1f5f8b;border-color:#bcdbf2}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kpi b{display:block;font-size:30px;font-weight:800;color:var(--turq);line-height:1.1}
+.kpi span{font-size:12.5px;color:var(--ink-soft)}
+.band-turq .kpi{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:var(--white)}
+.band-turq .kpi b{color:var(--white)}
+.band-turq .kpi span{color:rgba(255,255,255,.85)}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:11px 13px;vertical-align:top;border-bottom:1px solid var(--line);text-align:right}
+th{background:var(--char);color:var(--white);font-weight:600;white-space:nowrap;font-size:12.5px;letter-spacing:.02em}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;color:var(--char);white-space:nowrap}
+.tbl.wide td:first-child{white-space:normal}
+.tbl.gantt td{text-align:center;padding:9px 6px}
+.tbl.gantt td:first-child{text-align:right;white-space:nowrap}
+.tbl.gantt i{display:block;height:14px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.tbl.gantt i.lite{background:var(--slate)}
+.tbl.gantt i.gate{background:var(--saffron);width:14px;margin:0 auto;transform:rotate(45deg);border-radius:2px}
+.bar{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.bar i{display:inline-block;height:12px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.bar.z span{color:var(--ink-soft)}
+
+/* audit cards */
+.audit{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.audit .card{display:grid;gap:10px;align-content:start}
+.audit .ch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.audit .ch h4{font-size:17px}
+.audit .ch small{font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.audit ul{margin:0;padding-inline-start:18px;font-size:14px}
+.audit .st{display:grid;gap:6px}
+.audit .st div{display:flex;gap:8px;align-items:flex-start;font-size:13.5px}
+.audit .st i{flex:none;width:10px;height:10px;border-radius:50%;margin-top:9px}
+.i-red{background:var(--red)} .i-yel{background:var(--saffron)} .i-grn{background:var(--turq)} .i-sky{background:var(--sky)}
+
+/* services icons row */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.svc .card{display:grid;gap:8px;padding:16px}
+.svc .ic{width:44px;height:44px;border-radius:10px;background:var(--turq-tint);display:grid;place-items:center;color:var(--turq-deep)}
+.svc .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h4{font-size:15px}
+.svc p{font-size:13px;color:var(--ink-soft);margin:0}
+
+/* needs */
+.needs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:n}
+.needs div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px;position:relative;padding-top:44px}
+.needs div::before{counter-increment:n;content:"0" counter(n);position:absolute;top:12px;inset-inline-start:16px;font-weight:800;font-size:22px;color:var(--turq);line-height:1}
+.needs b{display:block;font-weight:600;margin-bottom:4px}
+.needs span{font-size:13.5px;color:var(--ink-soft)}
+
+/* benchmark */
+.bench{display:grid;gap:14px}
+.bench .row{background:var(--white);border:1px solid var(--line);border-radius:12px;display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:0;overflow:hidden}
+.bench .row>div{padding:16px 18px;min-width:0}
+.bench .k{background:var(--char);color:var(--white);display:grid;gap:8px;align-content:start}
+.bench .k h4{color:var(--white);font-size:15.5px}
+.bench .k .chips .chip{background:rgba(255,255,255,.12);color:var(--white);border-color:rgba(255,255,255,.25)}
+.bench .o{border-inline-end:1px solid var(--line)}
+.bench .lbl{font-size:11.5px;font-weight:600;color:var(--turq);letter-spacing:.06em;margin-bottom:6px}
+.bench p{font-size:13.5px;margin:0}
+@media (max-width:760px){.bench .row{grid-template-columns:minmax(0,1fr)}.bench .o{border-inline-end:0;border-bottom:1px solid var(--line)}}
+
+/* idea */
+.formula{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
+.f-step{border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:20px;background:rgba(255,255,255,.04)}
+.f-step small{display:block;font-size:12px;font-weight:600;color:var(--saffron)}
+.f-step b{display:block;font-size:26px;font-weight:800;color:var(--white);margin-top:2px}
+.f-step span{display:block;font-size:14px;color:#c9d1d5;margin-top:6px}
+.f-arrow{align-self:center;font-size:30px;font-weight:800;color:var(--turq)}
+@media (max-width:640px){.formula{grid-template-columns:minmax(0,1fr)}.f-arrow{justify-self:center;transform:rotate(90deg)}}
+.band-char .tbl{background:transparent;border-color:rgba(255,255,255,.18)}
+.band-char table{color:#eef2f3}
+.band-char th{background:rgba(255,255,255,.08);color:var(--saffron)}
+.band-char td{border-color:rgba(255,255,255,.14)}
+.band-char td:first-child{color:var(--white)}
+.band-char .note{background:rgba(255,255,255,.08);color:#eef2f3}
+.band-char .note b{color:var(--white)}
+.band-char .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#eef2f3}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.pillar{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0;border-top:4px solid var(--turq)}
+.pillar .fn{font-size:12px;color:var(--turq);font-weight:600}
+.pillar .nm{font-weight:700;font-size:18px;color:var(--char);margin-top:2px}
+.pillar .sr{font-size:12.5px;color:var(--ink-soft);margin-top:4px}
+.pillar .ex{font-size:13.5px;margin-top:8px}
+
+/* platforms */
+.plat{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.plat .card{display:grid;gap:12px;align-content:start;padding:0;overflow:hidden}
+.plat .ph{display:flex;align-items:center;gap:12px;padding:16px 20px;color:var(--white)}
+.plat .ph.x{background:#0f1419}.plat .ph.li{background:var(--li-blue)}.plat .ph.tt{background:#111;background-image:linear-gradient(90deg,#111 60%,#25f4ee22,#fe2c5522)}
+.plat .ph .mark{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.14);display:grid;place-items:center;font-weight:800;font-size:18px;font-family:var(--font-sh)}
+.plat .ph h3{margin:0;color:var(--white);font-size:18px}
+.plat .ph small{display:block;font-size:12px;opacity:.85}
+.plat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px;padding:0 20px 18px}
+.plat dt{font-weight:600;color:var(--ink-soft);white-space:nowrap}
+.plat dd{margin:0}
+.plat .qty{margin:0 20px;background:var(--turq-tint);border-radius:8px;padding:8px 12px;font-weight:600;color:var(--turq-ink);font-size:13.5px}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.steps li{position:relative;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px;padding-top:50px;min-width:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:12px;inset-inline-start:14px;width:30px;height:30px;display:grid;place-items:center;background:var(--turq);color:#fff;font-weight:800;transform:skewX(var(--slant));border-radius:4px}
+.steps b{display:block;font-weight:600;margin-bottom:4px}
+.steps span{font-size:13.5px;color:var(--ink-soft)}
+
+/* scope rail */
+.rail{display:grid;gap:12px}
+.rail .tr{display:grid;grid-template-columns:72px minmax(0,1fr) 110px minmax(0,.8fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rail .tr>div{padding:16px 18px;min-width:0;font-size:13.5px}
+.rail .n{background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:26px}
+.rail .t b{display:block;font-size:15.5px;font-weight:700;color:var(--char);margin-bottom:4px}
+.rail .q{background:var(--slate-soft);display:grid;place-items:center;text-align:center;font-weight:700;color:var(--turq-ink);border-inline:1px solid var(--line)}
+.rail .q b{font-size:24px;display:block;line-height:1.1}
+.rail .q span{font-size:12px;font-weight:500;color:var(--ink-soft)}
+.rail .r{color:var(--ink-soft)}
+.rail .r b{display:block;font-size:11.5px;letter-spacing:.06em;color:var(--turq);font-weight:600;margin-bottom:4px}
+@media (max-width:760px){.rail .tr{grid-template-columns:56px minmax(0,1fr)}.rail .q,.rail .r{grid-column:2;border-inline:0;border-top:1px solid var(--line)}.rail .q{place-items:start;text-align:right}}
+
+/* Shihab surfaces */
+.sh{font-family:var(--font-sh)}
+.art{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;font-family:var(--font-sh);display:flex;flex-direction:column;justify-content:space-between;padding:7%;container-type:inline-size;border-radius:12px}
+.art.wide{aspect-ratio:1.25/1}
+.art-wine{background:var(--sh-wine);color:var(--white)}
+.art-blush{background:var(--sh-blush);color:var(--sh-ink)}
+.art-white{background:var(--white);color:var(--sh-ink);border:1px solid var(--sh-line)}
+.art-logo{height:clamp(14px,7cqi,26px);width:auto;align-self:flex-start;position:relative}
+.art h5{position:relative;margin:0;font:700 clamp(26px,13cqi,58px)/1.22 var(--font-sh)}
+.art .sm h5{font-size:clamp(20px,9cqi,40px);line-height:1.25}
+.art .cta{position:relative;align-self:flex-start;display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 clamp(13px,6cqi,24px)/1.3 var(--font-sh);padding:.15em .45em .25em;margin-top:5cqi}
+.art .meta{position:relative;font:500 clamp(10px,3.6cqi,14px)/1.5 var(--font-sh);opacity:.85}
+.art-list{display:grid;gap:2cqi;position:relative;padding:0;margin:0;list-style:none}
+.art-list li{font:500 clamp(11px,4.4cqi,16px)/1.35 var(--font-sh);background:var(--white);padding:2cqi 3.2cqi;border:1px solid var(--sh-line);margin:0;display:flex;gap:2.5cqi;align-items:center}
+.art-list li::before{content:"";width:2.4cqi;height:2.4cqi;background:var(--sh-coral);flex:none}
+.art-big{font:700 clamp(40px,24cqi,110px)/1 var(--font-sh);color:var(--sh-coral);direction:ltr;text-align:right}
+.art-q{position:relative;font:700 clamp(14px,5.6cqi,22px)/1.45 var(--font-sh)}
+.art-photo{position:relative;flex:1;margin:3cqi 0;background:linear-gradient(160deg,#5a3a46,#1f151a);display:grid;place-items:center;color:rgba(255,255,255,.65);font:500 clamp(10px,3.4cqi,13px) var(--font-sh);border:1px dashed rgba(255,255,255,.35);text-align:center;padding:4cqi;border-radius:8px}
+.swoosh{position:absolute;inset-inline-start:-18%;bottom:-20%;width:75%;height:auto;opacity:.12;pointer-events:none}
+.tpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tpl .art{box-shadow:var(--shadow)}
+.tpl-cap{margin-top:10px;font-size:13.5px;font-weight:600}
+.tpl-cap span{display:block;font-weight:400;font-size:12.5px;color:var(--ink-soft)}
+.mock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:start}
+.mock-col{display:grid;gap:20px;min-width:0}
+.mock-note{margin-top:8px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.mock-note b{color:var(--turq-deep)}
+.post{background:var(--white);color:var(--pf-ink);border:1px solid var(--pf-line);border-radius:14px;padding:14px 16px 8px;font-family:var(--font-sh);box-shadow:var(--shadow)}
+.x-row{display:flex;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--sh-wine);display:grid;place-items:center;flex:none;overflow:hidden}
+.av img{width:70%;height:auto}
+.x-main{min-width:0;flex:1}
+.x-id{font-size:14.5px;line-height:1.3}
+.x-id b{font-weight:700}
+.x-id span{color:var(--pf-muted);font-weight:400}
+.x-text{font-size:15px;line-height:1.65;margin-top:6px;white-space:pre-line}
+.x-text .tag{color:var(--pf-blue)}
+.x-media{margin-top:12px;border-radius:14px;overflow:hidden;border:1px solid var(--pf-line)}
+.x-media .art{border-radius:0}
+.x-actions{display:flex;justify-content:space-between;max-width:360px;color:var(--pf-muted);padding:10px 0 4px;font-size:12.5px}
+.poll{display:grid;gap:8px;margin-top:10px}
+.poll span{display:block;border:1.5px solid var(--pf-blue);color:var(--pf-blue);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;text-align:center}
+.poll small{color:var(--pf-muted);font-size:12.5px}
+.thread .x-row+.x-row{margin-top:12px}
+.li-id b{display:block;font-size:14.5px}
+.li-id span{display:block;font-size:12px;color:var(--pf-muted)}
+.li-text{font-size:14.5px;line-height:1.65;margin:12px 0;white-space:pre-line}
+.li-actions{display:flex;justify-content:space-around;color:var(--pf-muted);border-top:1px solid var(--pf-line);margin-top:4px;padding:8px 0 2px;font-size:13px;font-weight:600}
+.carousel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.carousel .art{aspect-ratio:1/1;padding:9%}
+@media (max-width:640px){.carousel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.phone-wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.phone-wrap{grid-template-columns:minmax(0,1fr)}}
+.phone{width:min(230px,70vw);aspect-ratio:9/18;background:#111;border-radius:36px;padding:9px;justify-self:center;box-shadow:var(--shadow)}
+.screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(170deg,#3a1226,#150509);color:#fff;font-family:var(--font-sh)}
+.screen .cap{position:absolute;inset-inline:14px 36px;top:48%;text-align:center}
+.screen .cap span{display:inline;background:#fff;color:#111;font:700 13px/1.8 var(--font-sh);padding:2px 7px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.screen .cta{position:absolute;inset-inline:14px 36px;top:64%;text-align:center}
+.screen .cta span{display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 12px/1.5 var(--font-sh);padding:3px 10px}
+.screen .meta{position:absolute;inset-inline:12px 36px;bottom:16px;font-size:11px;line-height:1.5}
+.screen .meta b{display:block;font-size:12px}
+.screen .logo{position:absolute;top:20px;inset-inline-start:14px;height:15px;width:auto}
+.screen .ic{position:absolute;top:26%;inset-inline:0;text-align:center;font-size:36px}
+.screen .prog{position:absolute;top:10px;inset-inline:10px;display:flex;gap:3px}
+.screen .prog i{flex:1;height:3px;background:rgba(255,255,255,.3)}
+.screen .prog i.on{background:#fff}
+
+/* community */
+.sla{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.sla div{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--turq);border-radius:10px;padding:12px 14px}
+.sla b{display:block;font-size:24px;font-weight:800;color:var(--char);line-height:1.2}
+.sla span{font-size:13px;color:var(--ink-soft)}
+.convo{display:grid;gap:8px;font-family:var(--font-sh)}
+.bubble{max-width:90%;padding:10px 14px;font-size:14px;line-height:1.6;border-radius:12px}
+.bubble small{display:block;font:600 11.5px var(--font);margin-bottom:2px;opacity:.75}
+.bubble.in{background:var(--slate-soft);border:1px solid var(--line);justify-self:start}
+.bubble.out{background:var(--sh-wine);color:var(--white);justify-self:end}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.member{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.member .ph{position:relative;background:var(--char);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.member .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.member .ph .init{width:52%;aspect-ratio:1;border-radius:50%;background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:34px;border:4px solid rgba(255,255,255,.9);position:relative}
+.member .ph .pt{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'><polygon points='8,2 20,2 14,18 2,18' fill='%2316a086'/></svg>");background-size:26px 26px;opacity:.22;mask-image:linear-gradient(90deg,#000 20%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 20%,transparent 80%)}
+.member .ph .hint{position:absolute;bottom:8px;inset-inline:8px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
+.member .bd{padding:14px 16px;display:grid;gap:4px;align-content:start}
+.member .bd b{font-weight:700;font-size:15.5px;color:var(--char)}
+.member .bd .role{font-size:13px;color:var(--turq-deep);font-weight:600}
+.member .bd span{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+
+/* closing */
+.closing{background:var(--char);color:var(--white);position:relative;overflow:hidden}
+.closing .pat{position:absolute;inset-inline-end:-30px;top:-20px;width:min(520px,70%);height:auto;pointer-events:none;opacity:.5}
+.closing .wrap{position:relative;padding-block:56px;display:grid;gap:16px}
+.closing h2{color:var(--white);font-size:clamp(28px,4vw,44px)}
+.closing .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;font-weight:500}
+.closing img{width:130px;height:auto}
+footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
+.check{list-style:none;padding:0;display:grid;gap:8px}
+.check li{display:flex;gap:10px;align-items:flex-start}
+.check li::before{content:"";flex:0 0 18px;height:18px;border:2px solid var(--turq);border-radius:4px;margin-top:4px}
+@keyframes sc1{0%{opacity:1}18%{opacity:1}20%{opacity:0}97%{opacity:0}100%{opacity:1}}
+@keyframes pg1{0%,0%{transform:scaleX(0)}20%,100%{transform:scaleX(1)}}
+@keyframes sc2{0%,20%{opacity:0}22%{opacity:1}38%{opacity:1}40%,100%{opacity:0}}
+@keyframes pg2{0%,20%{transform:scaleX(0)}40%,100%{transform:scaleX(1)}}
+@keyframes sc3{0%,40%{opacity:0}42%{opacity:1}58%{opacity:1}60%,100%{opacity:0}}
+@keyframes pg3{0%,40%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}
+@keyframes sc4{0%,60%{opacity:0}62%{opacity:1}78%{opacity:1}80%,100%{opacity:0}}
+@keyframes pg4{0%,60%{transform:scaleX(0)}80%,100%{transform:scaleX(1)}}
+@keyframes sc5{0%,80%{opacity:0}82%{opacity:1}97%{opacity:1}100%{opacity:0}}
+@keyframes pg5{0%,80%{transform:scaleX(0)}100%,100%{transform:scaleX(1)}}
+@keyframes blink{0%,4%{opacity:1;transform:scale(1)}6%{opacity:.35;transform:scale(.92)}8%{opacity:1;transform:scale(1.08)}10%{opacity:.35}12%,100%{opacity:1;transform:scale(1)}}
+@keyframes drive{0%,21%{transform:translateX(0)}37%,100%{transform:translateX(-118px)}}
+@keyframes bar1{0%,41%{transform:scaleX(0)}48%,100%{transform:scaleX(1)}}
+@keyframes bar2{0%,44%{transform:scaleX(0)}52%,100%{transform:scaleX(1)}}
+@keyframes bar3{0%,47%{transform:scaleX(0)}56%,100%{transform:scaleX(1)}}
+@keyframes ok1{0%,62%{opacity:0;transform:translateY(6px)}65%,100%{opacity:1;transform:none}}
+@keyframes ok2{0%,66%{opacity:0;transform:translateY(6px)}69%,100%{opacity:1;transform:none}}
+@keyframes ok3{0%,70%{opacity:0;transform:translateY(6px)}73%,100%{opacity:1;transform:none}}
+@keyframes swoop{0%,80%{transform:scale(.25) rotate(-20deg)}88%,100%{transform:scale(1) rotate(0)}}
+@keyframes reveal{0%,86%{opacity:0;transform:translateY(8px)}90%,100%{opacity:1;transform:none}}
+/* one-minute summary */
+.cover-tag{display:inline-block;background:var(--saffron);color:var(--char);font-weight:700;font-size:12.5px;padding:4px 12px;transform:skewX(var(--slant));margin-bottom:12px}
+.cover-tag span{display:inline-block;transform:skewX(15deg)}
+.minute{background:var(--white);border-bottom:1px solid var(--line)}
+.minute .wrap{padding-block:clamp(40px,6vw,72px);display:grid;gap:22px}
+.minute h2{font-size:clamp(24px,3vw,34px)}
+.m3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.m3 .mi{border-top:4px solid var(--turq);padding-top:14px}
+.m3 .mi:nth-child(2){border-top-color:var(--char)}
+.m3 .mi:nth-child(3){border-top-color:var(--saffron)}
+.m3 b{display:block;font-size:13px;letter-spacing:.06em;color:var(--turq-deep);margin-bottom:6px}
+.m3 p{font-size:16px;line-height:1.85;margin:0;color:var(--char)}
+.mnums{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;background:var(--char);border-radius:12px;overflow:hidden}
+.mnums div{padding:16px 12px;text-align:center;color:#fff;border-inline-start:1px solid rgba(255,255,255,.12)}
+.mnums div:first-child{border-inline-start:0}
+.mnums b{display:block;font-size:clamp(24px,2.6vw,32px);font-weight:800;line-height:1.15}
+.mnums span{font-size:12.5px;opacity:.8}
+.mlink{justify-self:start;display:inline-flex;gap:10px;align-items:center;font-weight:600;font-size:14px;color:var(--turq-deep);text-decoration:none;border:1px solid var(--turq);border-radius:999px;padding:8px 16px}
+.mlink:hover{background:var(--turq-tint)}
+@media (max-width:820px){.m3{grid-template-columns:minmax(0,1fr)}.mnums{grid-template-columns:repeat(3,minmax(0,1fr))}.mnums div:nth-child(4){border-inline-start:0}.mnums div:nth-child(n+4){border-top:1px solid rgba(255,255,255,.12)}}
+@media (max-width:420px){.mnums{grid-template-columns:repeat(2,minmax(0,1fr))}.mnums div{border-inline-start:0;border-top:1px solid rgba(255,255,255,.12)}}
+
+/* compliance annex */
+.num.ltr-a span{font-size:26px}
+.cmp-sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cmp-sum div{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.cmp-sum b{display:block;font-size:30px;font-weight:800;line-height:1.1}
+.cmp-sum span{font-size:13px;color:var(--ink-soft)}
+.cmp td a{font-weight:600;text-decoration:none;white-space:nowrap}
+.cmp td:nth-child(2){min-width:16em}
+.cmp td small{display:block;color:var(--ink-soft);font-size:12.5px;line-height:1.6;margin-top:3px}
+.cmp tr.grp td{background:var(--slate-soft);font-weight:700;color:var(--char);font-size:13px}
+@media (max-width:640px){.cmp-sum{grid-template-columns:minmax(0,1fr)}}
+
+/* animated motion preview */
+.mo .prog{z-index:3}
+.mo .sc{position:absolute;inset:0;opacity:0;animation-duration:10s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both}
+.mo .sc5{opacity:1}
+.mo .sc1{animation-name:sc1}.mo .sc2{animation-name:sc2}.mo .sc3{animation-name:sc3}.mo .sc4{animation-name:sc4}.mo .sc5{animation-name:sc5}
+.mo .prog i{position:relative;overflow:hidden;background:rgba(255,255,255,.3)}
+.mo .prog i::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:right;transform:scaleX(1);animation:10s linear infinite both}
+.mo .prog i:nth-child(1)::after{animation-name:pg1}.mo .prog i:nth-child(2)::after{animation-name:pg2}.mo .prog i:nth-child(3)::after{animation-name:pg3}.mo .prog i:nth-child(4)::after{animation-name:pg4}.mo .prog i:nth-child(5)::after{animation-name:pg5}
+.mo .anim{animation-duration:10s;animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:ease-out}
+.mo .cap{position:absolute;inset-inline:14px;top:auto;bottom:26%;text-align:center}
+.mo .dash{position:absolute;inset-inline:18px;top:20%;height:34%;border-radius:50% 50% 14px 14px / 70% 70% 14px 14px;background:#1d0a12;border:2px solid rgba(255,255,255,.18);display:grid;place-items:center}
+.mo .dash svg{width:44%;height:auto}
+.mo .warn{animation-name:blink;transform-origin:center}
+.mo .map{position:absolute;inset-inline:16px;top:22%;height:30%;border-radius:12px;background:#2b0f1b;overflow:hidden}
+.mo .road{position:absolute;inset-inline:18px;top:50%;border-top:3px dashed rgba(255,255,255,.35)}
+.mo .car{position:absolute;inset-inline-start:16px;top:calc(50% - 9px);width:22px;height:16px;background:#fff;border-radius:4px;animation-name:drive}
+.mo .pin{position:absolute;inset-inline-end:14px;top:calc(50% - 22px);width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--sh-coral);display:grid;place-items:center}
+.mo .pin::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--sh-wine)}
+.mo .diag{position:absolute;inset-inline:18px;top:20%;display:grid;gap:10px;background:#1d0a12;border-radius:12px;padding:14px 12px;border:1px solid rgba(255,255,255,.18)}
+.mo .diag small{font-size:10px;opacity:.75}
+.mo .diag i{display:block;height:8px;border-radius:4px;background:var(--sh-coral);transform-origin:right}
+.mo .diag i.b1{animation-name:bar1;width:92%}.mo .diag i.b2{animation-name:bar2;width:64%;background:#fff}.mo .diag i.b3{animation-name:bar3;width:78%}
+.mo .sheet{position:absolute;inset-inline:16px;top:20%;background:var(--sh-blush);color:var(--sh-wine);border-radius:12px;padding:12px;display:grid;gap:8px}
+.mo .sheet div{display:flex;justify-content:space-between;align-items:center;font:600 12px/1.4 var(--font-sh);background:#fff;padding:7px 9px;border-radius:7px}
+.mo .sheet div::after{content:"✓";color:var(--turq);font-weight:800}
+.mo .sheet .o1{animation-name:ok1}.mo .sheet .o2{animation-name:ok2}.mo .sheet .o3{animation-name:ok3}
+.mo .sc5{background:var(--sh-wine)}
+.mo .big{position:absolute;inset-inline-start:-30%;bottom:-25%;width:150%;height:auto;opacity:.22;transform-origin:20% 80%;animation-name:swoop}
+.mo .end{position:absolute;inset-inline:14px;top:32%;display:grid;justify-items:center;gap:12px;text-align:center;animation-name:reveal}
+.mo .end img{height:30px;width:auto}
+.mo .end b{font:700 17px/1.45 var(--font-sh)}
+.mo .end span{display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 13px/1.5 var(--font-sh);padding:3px 12px}
+.mo-note{display:flex;gap:8px;align-items:center;justify-content:center;font-size:12px;color:var(--ink-soft);margin-top:10px}
+.mo-note i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 2s infinite}
+@media (prefers-reduced-motion:reduce){.mo .sc5 .big{transform:none}.mo .end{opacity:1}}
+
+/* print / PDF */
+@media print{
+  @page{size:A4 landscape;margin:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;background:var(--page)}
+  html{scroll-behavior:auto}
+  .top,.mlink,.mo-note{display:none!important}
+  *{animation:none!important;transition:none!important}
+  .sec[id]{break-before:page}
+  .minute .wrap{padding-block:28px}
+  .wrap{max-width:none;padding-left:44px;padding-right:44px}
+  .sec .wrap{gap:12px}
+  .sec h3{margin-top:14px;margin-bottom:4px}
+  .sec,.minute{box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .sec{padding-block:30px}
+  .sec:not([id]){padding-top:0}
+  .hero{height:1015px;display:grid;align-items:center;break-after:page}
+  .minute{min-height:840px;display:grid;align-items:center}
+  .minute .wrap{gap:34px}
+  .m3 p{font-size:18px}
+  .minute h2{font-size:38px}
+  .proof .wrap{padding-block:18px}
+  .card,.post,.bench .row,.rail .tr,.member,.art,tr,.needs>div,.steps li,.kpi,.sla>div,.tpl>div,.phone-wrap,.convo,.note,.cmp-sum>div,.audit .card,.grid3>div,.grid2>div,.head{break-inside:avoid}
+  h2,h3,.head{break-after:avoid}
+  .closing{break-before:page;min-height:100vh;display:grid;align-items:center}
+  footer{display:none}
+  .card.lift,.post,.art,.tpl .art{box-shadow:none}
+}
+</style>
+
+<header class="top"><div class="wrap">
+  <img src="logo-dark.png" alt="3,6T">
+  <span class="tag">العرض الفني · شهاب · نوفمبر 2026</span>
+  <nav>
+    <a href="#s1">الملخص</a><a href="#s2">شهاب</a><a href="#s3">الحضور الرقمي</a><a href="#s4">المقارنة</a><a href="#s5">الأهداف</a><a href="#s6">الفكرة</a><a href="#s7">المنصات</a><a href="#s8">النطاق</a><a href="#s9">النماذج</a><a href="#s10">الإدارة</a><a href="#s11">الفريق</a><a href="#annex">مطابقة البريف</a>
+  </nav>
+</div></header>
+
+<section class="hero" id="start">
+  <svg class="slash" viewBox="0 0 420 300" aria-hidden="true"><polygon points="120,0 420,0 300,300 0,300" fill="#0f7a66" opacity=".55"/></svg>
+  <svg class="pat" viewBox="0 0 640 220" aria-hidden="true"><defs><pattern id="pp" width="30" height="30" patternUnits="userSpaceOnUse"><polygon points="9,0 24,0 15,22 0,22" fill="#ffffff"/></pattern><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk"><rect width="640" height="220" fill="url(#fade)"/></mask></defs><rect width="640" height="220" fill="url(#pp)" mask="url(#mk)" opacity=".32"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="kicker">عرض فني مقدم إلى شركة شهاب · إدارة المنصات وصناعة المحتوى · 12 شهرًا</span>
+      <h1 style="margin-top:22px">خلّها على<br>شهاب</h1>
+      <p class="lead">ثلاث منصات بأدوار واضحة، وفكرة اتصال واحدة تشرح أكثر من 15 خدمة بلغة يفهمها الناس، ونطاق عمل من ستة مسارات بمخرجات شهرية محددة، من التأسيس إلى التقرير السنوي.</p>
+      <div class="facts">
+        <div><b>المدة</b>12 شهرًا</div>
+        <div><b>المنصات</b>إكس · لينكدإن · تيك توك</div>
+        <div><b>النطاق</b>من الاستراتيجية إلى التقرير</div>
+        <div><b>مقدم من</b>تسويق ثلاثمائة وستين درجة 3,6T</div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="cardx back"></div><div class="cardx back2"></div>
+      <div class="art art-wine sh">
+        <svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg>
+        <img class="art-logo" src="shihab-logo-white.png" alt="شهاب">
+        <div><h5>بنشرت في نص الطريق؟</h5><span class="cta">خلّها على شهاب</span></div>
+        <div class="meta">المساعدة على الطريق · متاحة في المدن المشمولة بالخدمة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof"><div class="wrap">
+  <div><b>500K</b><span>مستخدم</span></div>
+  <div><b>200K+</b><span>سيارة مخدومة</span></div>
+  <div><b>30M</b><span>مكافآت موزعة</span></div>
+  <div><b>15+</b><span>خدمة في 5 مجموعات</span></div>
+  <div><b>9+</b><span>مراكز صيانة مملوكة</span></div>
+  <small>المصدر: الملف التعريفي لشهاب. أصول جاهزة للمحتوى بعد اعتماد صياغتها من شهاب.</small>
+</div></div>
+
+
+<section class="minute" id="min"><div class="wrap">
+  <div><span class="cover-tag"><span>العرض في دقيقة</span></span><h2>ما نقترحه لشهاب، في ثلاث جمل وستة أرقام</h2></div>
+  <div class="m3">
+    <div class="mi"><b>الفكرة</b><p>«خلّها على شهاب»: كل موقف يمر فيه صاحب السيارة ينتهي بخدمة واحدة من شهاب، ودعوة واحدة إلى قناة الطلب.</p></div>
+    <div class="mi"><b>النطاق</b><p>ستة مسارات لمدة 12 شهرًا: تأسيس، ومحتوى شهري، وإدارة الحسابات والمجتمع، وموشن شهري، وتقارير، وإدارة مشروع.</p></div>
+    <div class="mi"><b>لماذا 3,6T</b><p>رصدنا قنوات شهاب وقارنّا كل خدمة بمن يشبهها قبل أن نكتب سطرًا، فكل ما في هذا العرض مبني على ما رأيناه، لا على قالب جاهز.</p></div>
+  </div>
+  <div class="mnums">
+    <div><b>12</b><span>شهرًا</span></div>
+    <div><b>3</b><span>منصات بأدوار مختلفة</span></div>
+    <div><b>240</b><span>منشورًا وتصميمًا في السنة</span></div>
+    <div><b>12</b><span>فيديو موشن</span></div>
+    <div><b>12</b><span>تقريرًا شهريًا</span></div>
+    <div><b>8</b><span>ساعات متابعة يوميًا</span></div>
+  </div>
+  <a class="mlink" href="#annex">كل متطلب في البريف، وأين يجيب عنه العرض ←</a>
+</div></section>
+
+<section class="sec" id="s1"><div class="wrap">
+  <div class="head"><div class="num"><span>01</span></div><div class="t"><div class="eyebrow">ملخص المشروع</div><h2>تأسيس قصير، ثم تشغيل شهري <span class="hl">لا يتوقف</span></h2></div></div>
+  <p class="intro">عرض فني لإدارة منصات شهاب في إكس ولينكدإن وتيك توك لمدة 12 شهرًا: صناعة المحتوى، والإنتاج المرئي بالموشن، وإدارة المجتمع، والقياس والتقارير.</p>
+  <div class="grid3">
+    <div class="card lift"><h4>التحدي</h4><p>منظومة واسعة أُطلقت حديثًا، تحتاج تعريفًا مبسطًا وثقة ومسارًا واضحًا للطلب.</p></div>
+    <div class="card lift"><h4>الحل</h4><p>ثلاث منصات بأدوار مختلفة، وفكرة اتصال واحدة «خلّها على شهاب»، ومحاور وسلاسل محتوى، وموشن يشرح الخدمات، وتقارير ومراجعات دورية.</p></div>
+    <div class="card lift"><h4>طريقة العمل</h4><p>تأسيس قصير ثم تشغيل شهري متداخل: نعد الشهر التالي أثناء نشر الحالي، بمسار اعتماد لا يوقف النشر.</p></div>
+    <div class="card lift"><h4>ما نسلمه</h4><p>مخرجات شهرية بوحدات احتساب واضحة في ستة مسارات، وتقارير شهرية ومراجعات ربع سنوية.</p></div>
+  </div>
+  <h3>قدراتنا المرتبطة بالمشروع</h3>
+  <p>3,6T (ثلاثمائة وستون درجة) شركة سعودية للتسويق والاتصال، تجمع الاستراتيجية والمحتوى والإنتاج المرئي وقياس الأداء تحت إدارة واحدة. في مشروع شهاب يكون مدير المشروع نقطة الاتصال الواحدة، ويعمل فريق متخصص على المنصات الثلاث طوال 12 شهرًا.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>القدرة</th><th>ارتباطها بمسارات المشروع الستة</th></tr></thead>
+    <tbody>
+      <tr><td>الخدمات التسويقية</td><td>الاستراتيجية والتأسيس، وتخطيط المحتوى</td></tr>
+      <tr><td>الخدمات الإبداعية</td><td>الكتابة والتصميم والقوالب</td></tr>
+      <tr><td>الإنتاج المرئي</td><td>فيديوهات الموشن الشهرية ولغة الحركة</td></tr>
+      <tr><td>إدارة الحسابات والنشر</td><td>الجدولة والنشر وإدارة المجتمع والتصعيد</td></tr>
+      <tr><td>متابعة الأداء والتحليل</td><td>خط الأساس والتقارير الشهرية والمراجعات</td></tr>
+      <tr><td>الحملات المدفوعة والعلاقات العامة</td><td>خارج هذا النطاق؛ تُفعّل عند الاتفاق ضمن فرصة الحملة المتكاملة، ولا تُحتسب ضمن التزامات الإدارة السنوية</td></tr>
+    </tbody></table></div>
+</div></section>
+
+<section class="sec band-white" id="s2"><div class="wrap">
+  <div class="head"><div class="num"><span>02</span></div><div class="t"><div class="eyebrow">فهمنا لشهاب</div><h2>منظومة واحدة، وخمس مجموعات خدمات</h2></div></div>
+  <p class="intro">شهاب منظومة رقمية تابعة لشركة التعاونية للتأمين، أُعلن إطلاقها رسميًا في 3 سبتمبر 2026، وتجمع خدمات المركبات والتنقل في تجربة واحدة: من الاقتناء إلى الصيانة والعناية والدعم، مع نقاط ومكافآت عبر «محفظة شهاب».</p>
+  <div class="svc">
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M15 3.5a5 5 0 0 0-4.6 6.9L3 17.8 6.2 21l7.4-7.4A5 5 0 0 0 20.5 9l-3.2.9-2.4-2.4.9-3.2z"/></svg></div><h4>1 · شهاب للإصلاح</h4><p>مراكز صيانة مملوكة (9+)، الصيانة الدورية والإصلاح، الأعطال الميكانيكية والكهربائية، السمكرة والدهان، التشخيص والفحص، السيارات الكهربائية</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5"/><path d="M11.2 11.8L20 3M16 7l2.5 2.5M13.5 9.5L16 12"/></svg></div><h4>2 · اقتناء واستخدام</h4><p>تأجير السيارات، بيع وشراء السيارات، التمويل</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 16V7h11v9"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg></div><h4>3 · دعم وعناية</h4><p>المساعدة على الطريق، الإطارات، قطع الغيار، الصيانة المتنقلة، الغسيل، العناية والحماية</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4"/></svg></div><h4>4 · بيانات المركبة</h4><p>فحص المركبة وتقييمها، حالة المركبة وقيمتها، تليماتكس لسلوك القيادة</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h17v13H3z"/><path d="M3 7l12-3.5V7M14 11.5h7v5h-7z"/></svg></div><h4>5 · محفظة شهاب</h4><p>كسب النقاط واستبدالها، مكافآت ضمن الخدمات</p></div>
+  </div>
+  <p><strong>الشرائح المستهدفة لمنصة شهاب:</strong> العملاء الأفراد، الشركات وقطاع الأعمال، والجهات الحكومية.</p>
+  <h3>احتياج شهاب التسويقي</h3>
+  <div class="needs">
+    <div><b>علامة حديثة الإطلاق</b><span>أُطلقت في سبتمبر 2026، فالأولوية أن يعرف الجمهور الاسم وما يقدمه.</span></div>
+    <div><b>منظومة واسعة</b><span>أكثر من 15 خدمة تحتاج تقديمًا مبسطًا، خدمة خدمة.</span></div>
+    <div><b>قرار يحتاج ثقة</b><span>الإصلاح والفحص والشراء قرارات حساسة، والثقة تُبنى بإظهار المراكز والفريق والتنفيذ.</span></div>
+    <div><b>جمهوران مختلفان</b><span>الأفراد من جهة، والشركات والجهات والشركاء من جهة أخرى، ولكل رسائله ومنصته.</span></div>
+    <div><b>مسار طلب غير ظاهر</b><span>القنوات الحالية لا تظهر رابطًا للتطبيق أو وسيلة لطلب الخدمة.</span></div>
+    <div><b>أصول غير مستثمرة</b><span>أرقام المنظومة والمراكز والمكافآت لم تظهر بعد في المحتوى.</span></div>
+  </div>
+  <div class="note"><b>المطلوب:</b> محتوى يعرّف ويبسّط ويبني الثقة ويقود إلى قناة الطلب، بإيقاع منتظم على ثلاث منصات.</div>
+</div></section>
+
+<section class="sec" id="s3"><div class="wrap">
+  <div class="head"><div class="num"><span>03</span></div><div class="t"><div class="eyebrow">تحليل الحضور الرقمي</div><h2>ما رصدناه بين 20 و24 أكتوبر 2026</h2></div></div>
+  <p class="intro">رصد ميداني لقنوات شهاب الثلاث قبل البدء. لقطات الشاشة في ملحق العرض الأساسي. الألوان: أحمر يحتاج معالجة، أصفر يحتاج انتظامًا، أخضر جاهز للبناء عليه.</p>
+  <div class="audit">
+    <div class="card lift"><div class="ch"><h4>الموقع الإلكتروني</h4><small>20 أكتوبر</small></div>
+      <div class="st"><div><i class="i-grn"></i><span><strong>الواجهة:</strong> رسالة واضحة «شهاب، شريكك الموثوق لجميع احتياجات مركبتك» بهوية متسقة مع الملف التعريفي.</span></div><div><i class="i-red"></i><span><strong>الخدمات:</strong> تسع خدمات تعريفية، بلا رابط للتطبيق أو طلب خدمة؛ مسار الطلب هو البريد فقط.</span></div><div><i class="i-yel"></i><span><strong>تفاصيل تحتاج مراجعة:</strong> دبوس الخريطة يحمل اسم «tree Digital Insurance»، والمراكز والمحفظة غير مذكورة.</span></div></div></div>
+    <div class="card lift"><div class="ch"><h4>منصة إكس</h4><small>24 أكتوبر · @ShihabCompany</small></div>
+      <div class="chips"><span class="chip">43 متابعًا</span><span class="chip">أُنشئ يوليو 2026</span><span class="chip yellow">5 منشورات 1 إلى 29 سبتمبر</span><span class="chip red">لا منشور بعدها</span></div>
+      <div class="st"><div><i class="i-grn"></i><span><strong>التعريف:</strong> نبذة عربية واضحة، وعلامة توثيق، وغلاف بهوية شهاب.</span></div><div><i class="i-sky"></i><span><strong>الوصول:</strong> أعلى مشاهدات 903 لمنشور الإطلاق المقتبس من حساب التعاونية. فيديو الإطلاق 241، إطلاق أول ورشة 283، صورة تعريفية 340.</span></div><div><i class="i-grn"></i><span><strong>الفرصة:</strong> حضور يومي يشرح الخدمات ويقود إلى الطلب، مستفيدًا من جمهور الشركة الأم.</span></div></div></div>
+    <div class="card lift"><div class="ch"><h4>لينكدإن</h4><small>20 أكتوبر</small></div>
+      <div class="st"><div><i class="i-yel"></i><span>الصفحة مذكورة في الملف التعريفي ومرتبطة من الموقع (linkedin.com/company/shihabcompany)، لكنها طلبت تسجيل الدخول عند الرصد، فلم نطلع على منشوراتها أو متابعيها.</span></div><div><i class="i-grn"></i><span>نبدأ بتدقيقها في التأسيس عبر صلاحية على الصفحة.</span></div></div></div>
+  </div>
+  <h3>أصول جاهزة للمحتوى، وفق الملف التعريفي لشهاب</h3>
+  <div class="grid2">
+    <div class="card"><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li><strong>المراكز والفريق:</strong> مراكز «شهاب للإصلاح» وفريقها لم يظهرا بعد في القنوات إلا في توثيق إطلاق الورشة.</li><li><strong>رحلة العميل:</strong> من الطلب إلى المتابعة والتقييم، كما يعرضها الملف التعريفي.</li></ul></div>
+    <div class="card"><ul style="margin:0;padding-inline-start:18px;font-size:14px"><li><strong>المحفظة والتليماتكس:</strong> قصص مكافآت وقيادة آمنة بعد تأكيد إتاحتها للجمهور.</li><li><strong>الاستخدام:</strong> تُنشر الأرقام بعد اعتماد صياغتها من شهاب.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec band-white" id="s4"><div class="wrap">
+  <div class="head"><div class="num"><span>04</span></div><div class="t"><div class="eyebrow">المقارنة المعيارية</div><h2>نقارن كل خدمة <span class="hl">بمن يشبهها</span></h2></div></div>
+  <p class="intro">لا توجد جهة واحدة تنافس منظومة شهاب كاملة؛ فالمنافس يتغير بتغير الخدمة، والشراكة لا تنفي التقاطع في خدمة بعينها. رصدنا الممارسة الفعلية في الموقع وإكس وتيك توك خلال أكتوبر 2026.</p>
+  <div class="bench">
+    <div class="row"><div class="k"><h4>الصيانة والإصلاح</h4><div class="chips"><span class="chip">مسمار · عميل</span><span class="chip">أزهلها</span><span class="chip">بترومين إكسبريس · شريك</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>منشور لكل خدمة بعبارة قصيرة وزر «اطلب مسمار». عرض شاشة الطلب الفعلية والإجابة عن عائق التكلفة. شرح الخدمة كرحلة من النقل حتى التسليم. لهجة قريبة «سيارتك تستاهل» وصورة ورشة حقيقية.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>محتوى من داخل المراكز المملوكة يشرح كل خدمة كرحلة بخطوات، مع دعوة واحدة إلى قناة الطلب، بمواد مرئية تزودنا بها شهاب من مراكزها.</p></div></div>
+    <div class="row"><div class="k"><h4>المساعدة على الطريق والخدمات المتنقلة</h4><div class="chips"><span class="chip">مرني</span><span class="chip">مسمار</span><span class="chip">سيارتك</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>مرني: عروض مرتبطة بمبادرات ومناسبات مع ما يشمله العرض ومدته. مسمار: «سطحتنا تجيك وين ما كنت» مع زر الطلب. سيارتك: «نجيك بـ3 خطوات» وزر حجز وواتساب ظاهر.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>قالب ثابت «اطلبها بثلاث خطوات» لكل خدمة متنقلة، ومحتوى موسمي للسفر والصيف مع ذكر المدن المشمولة.</p></div></div>
+    <div class="row"><div class="k"><h4>الغسيل والعناية والحماية</h4><div class="chips"><span class="chip">سويتر · شريك</span><span class="chip">سيارتك</span><span class="chip">مسمار</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>فريق حقيقي بزي العلامة في الموقع والفيديو. سلاسل ثابتة في قوائم تشغيل على تيك توك (كيف ننظفها، قبل | بعد، عروضنا). منشورات حوارية يومية قصيرة على إكس.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>سلسلة «قبل وبعد» من صور ومقاطع شهاب الفعلية بزي موحد، وحضور يومي على إكس.</p></div></div>
+    <div class="row"><div class="k"><h4>بيع وشراء المركبات والتأجير</h4><div class="chips"><span class="chip">سيارة · شريك</span><span class="chip">موتري</span><span class="chip">يلو · لومي · المفتاح · شركاء</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>سيارة: وعود محددة (فحص +200 نقطة، ضمان، 10 أيام تجربة) وحملة «11 سنة» بعجلة جوائز. موتري: أدوات تقييم ومقارنة وحاسبة تمويل وفيديوهات. يلو: «الاشتراك الشهري» و«تأجير طويل الأجل» في واجهة الحجز.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>سلسلة «قبل لا تشتري» تربط الفحص والتقييم بقرار الشراء، وتوضيح خيارات التأجير للأفراد والشركات.</p></div></div>
+    <div class="row"><div class="k"><h4>قطع الغيار وبيانات المركبة والمكافآت</h4><div class="chips"><span class="chip">سبيرو · شريك</span><span class="chip">بترومين مع قطاف · شريك</span><span class="chip">التعاونية درايف · الشركة الأم</span></div></div><div class="o"><div class="lbl">الممارسة المرصودة</div><p>سبيرو: البحث بالسيارة أو رقم القطعة وإشارات ثقة (أصلية، مفحوصة، إرجاع 7 أيام). بترومين: معادلة مكافأة واضحة «6 نقاط قطاف لكل 25 ريال» وزر «ابحث عن الورشة». التعاونية درايف: نقاط أسبوعية للقيادة الآمنة تُستبدل بمكافآت.</p></div><div><div class="lbl">ما نقترحه لشهاب</div><p>شرح محفظة شهاب بمعادلة كسب وأمثلة بعد تأكيدها، وإبراز ضمانات القطع وربطها بالصيانة في المراكز.</p></div></div>
+  </div>
+  <h3>من الممارسة إلى خطة شهاب</h3>
+  <div class="needs">
+    <div><b>خدمة واحدة في كل منشور</b><span>سلسلتا «خدمة في دقيقة» و«اطلبها بثلاث خطوات» على إكس وتيك توك.</span></div>
+    <div><b>صورة حقيقية بزي موحد</b><span>سلسلة «من داخل شهاب للإصلاح» من المواد التي تزودنا بها شهاب.</span></div>
+    <div><b>سلاسل ثابتة بأسماء واضحة</b><span>قوائم تشغيل تيك توك، وإيقاع أسبوعي ثابت على إكس.</span></div>
+    <div><b>وعود محددة قابلة للإثبات</b><span>صياغة الرسائل بعد اعتماد شهاب للضمانات والمدد والمدن المشمولة.</span></div>
+    <div><b>محتوى موسمي ومناسباتي</b><span>محور «مهما صار» ومحتوى السفر والصيف والمناسبات.</span></div>
+    <div><b>المكافأة بمعادلة واضحة</b><span>محور «المكافآت والمجتمع» بعد تأكيد إتاحة المحفظة للجمهور.</span></div>
+  </div>
+  <div class="note"><b>تنبيه:</b> عدد من الجهات المرصودة شركاء أو عملاء لشهاب، فالمقارنة هنا مقارنة ممارسات لا منافسة. القائمة النهائية لجهات المقارنة الدورية تُعتمد مع شهاب في التأسيس، وتُحدّث كل ربع سنة.</div>
+</div></section>
+
+<section class="sec" id="s5"><div class="wrap">
+  <div class="head"><div class="num"><span>05</span></div><div class="t"><div class="eyebrow">الأهداف والجمهور</div><h2>ستة أهداف، ومؤشر لكل هدف</h2></div></div>
+  <p class="intro">نقيس خط الأساس في الشهر الأول، ثم نقترح المستهدفات الرقمية مع شهاب وفق الميزانية والكميات المعتمدة، دون ضمان نتائج مسبقًا.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>الهدف</th><th>مؤشرات القياس</th><th>مصدر البيانات</th></tr></thead>
+    <tbody>
+      <tr><td>زيادة الوعي بشهاب كمنظومة مترابطة لخدمات المركبات</td><td>الوصول ومرات الظهور، ونمو المتابعين، ومشاهدات الفيديو، والإشارات إلى شهاب</td><td>تحليلات المنصات وأداة الرصد</td></tr>
+      <tr><td>تبسيط الخدمات وشرح فائدتها وطريقة الاستفادة منها</td><td>معدل إكمال مشاهدة الفيديو الشارح، والحفظ والمشاركة، وتكرار الأسئلة نفسها في التعليقات</td><td>تحليلات المنصات وتقرير المجتمع</td></tr>
+      <tr><td>بناء الثقة بإبراز المراكز والفريق والتنفيذ الفعلي</td><td>التفاعل مع محتوى المراكز والفريق، وطبيعة التعليقات (إيجابية/سلبية/محايدة)</td><td>تحليلات المنصات وتصنيف التعليقات</td></tr>
+      <tr><td>الانتقال من المحتوى إلى قناة طلب الخدمة المعتمدة</td><td>النقرات على الروابط المتتبعة، والزيارات المحالة، والاستفسارات الموجهة لقنوات الخدمة</td><td>روابط تتبع (UTM) وبيانات شهاب</td></tr>
+      <tr><td>دعم حضور شهاب لدى الشركات والجهات والشركاء</td><td>متابعو لينكدإن من الشرائح المستهدفة، والتفاعل مع محتوى الحلول، والاستفسارات التجارية</td><td>تحليلات لينكدإن وفريق الأعمال لدى شهاب</td></tr>
+      <tr><td>بناء محتوى منتظم ومتنوع يتطور وفق الأداء</td><td>الالتزام بالتقويم، وتنوع الصيغ، وأداء كل سلسلة مقابل متوسط الحساب، وزمن الاستجابة</td><td>التقويم والتقارير الشهرية</td></tr>
+    </tbody></table></div>
+  <h3>الجمهور المستهدف</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>الشريحة</th><th>الخدمة المرتبطة</th><th>الرسالة</th><th>المنصة</th><th>الإجراء المطلوب</th></tr></thead>
+    <tbody>
+      <tr><td>أفراد يحتاجون الصيانة والإصلاح</td><td>شهاب للإصلاح، التشخيص، فحص المركبة</td><td>سيارتك في أيد مختصة، وتتابع حالتها خطوة بخطوة</td><td>إكس، تيك توك</td><td>حجز الخدمة عبر القناة المعتمدة</td></tr>
+      <tr><td>أفراد يحتاجون المساعدة على الطريق والخدمات المتنقلة</td><td>المساعدة على الطريق، الإطارات، الصيانة المتنقلة</td><td>المساعدة على الطريق بطلب واحد، في المدن المشمولة</td><td>إكس، تيك توك</td><td>حفظ القناة والطلب عند الحاجة</td></tr>
+      <tr><td>أفراد يبحثون عن الغسيل والعناية والحماية</td><td>الغسيل، العناية، الحماية والتظليل</td><td>عناية تحافظ على مظهر سيارتك وقيمتها</td><td>إكس، تيك توك</td><td>حجز الخدمة أو الباقة</td></tr>
+      <tr><td>مهتمون بشراء المركبات أو بيعها أو تأجيرها</td><td>البيع والشراء، التأجير، التمويل، الفحص قبل الشراء</td><td>قرار أوضح قبل الشراء أو الاستئجار</td><td>إكس، تيك توك</td><td>بدء الطلب أو طلب الفحص</td></tr>
+      <tr><td>شركات وجهات لديها مركبات وأساطيل</td><td>حلول الأعمال، شهاب للإصلاح، المتابعة الرقمية</td><td>شريك واحد لاحتياجات مركباتكم من الطلب حتى التنفيذ</td><td>لينكدإن، وإكس للأخبار</td><td>التواصل مع فريق الأعمال</td></tr>
+      <tr><td>شركاء ومزودو خدمات</td><td>الانضمام إلى منظومة شهاب</td><td>نمو مع منظومة رقمية متكاملة</td><td>لينكدإن</td><td>طلب الشراكة</td></tr>
+    </tbody></table></div>
+  <p style="color:var(--ink-soft);font-size:13.5px">تُبنى التغطية الجغرافية وأولوية الشرائح على الخدمات المتاحة فعليًا لدى شهاب في كل مدينة.</p>
+</div></section>
+
+<section class="sec band-char" id="s6"><div class="wrap">
+  <div class="head"><div class="num"><span>06</span></div><div class="t"><div class="eyebrow">الفكرة والرسائل والنبرة</div><h2>موقف يعرفه الجمهور، وخدمة واحدة تحلّه، ودعوة واحدة</h2></div></div>
+  <p class="intro">العميل يصل وفي ذهنه موقف واحد، ويسأل ثلاثة أسئلة قبل أن يطلب: وش أستفيد؟ متى أحتاجها؟ كيف أطلبها؟ «خلّها على شهاب» جملة يقولها الواحد لصاحبه حين يتكفّل عنه بالمشوار كله، ونجعلها توقيع شهاب على كل منشور.</p>
+  <div class="formula">
+    <div class="f-step"><small>نبدأ بـ</small><b>الموقف</b><span>شيء صار للسائق اليوم أو قد يصير غدًا</span></div>
+    <div class="f-arrow">←</div>
+    <div class="f-step"><small>نعرض</small><b>الخدمة</b><span>خدمة واحدة من شهاب، بفائدة واحدة واضحة</span></div>
+    <div class="f-arrow">←</div>
+    <div class="f-step"><small>وننتهي بـ</small><b>الطلب</b><span>«خلّها على شهاب» ورابط قناة الطلب المعتمدة</span></div>
+  </div>
+  <div class="tbl wide"><table>
+    <thead><tr><th>الموقف</th><th>الخدمة</th><th>الدعوة</th></tr></thead>
+    <tbody>
+      <tr><td>بنشرت في نص الطريق والشمس فوق راسك</td><td>المساعدة على الطريق</td><td>حدد موقعك واطلب المساعدة.. وخلّها على شهاب</td></tr>
+      <tr><td>صوت غريب كل ما دعست فرامل</td><td>التشخيص والفحص في مراكز شهاب</td><td>احجز فحصك.. وخلّها على شهاب</td></tr>
+      <tr><td>تبي تبيع سيارتك وما تدري كم تسوى</td><td>حالة المركبة وقيمتها</td><td>اطلب تقرير التقييم.. وخلّها على شهاب</td></tr>
+      <tr><td>قبل سفر العيد ومو متأكد من الإطارات</td><td>خدمات الإطارات</td><td>افحصها قبل لا تمشي.. وخلّها على شهاب</td></tr>
+      <tr><td>أسطول شركتك، وكل سيارة لها ورشة وفاتورة</td><td>حلول الشركات وقطاع الأعمال</td><td>مركبات شركتك في منظومة واحدة. تواصل مع فريق الأعمال</td></tr>
+    </tbody></table></div>
+  <div class="grid3">
+    <div class="card"><h4>على إكس</h4><p class="muted">«خلّها على شهاب» تختم كل موقف يومي وكل رد على سؤال.</p></div>
+    <div class="card"><h4>على تيك توك</h4><p class="muted">فيديو الموشن الشهري يحمل وسم #خلها_على_شهاب، حلقة لكل موقف أو خدمة.</p></div>
+    <div class="card"><h4>على لينكدإن</h4><p class="muted">صياغة رسمية للفكرة نفسها: «مركبات شركتك في منظومة واحدة»، بالوقائع والأرقام المعتمدة.</p></div>
+  </div>
+  <h3>الرسائل الأساسية</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>الرسالة</th><th>الصياغة</th><th>الدليل الذي يُظهره المحتوى</th></tr></thead>
+    <tbody>
+      <tr><td>الأساسية</td><td>مهما كان الموقف، خلّها على شهاب: تطلب، تتابع، وتكسب</td><td>رحلة العميل من الطلب إلى النقاط في فيديو موشن واحد</td></tr>
+      <tr><td>التكامل</td><td>خدمة وحدة أو خمسة عشر، نفس التجربة</td><td>خريطة الخدمات الخمس وبطاقات الخدمة</td></tr>
+      <tr><td>الموثوقية</td><td>مراكز مملوكة، وفريق مختص، ومتابعة من الطلب حتى الاستلام</td><td>مواد المراكز والفريق المعتمدة من شهاب، والأرقام بعد اعتمادها</td></tr>
+      <tr><td>القيمة</td><td>كل خدمة مؤهلة ترجع لك نقاط</td><td>محفظة شهاب بمعادلة كسب واضحة بعد تأكيدها</td></tr>
+      <tr><td>للأعمال</td><td>مركبات شركتك في منظومة واحدة، من الطلب حتى التنفيذ</td><td>المراكز المملوكة والمتابعة الرقمية، ودراسات الحالة بموافقة العملاء</td></tr>
+    </tbody></table></div>
+  <h3>النبرة: بلغة السائق، لا بلغة الكتالوج</h3>
+  <p class="muted">شهاب تتكلم كما يتكلم فني تثق به: واضح، مطمئن، لا يبالغ ولا يُخوّف. لهجة سعودية قريبة بجمل قصيرة على إكس وتيك توك، والإنجليزية في منشور مستقل عند الحاجة. لغة مهنية واضحة بالعربية والإنجليزية على لينكدإن تعتمد الأرقام المعتمدة والأمثلة الفعلية. نقول «سيارتك» للفرد و«مركباتكم» للشركات.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>بدل أن نقول</th><th>نقول</th></tr></thead>
+    <tbody>
+      <tr><td>حلول مبتكرة لخدمات المركبات</td><td>تطلب الصيانة من جوالك وتتابع حالتها خطوة بخطوة</td></tr>
+      <tr><td>منظومة رائدة ومتكاملة</td><td>صيانة، وإطارات، ومساعدة على الطريق، كلها في شهاب</td></tr>
+      <tr><td>تجربة عميل استثنائية</td><td>تتابع سيارتك من الطلب لين الاستلام</td></tr>
+      <tr><td>نفخر بشراكتنا الاستراتيجية</td><td>الحين تقدر تطلب [الخدمة] من شهاب عبر [الشريك]</td></tr>
+    </tbody></table></div>
+  <div class="note"><b>قواعد لا نكسرها:</b> لا ندّعي رقمًا أو تغطية أو وقت تنفيذ لم تؤكده شهاب كتابةً. لا نستخدم التخويف من الأعطال أسلوبًا للبيع. لا نذكر شريكًا أو عميلًا بالاسم دون موافقته المكتوبة. لا يزيد الترويج المباشر عن منشور من كل خمسة. لا تُستخدم «خلّها على شهاب» في الردود على الشكاوى.</div>
+</div></section>
+
+<section class="sec" id="s7"><div class="wrap">
+  <div class="head"><div class="num"><span>07</span></div><div class="t"><div class="eyebrow">استراتيجية المنصات والمحتوى والنشر</div><h2>ثلاث منصات، <span class="hl">ثلاثة أدوار</span></h2></div></div>
+  <p class="intro">لا نكرر المنشور نفسه على المنصات الثلاث؛ الفكرة الواحدة تُطوّر مرة بزاوية ورسالة واضحة، ثم تُعالج لكل منصة.</p>
+  <div class="plat">
+    <div class="card lift"><div class="ph x"><div class="mark">X</div><div><h3>إكس</h3><small>التعريف بالخدمات والتواصل اليومي</small></div></div>
+      <div class="qty">12 منشورًا شهريًا + تفاعل يومي</div>
+      <dl><dt>الهدف</dt><dd>التعريف بخدمات شهاب، والتواصل اليومي، والمستجدات والعروض، وتوجيه الاستفسارات إلى قنوات الخدمة</dd><dt>الجمهور</dt><dd>مالكو المركبات ومستخدموها والمهتمون بخدمات شهاب، مقسمون بحسب الخدمة</dd><dt>الصيغ</dt><dd>تصاميم ثابتة، كاروسيل، ثريد، استطلاعات، موشن قصير</dd><dt>النشر</dt><dd>تقويم شهري بحضور يومي، ومحتوى آني للمناسبات، ومنشور تعريفي مثبت بالخدمات ومسار الطلب</dd><dt>الدعوة</dt><dd>واحدة لكل منشور: الطلب أو التحميل عبر القناة المعتمدة، أو الرسائل للاستفسار</dd><dt>المؤشرات</dt><dd>الظهور والتفاعل، النقرات، الردود وزمنها، نمو المتابعين</dd></dl></div>
+    <div class="card lift"><div class="ph li"><div class="mark">in</div><div><h3>لينكدإن</h3><small>الثقة المؤسسية وحلول قطاع الأعمال</small></div></div>
+      <div class="qty">8 منشورات شهريًا</div>
+      <dl><dt>الهدف</dt><dd>بناء الثقة المؤسسية، وإبراز القدرات التشغيلية والشراكات وحلول قطاع الأعمال</dd><dt>الجمهور</dt><dd>مسؤولو الأساطيل والتشغيل والمشتريات، والشركات، والجهات الحكومية، والشركاء المحتملون</dd><dt>الصيغ</dt><dd>كاروسيل، تصاميم، منشورات قيادية، دراسات حالة بموافقة العملاء، موشن</dd><dt>النشر</dt><dd>إيقاع أسبوعي منتظم، ومشاركة المحتوى عبر حسابات قيادات شهاب عند الموافقة</dd><dt>الدعوة</dt><dd>التواصل مع فريق حلول الأعمال، أو طلب عرض، أو الانضمام كشريك</dd><dt>المؤشرات</dt><dd>نمو المتابعين من الشرائح المستهدفة، معدل التفاعل، الاستفسارات التجارية</dd></dl></div>
+    <div class="card lift"><div class="ph tt"><div class="mark">♪</div><div><h3>تيك توك</h3><small>اكتشاف شهاب وفهم خدماتها بصريًا</small></div></div>
+      <div class="qty">فيديو موشن عمودي شهريًا + مقاطع من مواد شهاب</div>
+      <dl><dt>الهدف</dt><dd>أن يكتشف الجمهور شهاب ويفهم خدماتها عبر محتوى مرئي قريب منه</dd><dt>الجمهور</dt><dd>مستخدمو المركبات والمهتمون بالصيانة والعناية والشراء، بحسب الاحتياج والموقع</dd><dt>الصيغ</dt><dd>موشن عمودي حتى 30 ثانية بنص على الشاشة، في قوائم تشغيل ثابتة بأسماء السلاسل</dd><dt>الدعوة</dt><dd>واحدة في نهاية المقطع، ورابط في الملف الشخصي إلى القناة المعتمدة</dd><dt>المؤشرات</dt><dd>المشاهدات ومعدل الإكمال، الحفظ والمشاركة، التعليقات، زيارات الملف والنقرات</dd></dl></div>
+  </div>
+  <div class="note warn"><b>ملاحظة نطاق:</b> كمية تيك توك أعلاه هي ما يسمح به النطاق المتفق عليه (12 فيديو موشن سنويًا). رفع الوتيرة إلى محتوى أسبوعي يحتاج مواد مصورة من شهاب أو إضافة تصوير إلى النطاق، ويُقدّم كبند مستقل عند الطلب.</div>
+
+  <h3>محاور المحتوى والسلاسل</h3>
+  <p>أسماء السلاسل مبدئية وتُعتمد في التأسيس مع دليل النبرة. كل سلسلة تنتهي بـ«خلّها على شهاب» ودعوة واحدة.</p>
+  <div class="pillars">
+    <div class="pillar"><div class="fn">يوضّح · توضيح الخدمات</div><div class="nm">خدمة في دقيقة</div><div class="sr">«اطلبها بثلاث خطوات»، «مشوار سيارة» · إكس، تيك توك</div><div class="ex">خدمة واحدة في كل مرة: فائدتها، ومتى تحتاجها، وكيف تطلبها، ببطاقة الخدمة.</div></div>
+    <div class="pillar"><div class="fn">يُثبت · بناء الثقة</div><div class="nm">من داخل شهاب للإصلاح</div><div class="sr">«سؤال للفني»، «دقيقة في الورشة» · إكس، تيك توك، لينكدإن</div><div class="ex">المراكز والأجهزة وخطوات التنفيذ من مواد شهاب الفعلية، وفنيون يجيبون بأسمائهم بعد موافقتهم.</div></div>
+    <div class="pillar"><div class="fn">يوضّح · الوعي والتذكّر</div><div class="nm">مهما صار</div><div class="sr">«على الطريق»، والسفر والمناسبات والصيف · إكس، تيك توك</div><div class="ex">مواقف يعرفها كل سائق، والحل في آخرها: خلّها على شهاب.</div></div>
+    <div class="pillar"><div class="fn">يوضّح · دليل مركبتك</div><div class="nm">دليل مركبتك</div><div class="sr">«إشارة في الطبلون»، «قبل لا تشتري» · إكس، تيك توك</div><div class="ex">نصائح عملية مختصرة تربط الفحص والتشخيص بقرار العميل.</div></div>
+    <div class="pillar"><div class="fn">يُثبت ويُحرّك · حلول الأعمال</div><div class="nm">شهاب للأعمال</div><div class="sr">«شهاب للأعمال»، دراسات حالة · لينكدإن</div><div class="ex">حلول الأساطيل والشراكات والإنجازات والأرقام المعتمدة.</div></div>
+    <div class="pillar"><div class="fn">يُحرّك · الانتقال للطلب</div><div class="nm">المكافآت والمجتمع</div><div class="sr">«قيادتك تكسب» بعد تأكيد الإتاحة، والاستطلاعات والمستجدات · إكس، لينكدإن</div><div class="ex">النقاط والعروض والمستجدات، وكيف يستفيد منها العميل.</div></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>المحور</th><th>إكس (12 شهريًا)</th><th>لينكدإن (8 شهريًا)</th><th>تيك توك (موشن شهري)</th></tr></thead>
+    <tbody>
+      <tr><td>خدمة في دقيقة</td><td><div class="bar"><i style="width:75px"></i><span>3</span></div></td><td><div class="bar"><i style="width:30px"></i><span>1</span></div></td><td><div class="bar"><i style="width:60px"></i><span>بالتناوب</span></div></td></tr>
+      <tr><td>مهما صار</td><td><div class="bar"><i style="width:75px"></i><span>3</span></div></td><td><div class="bar z"><i style="width:0"></i><span>0</span></div></td><td><div class="bar"><i style="width:60px"></i><span>بالتناوب</span></div></td></tr>
+      <tr><td>من داخل شهاب للإصلاح</td><td><div class="bar"><i style="width:50px"></i><span>2</span></div></td><td><div class="bar"><i style="width:50px"></i><span>2</span></div></td><td><div class="bar"><i style="width:30px"></i><span>مقاطع من مواد شهاب</span></div></td></tr>
+      <tr><td>دليل مركبتك</td><td><div class="bar"><i style="width:50px"></i><span>2</span></div></td><td><div class="bar"><i style="width:30px"></i><span>1</span></div></td><td><div class="bar"><i style="width:30px"></i><span>بالتناوب</span></div></td></tr>
+      <tr><td>شهاب للأعمال</td><td><div class="bar z"><i style="width:0"></i><span>أخبار فقط</span></div></td><td><div class="bar"><i style="width:75px"></i><span>3</span></div></td><td><div class="bar z"><i style="width:0"></i><span>0</span></div></td></tr>
+      <tr><td>المكافآت والمجتمع</td><td><div class="bar"><i style="width:50px"></i><span>2</span></div></td><td><div class="bar"><i style="width:30px"></i><span>1</span></div></td><td><div class="bar"><i style="width:30px"></i><span>بالتناوب</span></div></td></tr>
+    </tbody></table></div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">التوزيع للأشهر العادية ويُراجع كل ربع سنة. المحتوى الآني خارج التقويم (مناسبات وطنية وموسمية وأخبار) يمر بمسار اعتماد مختصر.</p>
+  <h3>آلية النشر وتوزيع المحتوى</h3>
+  <ol class="steps">
+    <li><b>فكرة أصلية</b><span>تُطوّر مرة واحدة بزاوية ورسالة واضحة.</span></li>
+    <li><b>التقويم الشهري</b><span>يوزع المحاور والسلاسل على المنصات والأسابيع.</span></li>
+    <li><b>معالجة لكل منصة</b><span>إكس: نص وصورة أو كاروسيل؛ لينكدإن: زاوية الأعمال؛ تيك توك: فيديو عمودي.</span></li>
+    <li><b>النشر والتفاعل</b><span>في أوقات النشاط، مع متابعة التعليقات في الساعات الأولى.</span></li>
+    <li><b>التحسين</b><span>نكرر الصيغ الأفضل أداءً ونعدل البقية.</span></li>
+  </ol>
+  <div class="note"><b>قواعد ثابتة:</b> لا يُنشر المنشور نفسه حرفيًا على المنصات الثلاث. الرد بالمحتوى على الأسئلة المتكررة. منشور تعريفي مثبت بالخدمات ومسار الطلب على كل منصة. رابط القناة المعتمدة في الملف الشخصي. لا وسوم عامة متداولة لرفع الوصول على إكس.</div>
+</div></section>
+
+<section class="sec band-turq" id="s8"><div class="wrap">
+  <div class="head"><div class="num"><span>08</span></div><div class="t"><div class="eyebrow">نطاق العمل والمخرجات</div><h2>ستة مسارات بوحدات احتساب واضحة</h2></div></div>
+  <p class="intro">الحملات المدفوعة والعلاقات العامة والتصوير الميداني خارج هذا النطاق.</p>
+  <div class="kpis">
+    <div class="kpi"><b>12</b><span>منشورًا على إكس شهريًا</span></div>
+    <div class="kpi"><b>8</b><span>منشورات على لينكدإن شهريًا</span></div>
+    <div class="kpi"><b>16</b><span>تصميمًا ثابتًا</span></div>
+    <div class="kpi"><b>4</b><span>كاروسيل</span></div>
+    <div class="kpi"><b>1</b><span>فيديو موشن حتى 30 ثانية</span></div>
+    <div class="kpi"><b>1</b><span>تقرير شهري</span></div>
+  </div>
+</div></section>
+<section class="sec band-white" style="padding-top:36px"><div class="wrap">
+  <div class="rail">
+    <div class="tr"><div class="n">1</div><div class="t"><b>الاستراتيجية وتأسيس منصات التواصل</b>حزمة تأسيس واحدة: الأهداف والجمهور وأدوار المنصات والرسائل والمحاور، وفكرة «خلّها على شهاب» ودليل الكتابة والنبرة، والتوجه البصري، و6 قوالب تصميم، وتهيئة الحسابات الثلاثة، وتقرير خط الأساس والمقارنة المعيارية، وسجل الإتاحة والتغطية، ودليل الردود</div><div class="q"><b>1</b><span>حزمة</span></div><div class="r"><b>مسؤولية شهاب</b>توفير معلومات الخدمات والهوية وصلاحيات الحسابات، واعتماد الاستراتيجية والقوالب</div></div>
+    <div class="tr"><div class="n">2</div><div class="t"><b>تخطيط وصناعة محتوى المنصات</b>حزمة شهرية تشمل خطة نشر و20 منشورًا (12 إكس و8 لينكدإن) بكابشن عربي لكل منشور؛ افتراض التصميم: 16 تصميمًا ثابتًا و4 كاروسيل</div><div class="q"><b>12</b><span>حزمة</span></div><div class="r"><b>مسؤولية شهاب</b>توفير المستجدات والعروض، ومراجعة دقة المعلومات، واعتماد المحتوى</div></div>
+    <div class="tr"><div class="n">3</div><div class="t"><b>إدارة الحسابات والنشر والتفاعل</b>جدولة ونشر ومتابعة التعليقات والرسائل والتصعيد للمنصات الثلاث. المتابعة المقترحة 8 ساعات يوميًا، 5 أيام أسبوعيًا؛ التخصيص الداخلي مبين في الاتفاقية</div><div class="q"><b>12</b><span>شهرًا</span></div><div class="r"><b>مسؤولية شهاب</b>توفير صلاحيات النشر، واعتماد دليل الردود، وتحديد مسؤول لمعالجة الاستفسارات والشكاوى المحالة</div></div>
+    <div class="tr"><div class="n">4</div><div class="t"><b>الإنتاج المرئي</b>فيديو موشن جرافيك شهري حتى 30 ثانية يشرح خدمة أو خطوات الطلب أو المكافآت، بصيغة عمودية لتيك توك ونسخة ملائمة لإكس ولينكدإن</div><div class="q"><b>12</b><span>فيديو</span></div><div class="r"><b>مسؤولية شهاب</b>توفير المعلومات والمواد المتاحة (صور ومقاطع المراكز والفريق)، واعتماد النص والسيناريو والنسخة النهائية</div></div>
+    <div class="tr"><div class="n">5</div><div class="t"><b>متابعة الأداء والتقارير</b>تقرير شهري لنتائج المنصات والتوصيات؛ يشمل آخر تقرير ملخصًا سنويًا، والمراجعة الربع سنوية ضمن المتابعة دون بند مستقل</div><div class="q"><b>12</b><span>تقريرًا</span></div><div class="r"><b>مسؤولية شهاب</b>إتاحة تحليلات الحسابات وبيانات الزيارات والطلبات المحالة من المنصات عند توفرها</div></div>
+    <div class="tr"><div class="n">6</div><div class="t"><b>إدارة المشروع والتنسيق</b>التنسيق والتسليمات والاعتمادات والاجتماعات؛ ساعات الإدارة مستقلة عن ساعات التقرير والمحتوى</div><div class="q"><b>12</b><span>شهرًا</span></div><div class="r"><b>مسؤولية شهاب</b>تحديد نقطة اتصال وصاحب صلاحية للاعتماد، وتوحيد الملاحظات، والالتزام بمواعيد المراجعة</div></div>
+  </div>
+  <h3>مثال على حزمة شهر عادي</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>المنصة</th><th>المنشورات</th></tr></thead>
+    <tbody>
+      <tr><td>إكس (12)</td><td>3 «مهما صار» بتصميم موقف وحل · 3 «خدمة في دقيقة» منها ثريد واحد وبطاقة خدمة · 2 «من داخل شهاب للإصلاح» من مواد شهاب · 2 «دليل مركبتك» منها كاروسيل «قبل لا تشتري» · 1 استطلاع «وش تختار» · 1 مستجدات أو عرض أو محفظة</td></tr>
+      <tr><td>لينكدإن (8)</td><td>3 «شهاب للأعمال» منها كاروسيل حلول من 4 شرائح · 2 «من داخل شهاب للإصلاح» بزاوية القدرات التشغيلية · 1 منشور قيادي أو دراسة حالة بموافقة العميل · 1 «دليل مركبتك» بزاوية الأساطيل · 1 شراكة أو إنجاز بالأرقام المعتمدة</td></tr>
+      <tr><td>تيك توك</td><td>فيديو الموشن الشهري بصيغة عمودية في قائمة تشغيل السلسلة، ومقاطع عمودية من مواد شهاب عند توفرها</td></tr>
+    </tbody></table></div>
+</div></section>
+
+<section class="sec" id="s9"><div class="wrap">
+  <div class="head"><div class="num"><span>09</span></div><div class="t"><div class="eyebrow">الإنتاج المرئي والنماذج</div><h2>هكذا يبدو الشهر الأول <span class="hl">على المنصة</span></h2></div></div>
+  <p class="intro">الإنتاج المرئي في هذا النطاق موشن جرافيك: 12 فيديو في السنة، كل منها حتى 30 ثانية. الصور الحقيقية للمراكز والفريق تأتي من مواد تزودنا بها شهاب بموافقات موقعة. النماذج أدناه مقترحة للتوضيح وليست محتوى منشورًا، والمعلومات الفنية تُراجع مع مختصي شهاب.</p>
+  <div class="grid3">
+    <div class="card tint"><h4>ما يشرحه الموشن الشهري</h4><p>خدمة واحدة أو رحلة طلب أو آلية مكافأة، بنص على الشاشة لأن أغلب المشاهدة بلا صوت، وبصيغة عمودية 9:16 لتيك توك ونسخة 1:1 أو 4:5 لإكس ولينكدإن.</p></div>
+    <div class="card tint"><h4>لغة الحركة: منحنى شهاب</h4><p>الانتقال بين المشاهد يستخدم منحنى شعار شهاب: يكبر حتى يملأ الإطار ثم يكشف المشهد التالي. توقيع حركي ثابت في كل الفيديوهات.</p></div>
+    <div class="card tint"><h4>مكتبة مواد شهاب</h4><p>صور ومقاطع المراكز والفريق تُحفظ في مكتبة مشتركة ملكًا لشهاب، مصنفة بالمركز والخدمة والتاريخ، مع طمس لوحات السيارات وبيانات العملاء دائمًا.</p></div>
+  </div>
+
+  <h3>القوالب الستة بهوية شهاب</h3>
+  <p>مبنية على ألوان شهاب وشعارها من الملف التعريفي: النبيذي للأرضيات، والمرجاني للدعوة فقط. تُسلَّم في التأسيس كقوالب قابلة للتعديل.</p>
+  <div class="tpl sh">
+    <div><div class="art art-wine"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">المساعدة على الطريق · متاحة في المدن المشمولة</div></div><div class="tpl-cap">1 · موقف وحل<span>سؤال قصير، والجواب ثابت.</span></div></div>
+    <div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine);font-size:clamp(16px,7cqi,26px)">المساعدة على الطريق</div><ul class="art-list"><li>سحب المركبة</li><li>تشغيل البطارية وتغييرها</li><li>إصلاح الإطار</li><li>توصيل الوقود</li></ul><div class="meta">اطلبها بثلاث خطوات من قنوات شهاب</div></div><div class="tpl-cap">2 · بطاقة خدمة<span>خدمة واحدة وما تشمله وكيف تُطلب.</span></div></div>
+    <div><div class="art art-white"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-photo">صورة الفني من مواد شهاب بعد موافقته</div><div class="art-q" style="color:var(--sh-wine)">«الصرير غالبًا يعني إن الفحمات تحتاج فحص»</div><div class="meta">سؤال للفني · مركز شهاب</div></div><div class="tpl-cap">3 · سؤال للفني<span>وجه حقيقي واسم وتخصص، والمعلومة تُراجع من مختص شهاب.</span></div></div>
+    <div><div class="art art-wine"><img class="art-logo" src="shihab-logo-white.png" alt=""><div><div class="art-big">200K+</div><div class="art-q">سيارة خدمتها شهاب</div></div><div class="meta">شهاب بالأرقام · بعد اعتماد الصياغة</div></div><div class="tpl-cap">4 · رقم وإنجاز<span>رقم واحد كبير، ومعناه تحته.</span></div></div>
+    <div><div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-photo" style="background:linear-gradient(160deg,#6b2a46,#3a1226)">صورة قبل | بعد من مركز شهاب</div><div class="art-q" style="color:var(--sh-wine)">السمكرة والدهان.. وطلعت كذا</div><div class="meta">من داخل شهاب للإصلاح</div></div><div class="tpl-cap">5 · قبل وبعد<span>صورتان من مواد المراكز، وجملة واحدة.</span></div></div>
+    <div><div class="art art-wine"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="sm"><h5>مركبات شركتك في منظومة واحدة</h5></div><div class="meta">شهاب للأعمال · غلاف كاروسيل لينكدإن</div></div><div class="tpl-cap">6 · غلاف الأعمال<span>كاروسيل لينكدإن: الغلاف، التحدي، الإثبات، الدعوة.</span></div></div>
+  </div>
+
+  <h3>نماذج إكس</h3>
+  <div class="mock-grid">
+    <div class="mock-col">
+      <div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">بنشرت وأنت راجع من الدوام، والشمس فوق راسك؟
+لا تنزل تفك الكفر في هالحر.
+حدد موقعك واطلب المساعدة على الطريق.. وخلّها على شهاب.
+متاحة في المدن المشمولة بالخدمة. <span class="tag">#خلها_على_شهاب</span></div>
+        <div class="x-media"><div class="art art-wine wide sh"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div><h5>بنشرت؟</h5><span class="cta">خلّها على شهاب</span></div><div class="meta">المساعدة على الطريق · سحب، بطارية، إطار، وقود</div></div></div>
+        <div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div>
+      <div class="mock-note"><b>مهما صار</b> · تصميم ثابت · هدفه: الوعي ونقرات الطلب</div>
+      <div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">تعطلت سيارتك فجأة.. أول شي تسويه؟</div><div class="poll"><span>أتصل بأقرب صديق</span><span>أدوّر ونش في قوقل</span><span>أحاول أصلحها بنفسي</span><span>خلّها على شهاب</span><small>تصويت · يوم واحد</small></div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div>
+      <div class="mock-note"><b>المكافآت والمجتمع</b> · استطلاع «وش تختار» · هدفه: التفاعل اليومي</div>
+    </div>
+    <div class="mock-col">
+      <div class="post thread">
+        <div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">وش الفرق بين الصيانة الدورية والإصلاح؟
+ثريد سريع يوفّر عليك مشوار.</div></div></div>
+        <div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-text">1/ الصيانة الدورية تمنع العطل قبل يصير: زيت، فلاتر، سوائل، وفحص فرامل.</div></div></div>
+        <div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-text">2/ الإصلاح يعالج عطلًا موجودًا: ميكانيكا، أو كهرباء، أو سمكرة ودهان.</div></div></div>
+        <div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-text">3/ في مراكز شهاب تلقى الثنتين، وتتابع حالة سيارتك من الطلب لين الاستلام.
+احجز موعدك.. وخلّها على شهاب.</div><div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div>
+      </div>
+      <div class="mock-note"><b>خدمة في دقيقة</b> · ثريد · هدفه: توضيح الخدمات</div>
+      <div class="post"><div class="x-row"><div class="av"><img src="shihab-logo-white.png" alt=""></div><div class="x-main"><div class="x-id"><b>شهاب</b> <span>@ShihabCompany · الآن</span></div><div class="x-text">5 أشياء يكشفها الفحص قبل شراء سيارة مستعملة.
+اسحب للجانب.</div>
+        <div class="x-media"><div class="art art-blush wide sh"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="sm"><h5 style="color:var(--sh-wine)">قبل لا تشتري</h5></div><div class="meta">5 أشياء يكشفها الفحص · 1 / 6</div></div></div>
+        <div class="x-actions"><span>رد</span><span>إعادة نشر</span><span>إعجاب</span><span>حفظ</span></div></div></div></div>
+      <div class="mock-note"><b>دليل مركبتك</b> · كاروسيل مربع · هدفه: توضيح الخدمات وطلب الفحص</div>
+    </div>
+  </div>
+
+  <h3>نموذج لينكدإن: كاروسيل «مركبات شركتك.. صيانة من طلب واحد»</h3>
+  <div class="post"><div class="x-row"><div class="av" style="border-radius:8px;width:48px;height:48px"><img src="shihab-logo-white.png" alt=""></div><div class="li-id"><b>شهاب | Shihab</b><span>خدمات المركبات والتنقل · الآن</span></div></div>
+    <div class="li-text">200 مركبة. أكثر من ورشة. أكثر من فاتورة. ومتابعة موزعة بين الجداول والإيميلات. هذا يوم عادي عند كثير من مسؤولي الأساطيل.
+في شهاب نربط احتياجات مركبات الشركات بخدمات الصيانة والإصلاح، ونتابع تنفيذ الطلبات في منظومة رقمية واحدة، تدعمها أكثر من 9 مراكز صيانة مملوكة لشهاب. مورد واحد، ومتابعة أوضح.
+للتعرف على حلول الشركات، تواصلوا مع فريق شهاب للأعمال.</div>
+    <div class="carousel sh">
+      <div class="art art-wine"><svg class="swoosh" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="sm"><h5>مركبات شركتك.. صيانة من طلب واحد</h5></div><div class="meta">1 / 4 · الغلاف</div></div>
+      <div class="art art-blush"><img class="art-logo" src="shihab-logo-color.png" alt=""><div class="art-q" style="color:var(--sh-wine)">التحدي</div><ul class="art-list"><li>موردون متعددون لكل خدمة</li><li>متابعة يدوية للطلبات</li><li>صعوبة معرفة حالة المركبة</li></ul><div class="meta">2 / 4</div></div>
+      <div class="art art-white"><img class="art-logo" src="shihab-logo-color.png" alt=""><div><div class="art-big" style="font-size:clamp(28px,16cqi,64px)">9+</div><div class="art-q" style="color:var(--sh-wine)">مراكز مملوكة ومتابعة رقمية للطلبات</div></div><div class="meta">3 / 4 · الإثبات</div></div>
+      <div class="art art-wine"><img class="art-logo" src="shihab-logo-white.png" alt=""><div class="sm"><h5>تواصل مع فريق حلول الأعمال</h5><span class="cta">القناة المعتمدة</span></div><div class="meta">4 / 4 · الدعوة</div></div>
+    </div>
+    <div class="li-actions"><span>أعجبني</span><span>تعليق</span><span>إعادة نشر</span><span>إرسال</span></div></div>
+  <div class="mock-note"><b>شهاب للأعمال</b> · كاروسيل من 4 شرائح · هدفه: استفسارات الشركات</div>
+
+  <h3>فيديو الموشن: «إشارة في الطبلون» في 30 ثانية</h3>
+  <div class="phone-wrap">
+    <div><div class="phone"><div class="screen mo" role="img" aria-label="معاينة متحركة لفيديو الموشن: إشارة في الطبلون">
+      <div class="prog"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="sc sc1"><img class="logo" src="shihab-logo-white.png" alt=""><div class="dash"><svg viewBox="0 0 48 44" aria-hidden="true"><g class="warn anim"><path d="M24 3 L45 40 H3 Z" fill="#f39c11"/><rect x="22" y="15" width="4" height="13" rx="2" fill="#260810"/><circle cx="24" cy="33" r="2.4" fill="#260810"/></g></svg></div><div class="cap"><span>هالإشارة طلعت لك؟</span></div></div>
+      <div class="sc sc2"><img class="logo" src="shihab-logo-white.png" alt=""><div class="map"><div class="road"></div><div class="car anim"></div><div class="pin"></div></div><div class="cap"><span>خلنا نشوف وش السالفة</span></div></div>
+      <div class="sc sc3"><img class="logo" src="shihab-logo-white.png" alt=""><div class="diag"><small>فحص المحرك</small><i class="b1 anim"></i><small>الفرامل</small><i class="b2 anim"></i><small>البطارية</small><i class="b3 anim"></i></div><div class="cap"><span>التشخيص قبل الإصلاح</span></div></div>
+      <div class="sc sc4"><img class="logo" src="shihab-logo-white.png" alt=""><div class="sheet"><div class="o1 anim">السبب</div><div class="o2 anim">الخيار</div><div class="o3 anim">التكلفة</div></div><div class="cap"><span>تعرف المشكلة وتكلفتها قبل ما تقرر</span></div></div>
+      <div class="sc sc5"><svg class="big anim" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 C 30 20, 80 10, 95 40 C 80 35, 50 45, 40 90 Z" fill="#fff"/></svg><div class="end anim"><img src="shihab-logo-white.png" alt="شهاب"><b>احجز فحصك..</b><span>خلّها على شهاب</span></div><div class="meta"><b>@ShihabCompany</b>التشخيص قبل الإصلاح · #خلها_على_شهاب</div></div>
+    </div></div><div class="mo-note"><i></i>معاينة متحركة 10 ثوانٍ · النسخة النهائية حتى 30 ثانية</div></div>
+    <div>
+      <div class="tbl"><table>
+        <thead><tr><th>التوقيت</th><th>المشهد (موشن)</th><th>النص على الشاشة</th><th>الصوت</th></tr></thead>
+        <tbody>
+          <tr><td>0 إلى 3 ث</td><td>لوحة قيادة متحركة تضيء فيها إشارة تحذير</td><td>هالإشارة طلعت لك؟</td><td>تنبيه قصير</td></tr>
+          <tr><td>3 إلى 10 ث</td><td>السيارة تتحرك نحو أيقونة مركز شهاب على خريطة مبسطة</td><td>خلنا نشوف وش السالفة</td><td>موسيقى الهوية</td></tr>
+          <tr><td>10 إلى 20 ث</td><td>جهاز التشخيص يتصل بالسيارة، وتظهر النتيجة على شاشة متحركة</td><td>التشخيص قبل الإصلاح</td><td>موسيقى الهوية</td></tr>
+          <tr><td>20 إلى 26 ث</td><td>بطاقة توضح السبب والخيار والتكلفة قبل القرار</td><td>تعرف المشكلة وتكلفتها قبل ما تقرر</td><td>موسيقى الهوية</td></tr>
+          <tr><td>26 إلى 30 ث</td><td>منحنى شهاب يملأ الإطار ويكشف الشعار والدعوة</td><td>احجز فحصك.. وخلّها على شهاب</td><td>نغمة الختام</td></tr>
+        </tbody></table></div>
+      <div class="mock-note"><b>دليل مركبتك</b> · موشن عمودي 30 ثانية · الرسالة: التشخيص قبل الإصلاح بوضوح · الدعوة: احجز فحصك عبر القناة المعتمدة</div>
+    </div>
+  </div>
+
+  <h3>فكرة واحدة بثلاث معالجات: «الفحص قبل الشراء»</h3>
+  <div class="grid3">
+    <div class="card lift"><h4>تيك توك · موشن عمودي</h4><p>الزاوية: رحلة الفحص خطوة بخطوة من الطلب إلى التقرير. الدعوة: احجز فحصك قبل ما تشتري.</p></div>
+    <div class="card lift"><h4>إكس · كاروسيل مربع</h4><p>«5 أشياء يكشفها الفحص قبل شراء سيارة مستعملة». الزاوية: نصائح عملية مختصرة. الدعوة: اطلب الفحص عبر القناة المعتمدة.</p></div>
+    <div class="card lift"><h4>لينكدإن · منشور بصورة عريضة</h4><p>«لماذا يبدأ القرار من الفحص؟ قبل إضافة مركبة لأسطولك». الزاوية: تكلفة المخاطر للشركات. الدعوة: تواصل مع فريق حلول الأعمال.</p></div>
+  </div>
+
+  <h3>فرصة إضافية: حملة متكاملة خلال السنة</h3>
+  <p>حملة تبرز شهاب في توقيت يتفق عليه، بنطاق وميزانية وجدول مستقلين، ولا يدخل فيلمها أو إنتاجها الكبير ضمن الإدارة السنوية. تتكامل مع إدارة الحسابات: تتحول رسالة الحملة إلى سلسلة على الحسابات الثلاثة قبل الإطلاق وبعده، وتُعدّل التقاويم الشهرية خلال فترتها وتُقاس نتائجها في تقرير مستقل.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>المسار</th><th>الفكرة</th><th>التوقيت المناسب</th></tr></thead>
+    <tbody>
+      <tr><td>«كل مشوار سيارتك.. في شهاب»</td><td>دورة حياة المركبة كاملة في منظومة واحدة؛ إطلاق الفكرة الجامعة على نطاق أوسع</td><td>بعد أن تثبت المنصات إيقاعها</td></tr>
+      <tr><td>«قبل لا تمشي»</td><td>فحص ما قبل السفر والمساعدة على الطريق طوال المشوار، بمحتوى من طرق السفر</td><td>قبل موسم السفر والعيد</td></tr>
+      <tr><td>«شهاب للإصلاح.. من الداخل» أو «ناس شهاب»</td><td>نفتح أبواب المراكز ونعرّف بالفريق وطريقة العمل؛ في اليوم الوطني قصص فنيين سعوديين</td><td>اليوم الوطني أو افتتاح مركز</td></tr>
+      <tr><td>«قيادتك تكسب»</td><td>نقاط ومكافآت القيادة الآمنة عبر التليماتكس والمحفظة</td><td>بعد تأكيد إتاحة المحفظة والتليماتكس للجمهور</td></tr>
+    </tbody></table></div>
+</div></section>
+
+<section class="sec band-white" id="s10"><div class="wrap">
+  <div class="head"><div class="num"><span>10</span></div><div class="t"><div class="eyebrow">الإدارة والجدول والقياس</div><h2>اعتماد <span class="hl">لا يوقف النشر</span>، وقياس من الظهور إلى الطلب</h2></div></div>
+  <h3>دورة الاعتماد</h3>
+  <ol class="steps">
+    <li><b>التقويم الشهري</b><span>يُرسل قبل بداية الشهر بموعد يتفق عليه، مع النصوص والأفكار المرئية.</span></li>
+    <li><b>المسودات</b><span>نصوص وتصاميم وسكربتات مجمعة في ملف واحد.</span></li>
+    <li><b>مراجعة شهاب</b><span>ملاحظات موحدة من نقطة اتصال واحدة.</span></li>
+    <li><b>التعديل والاعتماد</b><span>عدد جولات التعديل يحدد في الاتفاق؛ اعتماد مباشر من صاحب صلاحية، ومختص من شهاب للدقة الفنية عند الحاجة.</span></li>
+    <li><b>الجدولة والنشر</b><span>نشر وفق التقويم مع إشعار بما نُشر، ومسار مختصر للمحتوى العاجل والمناسبات والردود الحساسة.</span></li>
+  </ol>
+  <div class="tbl wide"><table>
+    <thead><tr><th>مستوى الاعتماد المقترح</th><th>ما يشمله</th><th>من يعتمد من شهاب</th><th>المهلة المقترحة</th></tr></thead>
+    <tbody>
+      <tr><td>المحتوى الاعتيادي</td><td>منشورات المحاور ضمن الإطار المعتمد، والردود من دليل الردود</td><td>نقطة الاتصال في شهاب</td><td>48 ساعة قبل النشر</td></tr>
+      <tr><td>المحتوى الحساس</td><td>خدمة جديدة، ذكر شريك أو عميل، أرقام وأسعار، منشورات القيادات، أي رد على موضوع حساس</td><td>صاحب الصلاحية الذي يحدده شهاب</td><td>5 أيام عمل، وفوري في الحالات الحساسة</td></tr>
+    </tbody></table></div>
+
+  <h3>إدارة المجتمع وتصعيد الاستفسارات</h3>
+  <p>التغطية المقترحة 8 ساعات يوميًا، 5 أيام أسبوعيًا. الأزمنة أدناه مقترحة داخل ساعات التغطية، وتُعتمد في اتفاقية الخدمة مع شهاب.</p>
+  <div class="sla">
+    <div><b>8 ساعات</b><span>يوميًا، 5 أيام أسبوعيًا</span></div>
+    <div><b>ساعة</b><span>مقترح للرد على الأسئلة والرسائل</span></div>
+    <div><b>30 دقيقة</b><span>مقترح لاستلام الشكوى وتصعيدها</span></div>
+    <div><b>فوري</b><span>تصعيد الموضوع الحساس أو الإعلامي</span></div>
+  </div>
+  <div class="tbl wide"><table>
+    <thead><tr><th>نوع التفاعل</th><th>المعالجة</th><th>المسؤول</th><th>زمن الاستجابة</th></tr></thead>
+    <tbody>
+      <tr><td>سؤال عام عن الخدمات</td><td>رد من دليل الردود المعتمد مع رابط الطلب؛ السؤال الجديد يُحال لشهاب ويُضاف للدليل</td><td>3,6T</td><td>يتفق عليه (مقترح: ساعة)</td></tr>
+      <tr><td>طلب خدمة أو حجز</td><td>توجيه إلى قناة الطلب المعتمدة بالخطوات، ولا تُؤخذ بيانات شخصية علنًا</td><td>3,6T</td><td>يتفق عليه (مقترح: ساعة)</td></tr>
+      <tr><td>استفسار عن طلب قائم أو سعر</td><td>تحويل إلى فريق خدمة شهاب، وإبلاغ العميل بالتحويل</td><td>3,6T ثم شهاب</td><td>يتفق عليه</td></tr>
+      <tr><td>شكوى من خدمة</td><td>اعتذار علني موجز، نقل للرسائل الخاصة، وتصعيد فوري لفريق شهاب برقم الطلب، ثم رد معتمد ومتابعة حتى الإغلاق</td><td>3,6T ثم شهاب</td><td>يتفق عليه (مقترح: 30 دقيقة للاستلام)</td></tr>
+      <tr><td>استفسار شركة أو شراكة</td><td>رد مهني وتحويل البيانات لفريق الأعمال في شهاب في اليوم نفسه</td><td>3,6T ثم شهاب</td><td>يتفق عليه</td></tr>
+      <tr><td>موضوع حساس أو إعلامي</td><td>تصعيد فوري لصاحب الصلاحية، دون رد قبل الاعتماد</td><td>شهاب</td><td>فوري</td></tr>
+      <tr><td>إساءة أو رسائل مزعجة</td><td>إخفاء أو حظر وفق سياسة متفق عليها، مع التوثيق</td><td>3,6T</td><td>حسب السياسة</td></tr>
+    </tbody></table></div>
+  <div class="grid2">
+    <div class="card"><h4>أمثلة على الردود</h4><div class="convo" style="margin-top:10px"><div class="bubble in"><small>تعليق</small>كم سعر تغيير الزيت عندكم؟</div><div class="bubble out"><small>رد شهاب · سؤال عام</small>أهلًا فيك! السعر يختلف حسب نوع السيارة والزيت. تقدر تشوف الخيارات وتحجز من الرابط، ولو احتجت مساعدة راسلنا على الخاص.</div><div class="bubble in"><small>تعليق</small>طلبت ونش وتأخر علي ساعة!</div><div class="bubble out"><small>رد شهاب · شكوى</small>نعتذر لك عن التأخير، وحقك علينا. أرسل لنا رقم الطلب على الخاص ونتابعه معك الحين.</div></div></div>
+    <div class="card"><h4>دليل الردود والإنصات</h4><p>نعد دليل الردود في التأسيس ونحدثه شهريًا من الأسئلة المتكررة: سؤال وجواب لكل خدمة، والمناطق المغطاة، وساعات العمل، وسياسة النقاط، وما لا يجوز قوله. الرسائل خارج ساعات التغطية تحصل على رد تلقائي يحدد موعد الرد، والمساعدة على الطريق حالة خاصة يحمل ردها رقم الطوارئ الرسمي. نرصد ذكر شهاب حتى بلا منشن، ويُرفع تقرير شهري بالاستفسارات المحالة.</p></div>
+  </div>
+
+  <h3>الجدول الزمني: تأسيس قصير ثم تشغيل شهري</h3>
+  <div class="tbl gantt"><table>
+    <thead><tr><th>المسار</th><th>ش1</th><th>ش2</th><th>ش3</th><th>ش4</th><th>ش5</th><th>ش6</th><th>ش7</th><th>ش8</th><th>ش9</th><th>ش10</th><th>ش11</th><th>ش12</th></tr></thead>
+    <tbody>
+      <tr><td>التأسيس الأولي (4 أسابيع)</td><td><i></i></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>صناعة المحتوى والنشر: إكس ولينكدإن</td><td><i class="lite"></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td>تيك توك (الموشن الشهري)</td><td><i class="lite"></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td>الإنتاج المرئي (12 موشن)</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td>إدارة المجتمع</td><td><i class="lite"></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td>التقارير الشهرية</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td>المراجعات الربعية</td><td></td><td></td><td><i class="gate"></i></td><td></td><td></td><td><i class="gate"></i></td><td></td><td></td><td><i class="gate"></i></td><td></td><td></td><td><i class="gate"></i></td></tr>
+      <tr><td>الحملة المتكاملة (اختيارية)</td><td></td><td></td><td></td><td><i class="lite"></i></td><td><i class="lite"></i></td><td></td><td></td><td></td><td><i class="lite"></i></td><td></td><td></td><td></td></tr>
+    </tbody></table></div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">مقترح للنقاش: التأسيس الأولي في الأسابيع الأربعة الأولى، ويبدأ نشر كل منصة وفق خطة الإطلاق وجاهزية الإنتاج. التشغيل متداخل: التخطيط والإنتاج لمحتوى الشهر التالي يبدأ قبل نهاية الشهر الحالي فلا يتوقف النشر بين الأشهر، وتتكرر الدورة طوال الاثني عشر شهرًا مع مراجعة ربعية تعدل المحاور والإيقاع.</p>
+
+  <h3>القياس والتقارير</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>التقرير</th><th>ما يتضمنه</th><th>التوقيت</th></tr></thead>
+    <tbody>
+      <tr><td>تقرير خط الأساس</td><td>وضع الحسابات قبل البدء، والمؤشرات المرجعية لكل منصة</td><td>الشهر الأول</td></tr>
+      <tr><td>التقرير الشهري</td><td>ملخص تنفيذي، أداء كل منصة وسلسلة مقابل متوسط الحساب، أفضل المحتوى وأضعفه، المجتمع والاستفسارات المحالة، توصيات الشهر التالي</td><td>شهري</td></tr>
+      <tr><td>المراجعة الربع سنوية</td><td>التقدم نحو الأهداف، ومراجعة المحاور والصيغ والإيقاع، وتحديث المستهدفات والمقارنة المعيارية</td><td>كل 3 أشهر، ضمن المتابعة</td></tr>
+      <tr><td>التقرير السنوي</td><td>حصيلة السنة، والدروس، وتوصيات السنة التالية، وتسليم مكتبة المحتوى</td><td>نهاية المشروع</td></tr>
+    </tbody></table></div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">المصادر: تحليلات المنصات، وروابط التتبع، وتقرير المجتمع، وبيانات الإحالة من شهاب عند إتاحتها. المستهدفات الرقمية تُقترح بعد خط الأساس وتُعتمد مع شهاب، ولا تضمن نتائج قبل ذلك.</p>
+</div></section>
+
+<section class="sec" id="s11"><div class="wrap">
+  <div class="head"><div class="num"><span>11</span></div><div class="t"><div class="eyebrow">فريق العمل</div><h2>فريق ثابت يعرف شهاب بالاسم</h2></div></div>
+  <p class="intro">الفريق المسؤول عن تفعيل بنود نطاق العمل بحسب تصنيفاتها الفنية والإطارية والزمنية، للخروج بأفضل الممارسات والنتائج التي ترتقي لتطلعات شهاب. نقطة اتصال واحدة من كل جهة.</p>
+  <div class="team">
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ف</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>فدوى التويجري</b><span class="role">مدير المشروع · نقطة الاتصال الواحدة</span><span>خبرة تزيد عن 5 سنوات في التسويق والتواصل، بكالوريوس إدارة أعمال، عملت على العديد من المشاريع الاتصالية.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ف</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>فالح الحربي</b><span class="role">خبير محتوى مرئي أول</span><span>خبرة تزيد عن 9 سنوات في عمليات الإنتاج السينمائي، بكالوريوس إعلام من جامعة الملك سعود.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ن</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>نورة المنيع</b><span class="role">أخصائي تواصل اجتماعي أول</span><span>بكالوريوس تسويق من جامعة الأميرة نورة بنت عبدالرحمن.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ر</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>ربا اللحيدان</b><span class="role">مختص تواصل اجتماعي</span><span>كتابة المحتوى والردود على المنصات الثلاث.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ف</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>فيصل الزهراني</b><span class="role">أخصائي حملات إعلانية</span><span>خبرة تزيد عن 6 سنوات في الحملات المدفوعة؛ يُفعّل عند الاتفاق على فرصة الحملة المتكاملة.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">آ</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>آلاء آل مسعد</b><span class="role">مساعد مدير الترجمة</span><span>النسخ الإنجليزية لمنشورات لينكدإن والشراكات.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ع</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>عبدالله الخثران</b><span class="role">مختص علاقات المؤثرين</span><span>يُفعّل عند الاتفاق على فرصة الحملة المتكاملة.</span></div></div>
+  </div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">الإيقاع: اجتماع أسبوعي قصير لاعتماد الأسبوع القادم، واجتماع شهري للتقرير والتقويم، ومراجعة ربعية. الحسابات تبقى ملكًا لشهاب وتُدار بالصلاحيات لا بمشاركة كلمات المرور.</p>
+
+  <h3>الافتراضات وما نحتاجه من شهاب</h3>
+  <div class="grid2">
+    <div class="card"><h4>الافتراضات</h4><ul style="margin-top:8px;font-size:14px">
+      <li>حسابا إكس ولينكدإن قائمان وتُسلّم صلاحياتهما؛ تيك توك يُجهّز في التأسيس.</li>
+      <li>التصوير الميداني والحملات المدفوعة والعلاقات العامة خارج النطاق؛ الصور الحقيقية من مواد شهاب بموافقات موقعة.</li>
+      <li>خدمات الملف التعريفي ليست كلها متاحة في كل مدينة، وسجل الإتاحة يحسم ما يُروّج له.</li>
+      <li>الأرقام والضمانات والمدد تُنشر بعد اعتماد صياغتها من شهاب، وذكر الشركاء والعملاء يحتاج موافقة مكتوبة.</li>
+    </ul></div>
+    <div class="card tint"><h4>في الأسبوعين الأولين</h4><ul class="check" style="margin-top:8px;font-size:14px">
+      <li>نقطة اتصال واحدة وصاحب صلاحية للاعتماد</li>
+      <li>صلاحيات الحسابات وأدوات التحليل، وروابط التتبع للتطبيق والموقع</li>
+      <li>دليل الهوية البصرية والملفات المصدرية</li>
+      <li>معلومات الخدمات، وسجل الإتاحة لكل مدينة، وقنوات الطلب الرسمية</li>
+      <li>مواد المراكز والفريق المتاحة، ونماذج موافقة الظهور</li>
+      <li>قائمة الشركاء والعملاء المسموح بذكرهم، والمستجدات والعروض القادمة</li>
+    </ul></div>
+  </div>
+  <div class="tbl wide"><table>
+    <thead><tr><th>الخطر</th><th>أثره</th><th>ما نفعله</th></tr></thead>
+    <tbody>
+      <tr><td>تأخر الاعتمادات</td><td>توقف النشر وفقدان الإيقاع</td><td>تقويم قبل الشهر، ومسار اعتماد بمستويين، ومسار مختصر للعاجل</td></tr>
+      <tr><td>قلة المواد المرئية من المراكز</td><td>اعتماد أكبر على التصميم والموشن</td><td>طلب مواد شهاب دوريًا، وقوالب لا تحتاج تصويرًا، وبند تصوير اختياري عند الحاجة</td></tr>
+      <tr><td>شكاوى تظهر علنًا مع زيادة الحضور</td><td>تضرر الثقة إذا لم تُحل</td><td>مصفوفة الرد والتصعيد، ومسؤول من شهاب لمعالجة المحال</td></tr>
+      <tr><td>الترويج لخدمة غير متاحة في منطقة المتابع</td><td>إحباط وتعليقات سلبية</td><td>سجل الإتاحة الشهري، وذكر المدن المشمولة صراحة</td></tr>
+      <tr><td>توقعات متسرعة قبل خط الأساس</td><td>ضغط على المشروع</td><td>مستهدفات بعد الشهر الأول، ولا ضمان نتائج مسبقًا</td></tr>
+    </tbody></table></div>
+  <h3>الخطوات التالية</h3>
+  <ol class="steps">
+    <li><b>اعتماد الاتجاه</b><span>الفكرة «خلّها على شهاب»، وأدوار المنصات، ونطاق المسارات الستة.</span></li>
+    <li><b>جلسة عمل مع شهاب</b><span>تصحيح الافتراضات، وتسمية نقطة الاتصال وصاحب الصلاحية، واعتماد الخدمات وقنوات الطلب وجهات المقارنة.</span></li>
+    <li><b>التأسيس (4 أسابيع)</b><span>خط الأساس، والاستراتيجية والقوالب ودليل النبرة والردود، وسجل الإتاحة، وتهيئة الحسابات، وتقويم الشهر الأول.</span></li>
+    <li><b>التشغيل الشهري</b><span>أول حزمة محتوى وموشن، وأول تقرير شهري بعد أربعة أسابيع.</span></li>
+  </ol>
+  <p style="font-size:13.5px;color:var(--ink-soft)">العرض المالي ونطاق العمل التفصيلي يُقدّمان في ملف مستقل.</p>
+</div></section>
+
+
+<section class="sec band-white" id="annex"><div class="wrap">
+  <div class="head"><div class="num ltr-a"><span>أ</span></div><div class="t"><div class="eyebrow">ملحق · مطابقة البريف</div><h2>كل متطلب في البريف، <span class="hl">وأين نجيب عنه</span></h2></div></div>
+  <p class="intro">البريف كما وصلنا، بندًا بندًا، مع القسم الذي يجيب عنه في هذا العرض. البنود المعدّلة عُدّلت باتفاق مشترك على النطاق، ونذكر سبب كل تعديل بجانبه.</p>
+  <div class="cmp-sum">
+    <div><b style="color:var(--turq)">16</b><span>بندًا مغطّى كما ورد في البريف</span></div>
+    <div><b style="color:#b38f00">2</b><span>بندان معدّلان بالاتفاق على النطاق (التصوير الميداني)</span></div>
+    <div><b style="color:var(--sky)">1</b><span>بند بنطاق مستقل كما طلب البريف (الحملة المتكاملة)</span></div>
+  </div>
+  <div class="tbl wide cmp"><table>
+    <thead><tr><th>متطلب البريف</th><th>كيف يجيب عنه العرض</th><th>القسم</th><th>الحالة</th></tr></thead>
+    <tbody><tr class="grp"><td colspan="4">عن شهاب والتحدي</td></tr><tr><td>فهم منظومة شهاب وخدماتها</td><td>خمس مجموعات خدمات من الملف التعريفي، واحتياج تسويقي من ست نقاط</td><td><a href="#s2">02 · شهاب</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>مراجعة إتاحة الخدمات والتغطية الجغرافية قبل الترويج</td><td>سجل إتاحة لكل خدمة ومدينة في التأسيس، يُحدّث شهريًا، وذكر المدن المشمولة صراحة في المحتوى</td><td><a href="#s8">08 · النطاق</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>تقديم مبسط: ما تقدمه شهاب، وفائدة كل خدمة، وكيف تُطلب</td><td>معادلة «الموقف ← الخدمة ← الدعوة»، وقالب «بطاقة خدمة»، وسلسلة «خدمة في دقيقة»</td><td><a href="#s6">06 · الفكرة</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>بناء الثقة بإظهار المراكز والفريق وتجربة التنفيذ</td><td>سلسلتا «من داخل شهاب للإصلاح» و«سؤال للفني» من مواد شهاب بموافقات موقعة</td><td><a href="#s7">07 · المنصات</a></td><td><span class="chip green">مغطّى</span></td></tr><tr class="grp"><td colspan="4">الأهداف والجمهور</td></tr><tr><td>الأهداف الخمسة: الوعي، توضيح الخدمات، الثقة، الانتقال للطلب، حضور الشركات</td><td>هدف ومؤشر قياس ومصدر بيانات لكل هدف، وهدف سادس للانتظام</td><td><a href="#s5">05 · الأهداف</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>الجمهور: أصحاب المركبات، المهتمون بالشراء والبيع والتأجير، مسؤولو الأساطيل، الشركاء</td><td>ست شرائح، لكل شريحة خدمة ورسالة ومنصة وإجراء مطلوب</td><td><a href="#s5">05 · الأهداف</a></td><td><span class="chip green">مغطّى</span></td></tr><tr class="grp"><td colspan="4">دور المنصات</td></tr><tr><td>إكس: التعريف بالخدمات، المستجدات والعروض، التفاعل اليومي</td><td>12 منشورًا شهريًا بسلاسل ثابتة، واستطلاعات، وثريدات، وإدارة يومية</td><td><a href="#s7">07 · المنصات</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>لينكدإن: القدرات التشغيلية، حلول الأعمال، الشراكات والإنجازات</td><td>8 منشورات شهريًا، منها كاروسيل «شهاب للأعمال» ونسخ إنجليزية</td><td><a href="#s7">07 · المنصات</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>تيك توك: الفيديو الميداني والمختصون وتجارب الخدمة</td><td>فيديو موشن شهري، ومقاطع عمودية من مواد شهاب عند توفرها<small>التصوير الميداني خارج النطاق المتفق، ويُضاف كبند مستقل عند الطلب.</small></td><td><a href="#s7">07 · المنصات</a></td><td><span class="chip yellow">مُعدّل بالاتفاق</span></td></tr><tr class="grp"><td colspan="4">نطاق العمل</td></tr><tr><td>استراتيجية المنصات والرسائل</td><td>حزمة تأسيس: الأهداف والجمهور وأدوار المنصات والرسائل والمحاور ودليل النبرة و6 قوالب</td><td><a href="#s8">08 · المسار 1</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>تقويم محتوى شهري</td><td>تقويم يُرسل قبل بداية الشهر، بدورة اعتماد من خمس خطوات</td><td><a href="#s10">10 · الإدارة</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>كتابة وتصميم وتكييف المحتوى لكل منصة</td><td>20 منشورًا شهريًا: 16 تصميمًا ثابتًا و4 كاروسيل، وفكرة واحدة بثلاث معالجات</td><td><a href="#s9">09 · النماذج</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>جدولة ونشر</td><td>جدولة ونشر للمنصات الثلاث وفق التقويم، مع إشعار بما نُشر</td><td><a href="#s8">08 · المسار 3</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>إدارة التعليقات والرسائل وتصعيد الاستفسارات</td><td>8 ساعات يوميًا 5 أيام أسبوعيًا، ودليل ردود، ومصفوفة تصعيد بسبعة أنواع تفاعل</td><td><a href="#s10">10 · الإدارة</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>تصوير المراكز والفريق والخدمات</td><td>الصور الحقيقية من مكتبة مواد شهاب بموافقات موقعة<small>خارج النطاق المتفق بقرار مشترك، ومتاح كبند اختياري مستقل.</small></td><td><a href="#s8">08 · النطاق</a></td><td><span class="chip yellow">مُعدّل بالاتفاق</span></td></tr><tr><td>إنتاج الفيديو والموشن</td><td>12 فيديو موشن حتى 30 ثانية، بلغة حركة ثابتة من منحنى شهاب، وستوري بورد ومعاينة متحركة</td><td><a href="#s9">09 · النماذج</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>تقارير شهرية ومراجعات دورية</td><td>تقرير خط أساس، و12 تقريرًا شهريًا، ومراجعة ربعية ضمنها، وملخص سنوي في الأخير</td><td><a href="#s10">10 · الإدارة</a></td><td><span class="chip green">مغطّى</span></td></tr><tr class="grp"><td colspan="4">المقارنة المعيارية والحملة</td></tr><tr><td>مقارنة معيارية حسب الخدمة، تركز على أساليب الشرح والمحتوى والتصوير والنشر، وتستخلص فرصًا لشهاب</td><td>خمس مجموعات خدمات، لكل منها جهات مقارنة مختلفة وممارسة مرصودة وما نقترحه، وست ممارسات مستخلصة</td><td><a href="#s4">04 · المقارنة</a></td><td><span class="chip green">مغطّى</span></td></tr><tr><td>الحملة المتكاملة كفرصة إضافية بنطاق مستقل</td><td>أربعة مسارات أفكار بتوقيتها المناسب، تُسعّر وتُجدول بنطاق مستقل</td><td><a href="#s7">07 · المنصات</a></td><td><span class="chip sky">نطاق مستقل</span></td></tr></tbody></table></div>
+</div></section>
+
+<div class="closing">
+  <svg class="pat" viewBox="0 0 520 170" aria-hidden="true"><defs><pattern id="pp2" width="28" height="28" patternUnits="userSpaceOnUse"><polygon points="8,0 22,0 14,20 0,20" fill="#16a086"/></pattern><linearGradient id="fade2" x1="1" x2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk2"><rect width="520" height="170" fill="url(#fade2)"/></mask></defs><rect width="520" height="170" fill="url(#pp2)" mask="url(#mk2)" opacity=".7"/></svg>
+  <div class="wrap">
+    <img src="logo-white.png" alt="3,6T">
+    <h2>شكرًا لكم.. وخلّها علينا</h2>
+    <p style="max-width:42em;color:#c9d1d5">تُعد تسويق ثلاثمائة وستين درجة مثالًا لمؤسسة وطنية رائدة في مجال الدعاية والتسويق، قادرة على تحقيق نتائج ملموسة للعملاء من خلال استراتيجيات مبتكرة وحلول إبداعية.</p>
+    <div class="contact"><span>www.360.sa</span><span>Business@360.sa</span><span class="ltr">+966 592 360 360</span><span>طريق الدائري الشمالي، النفل، الرياض 13312</span></div>
+  </div>
+</div>
+<footer><div class="wrap">© جميع الحقوق الإبداعية لـشركة ثلاثمائة وستون درجة للدعاية والإعلان · عرض فني لشركة شهاب · نوفمبر 2026 · شعار شهاب وألوانها من ملفها التعريفي وتُستخدم في النماذج المقترحة فقط.</div></footer>

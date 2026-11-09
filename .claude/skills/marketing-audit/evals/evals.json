@@ -1,0 +1,49 @@
+{
+  "skill_name": "marketing-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "سوّ أوديت لعميل محتمل: متجر عطور سعودي، موقعه example-perfume.sa، عندهم انستقرام وسناب، يصرفون على إعلانات بس ما نعرف كم. ما عندنا أي صلاحيات.",
+      "expected_output": "Should identify this as a pre-sale, external-only audit and state the scope and the assumed objective (online sales). Should run the external-visible areas (website/conversion including mobile and Arabic quality and checkout path up to payment, SEO visibility, social presence, ad library check, competitor snapshot, visible tracking via page source) and mark paid media account internals, CRM, email flows, and analytics configuration as [NEED ACCESS]. Should produce a scorecard with unscored areas excluded, top five findings with evidence, and a recommendation to move to client-proposal. Should not invent metrics. Arabic-first executive summary.",
+      "assertions": [
+        "States audit type as pre-sale and access level as external only",
+        "States the objective audited against",
+        "Covers website, SEO, social, ad library, and competitor snapshot from public data",
+        "Marks inaccessible areas as [NEED ACCESS] and excludes them from scoring",
+        "Provides top five findings with evidence",
+        "Does not fabricate metrics or benchmarks",
+        "Executive summary in Arabic first",
+        "Recommends next step via client-proposal"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We just onboarded a B2B software client with full access to Google Ads, Meta, GA4, GTM and HubSpot. Leads dropped 50% over 3 months and they don't know why. Where do we start?",
+      "expected_output": "Should classify as a diagnostic audit and prioritize analytics and tracking integrity first (GA4 conversions, GTM changes, pixel/CAPI, HubSpot form and lead source fields, any site or form changes in the period), then paid media (conversion actions, bidding changes, budget, search terms, creative fatigue, landing page changes), then lead handling in the CRM. Should propose a reconciliation between platform conversions, GA4, and HubSpot leads over the period. Should invoke conversion-tracking, analytics, ads, and revops for depth. Should produce prioritized findings and a 30-day corrective plan with owners.",
+      "assertions": [
+        "Identifies this as a diagnostic audit",
+        "Starts with tracking integrity and a reconciliation across platforms, GA4, and CRM",
+        "Checks for changes in the period (site, forms, conversion actions, bids, budgets)",
+        "References the specialist skills for depth",
+        "Produces prioritized findings with evidence placeholders",
+        "Provides a 30-day corrective plan with owners"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I have 40 findings from the audit. The client CEO has 20 minutes. What do I show?",
+      "expected_output": "Should apply the prioritization matrix: score impact and effort, identify dependency roots (tracking), rank by impact over effort, and reduce the executive summary to the top five with evidence, why it matters, recommendation, and expected direction. Should structure the 20 minutes: overall score and verdict, five findings, the single most important recommendation, the 30/60/90 roadmap, and decisions needed. Everything else goes to the appendix. Should recommend Arabic-first if the CEO prefers Arabic.",
+      "assertions": [
+        "Applies impact, effort, and dependency scoring",
+        "Reduces to the top five findings",
+        "Each finding has evidence and a recommendation",
+        "Includes a single most important recommendation",
+        "Provides a 20-minute structure including roadmap and decisions",
+        "Moves remaining findings to the appendix"
+      ],
+      "files": []
+    }
+  ]
+}
