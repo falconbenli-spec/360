@@ -1,0 +1,13 @@
+# 360 overlay for Open Duet's compose.yaml: builds open-dots:360 (upstream image + gh CLI) from
+# this folder's Dockerfile instead of the upstream recipe. Use it with OPEN_DOTS_IMAGE=open-dots:360:
+#
+#   docker compose -f compose.yaml -f /opt/open-duet-360/compose.360.yaml -f deploy/proxy/compose.caddy.yaml up -d
+#
+# The upstream image (open-dots:local, with Claude Code) must be built first; install.sh does that.
+services:
+  open-dots:
+    build:
+      context: /opt/open-duet-360
+      dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: open-dots:local
