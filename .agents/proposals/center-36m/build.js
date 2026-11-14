@@ -49,10 +49,10 @@ pres.defineSlideMaster({ title: "CLOSING", background: { color: C.text1 }, objec
 
 // ---------------- helpers ----------------
 function T(s, text, o) {
-  s.addText(text, Object.assign({ isTextBox: true, ...AR, margin: 0, valign: "top", fontSize: 14, color: C.text1, paraSpaceAfter: 2 }, o));
+  s.addText(text, Object.assign({ isTextBox: true, ...AR, margin: 0, valign: "top", fontSize: 14, color: C.text1, paraSpaceAfter: 2, lineSpacingMultiple: 1.12 }, o));
 }
 function bullets(items, o = {}) {
-  return items.map((t, i) => ({ text: t, options: Object.assign({ bullet: { indent: 14 }, breakLine: i < items.length - 1, paraSpaceAfter: 5 }, o) }));
+  return items.map((t, i) => ({ text: t, options: Object.assign({ bullet: { indent: 16 }, breakLine: i < items.length - 1, paraSpaceAfter: 6, rtlMode: true, align: "right", lang: "ar-SA", lineSpacingMultiple: 1.1 }, o) }));
 }
 function para(parts) { // [[text, {bold}], ...] single paragraph runs
   return parts.map(([t, o]) => ({ text: t, options: o || {} }));
@@ -92,24 +92,24 @@ function pattern(s, x0, y0, cols, rows, color, transp, size = 0.32, gap = 0.12) 
     s.addShape(SH.PARALLELOGRAM, { x: x0 + c * (size + gap), y: y0 + r * (size * 0.7 + gap), w: size, h: size * 0.7, fill: { color, transparency: transp }, line: { color, transparency: 100 }, objectName: "pattern" });
   }
 }
-function steps(s, items, y, h, o = {}) { // horizontal RTL steps with numbered parallelograms
+function steps(s, items, y, h, o = {}) { // horizontal RTL steps: number chip + title on one row, body below
   const n = items.length, gap = o.gap || 0.25;
   items.forEach((it, i) => {
     const { x, w } = colX(i, n, gap);
-    card(s, x, y, w, h, { fill: o.fill || C.background1, line: o.line || C.accent6, shadow: o.shadow, title: it.t, body: it.b, titleSize: o.titleSize || 16, bodySize: o.bodySize || 13, kicker: " ", titleH: o.titleH });
-    para_shape(s, x + w - 0.75, y + 0.18, 0.55, 0.36, o.numFill || C.accent1, String(i + 1), { fontSize: 14, color: o.numColor || C.background1 });
+    s.addShape(SH.ROUNDED_RECTANGLE, { x, y, w, h, rectRadius: 0.12, fill: { color: o.fill || C.background1 }, line: { color: o.line || C.accent6, width: 0.75 }, objectName: "step" });
+    para_shape(s, x + w - 0.72, y + 0.24, 0.5, 0.4, o.numFill || C.accent1, String(i + 1), { fontSize: 14, color: o.numColor || C.background1 });
+    T(s, it.t, { x: x + 0.22, y: y + 0.2, w: w - 1.04, h: 0.48, fontSize: o.titleSize || 16, bold: true, valign: "middle" });
+    T(s, it.b, { x: x + 0.22, y: y + 0.85, w: w - 0.44, h: h - 1.05, fontSize: o.bodySize || 14 });
   });
 }
-function chips(s, labels, x, y, w, o = {}) { // flowing chips right-to-left in rows
-  const h = o.h || 0.42, gap = o.gap || 0.14, size = o.size || 13;
-  let cx = x + w, cy = y;
-  labels.forEach((lb) => {
-    const cw = Math.max(0.9, lb.length * (size / 72) * 0.62 + 0.45);
-    if (cx - cw < x - 0.01) { cx = x + w; cy += h + gap; }
-    s.addText(lb, { shape: SH.ROUNDED_RECTANGLE, rectRadius: 0.2, x: cx - cw, y: cy, w: cw, h, fill: { color: o.fill || C.background2 }, line: { color: o.line || o.fill || C.accent6, width: 0.75 }, ...AR, align: "center", valign: "middle", margin: 0, fontSize: size, bold: !!o.bold, color: o.color || C.text1, objectName: "chip" });
-    cx -= cw + gap;
+function chips(s, labels, x, y, w, o = {}) { // equal-size tiles in a grid, filled right to left
+  const cols = o.cols || 3, h = o.h || 0.46, gap = o.gap || 0.12, size = o.size || 13;
+  const tw = (w - gap * (cols - 1)) / cols;
+  labels.forEach((lb, i) => {
+    const c = i % cols, r = Math.floor(i / cols);
+    s.addText(lb, { shape: SH.ROUNDED_RECTANGLE, rectRadius: 0.1, x: x + w - tw - c * (tw + gap), y: y + r * (h + gap), w: tw, h, fill: { color: o.fill || C.background2 }, line: { color: o.line || o.fill || C.accent6, width: 0.75 }, ...AR, align: "center", valign: "middle", margin: 0, fontSize: size, bold: o.bold !== false, color: o.color || C.text1, objectName: "tile" });
   });
-  return cy + h;
+  return y + Math.ceil(labels.length / cols) * (h + gap) - gap;
 }
 function table(s, header, rows, x, y, w, colW, o = {}) {
   // header/rows given in reading order (right to left); reverse for layout
@@ -220,14 +220,14 @@ steps(s, [
 ], 1.95, 2.85, { bodySize: 13 });
 s.addShape(SH.ROUNDED_RECTANGLE, { x: L, y: 5.05, w: CW, h: 1.35, rectRadius: 0.12, fill: { color: HEX.tint }, line: { color: HEX.tint }, objectName: "deliverable" });
 T(s, "يتضمن تقرير التشخيص", { x: 9.9, y: 5.2, w: 2.6, h: 0.4, fontSize: 15, bold: true, color: C.dk2 || HEX.deep });
-chips(s, ["الفجوات", "الفرص", "المخاطر الاتصالية", "خط الأساس للمؤشرات", "أولويات التحسين", "خطة أول 90 يومًا"], 0.8, 5.65, 11.7, { fill: C.background1, line: C.accent1, bold: true, size: 14 });
+chips(s, ["الفجوات", "الفرص", "المخاطر الاتصالية", "خط الأساس للمؤشرات", "أولويات التحسين", "خطة أول 90 يومًا"], 0.85, 5.68, 11.63, { cols: 6, fill: C.background1, line: C.accent1, size: 14, h: 0.5 });
 
 // 6. 04 الاستراتيجية الاتصالية
 pres.addSection({ title: "الاستراتيجية" });
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "الاستراتيجية" });
 head(s, "04", "الاستراتيجية الاتصالية للمركز", "استراتيجية واحدة، وسردية تشرح دور المركز");
 card(s, 7.73, 1.95, 5.0, 4.5, { fill: C.text1, line: C.text1, kicker: "استراتيجية تسويق وتواصل مؤسسي متكاملة", kickerColor: C.accent2, title: "سبعة مكونات", titleColor: C.background1, titleSize: 22, titleH: 0.5, body: "" });
-chips(s, ["الأهداف", "التموضع المؤسسي", "الشرائح المستهدفة", "الرسائل", "القنوات", "المبادرات", "مؤشرات القياس"], 7.95, 3.15, 4.56, { fill: HEX.charDeep, line: HEX.turq, color: C.background1, bold: true, size: 15, h: 0.5, gap: 0.16 });
+chips(s, ["الأهداف", "التموضع المؤسسي", "الشرائح المستهدفة", "الرسائل", "القنوات", "المبادرات", "مؤشرات القياس"], 7.98, 3.0, 4.5, { cols: 2, fill: HEX.charDeep, line: HEX.turq, color: C.background1, size: 15, h: 0.62, gap: 0.14 });
 card(s, L, 1.95, 6.85, 1.38, { fill: C.background1, line: C.accent6, title: "السردية المؤسسية", body: "إطار يوضح دور المركز واختصاصاته وقيمته للمنظومة، مع تحديد حدود الاتصال بالموضوعات المشتركة مع الوزارة.", titleSize: 17, bodySize: 13 });
 card(s, L, 3.5, 6.85, 1.38, { fill: C.background1, line: C.accent6, title: "أدلة الاتصال", body: "الرسائل الرئيسية، والأسئلة والأجوبة المتوقعة، ونبرة الخطاب، والموضوعات الحساسة، ومصفوفة قنوات وجماهير الاتصال.", titleSize: 17, bodySize: 13 });
 card(s, L, 5.05, 6.85, 1.4, { fill: C.background1, line: C.accent6, title: "التحديث المستمر", body: "تُحدّث الخطة عند اعتماد مستجدات الاستراتيجية أو أولويات المركز، مع خطة سنوية وتقويم تفعيل قابلين للتحديث الدوري.", titleSize: 17, bodySize: 13 });
@@ -317,8 +317,8 @@ note(s, "يتم كل ذلك بالتنسيق مع الفريق الداخلي ب
 // 13. 07 التواصل الداخلي
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "التشغيل والقنوات" });
 head(s, "07", "التواصل الداخلي والفعاليات الداخلية", "خطة تواصل داخلي لكل سنة، ومخصص واضح");
-card(s, 8.33, 1.95, 4.4, 4.55, { fill: C.background1, line: C.accent6, kicker: "الاستراتيجية والخطة", title: "استراتيجية موحدة لمدة العقد", titleH: 0.75, body: "وخطة تشغيلية مستقلة لكل سنة، مع إمكانية تعديل الخطط لما بعد 2027 استنادًا إلى قياس أداء السنة الأولى.", titleSize: 17, bodySize: 13 });
-chips(s, ["أهداف الارتباط والوعي", "الشرائح", "المحاور", "المبادرات والفعاليات", "الجدول الزمني", "مؤشرات الأثر"], 8.55, 4.55, 3.96, { size: 12, h: 0.38, gap: 0.1 });
+card(s, 8.33, 1.95, 4.4, 4.55, { fill: C.background1, line: C.accent6, kicker: "الاستراتيجية والخطة", title: "استراتيجية موحدة لمدة العقد", titleH: 0.45, body: "وخطة تشغيلية مستقلة لكل سنة، مع إمكانية تعديل الخطط لما بعد 2027 استنادًا إلى قياس أداء السنة الأولى.", titleSize: 17, bodySize: 13 });
+chips(s, ["أهداف الارتباط والوعي", "الشرائح", "المحاور", "المبادرات والفعاليات", "الجدول الزمني", "مؤشرات الأثر"], 8.55, 4.75, 3.96, { cols: 2, size: 12, h: 0.42, gap: 0.1 });
 T(s, "من الفكرة إلى التقييم", { x: 4.1, y: 1.95, w: 4.0, h: 0.4, fontSize: 16, bold: true });
 ["الأفكار", "المواد والتصاميم", "التنسيق والتجهيز", "الإشراف والتنفيذ الميداني", "التقييم"].forEach((t, i) => {
   para_shape(s, 4.35, 2.45 + i * 0.8, 3.7, 0.62, i === 4 ? C.accent2 : C.accent1, t, { fontSize: 14, color: i === 4 ? C.text1 : C.background1 });
@@ -413,7 +413,7 @@ head(s, "10", "الأعمال المجدولة والطلبات العاجلة",
 card(s, 9.33, 1.95, 3.4, 1.85, { fill: C.accent1, line: C.accent1, title: "المسار المجدول", titleColor: C.background1, titleSize: 18, body: "ما ورد في الخطط والتقاويم المعتمدة.", bodyColor: C.background1, bodySize: 14 });
 card(s, 9.33, 4.0, 3.4, 1.85, { fill: C.accent2, line: C.accent2, title: "المسار العاجل", titleSize: 18, body: "طلبات غير مجدولة تنشأ عن مستجدات أعمال المركز.", bodySize: 14 });
 T(s, "السجل الموحد", { x: 4.6, y: 1.95, w: 4.4, h: 0.4, fontSize: 17, bold: true });
-chips(s, ["الجهة الطالبة", "الوصف", "الأولوية", "المدخلات", "مسؤول التنفيذ", "مواعيد التسليم", "حالة الاعتماد", "الأثر على المهام الأخرى"], 4.6, 2.45, 4.4, { size: 12, h: 0.4, gap: 0.1, fill: HEX.tint, line: HEX.tint, bold: true });
+chips(s, ["الجهة الطالبة", "الوصف", "الأولوية", "المدخلات", "مسؤول التنفيذ", "مواعيد التسليم", "حالة الاعتماد", "الأثر على المهام"], 4.6, 2.45, 4.4, { cols: 2, size: 13, h: 0.42, gap: 0.1, fill: HEX.tint, line: HEX.tint });
 card(s, 4.6, 4.7, 4.4, 1.15, { fill: C.background1, line: C.accent6, pad: 0.16, title: "عند التعارض", titleSize: 15, titleH: 0.34, body: "يرفع مدير الحساب الأثر وتوصية بإعادة ترتيب الأولويات لاعتمادها من الممثل المختص.", bodySize: 13 });
 card(s, L, 1.95, 3.7, 1.85, { fill: C.background1, line: C.accent6, title: "الطاقة التشغيلية", titleSize: 15, titleH: 0.34, body: "لا عدد شهري ثابت؛ التنفيذ ضمن الطاقة والموارد المشمولة وبالمواعيد والأولويات المعتمدة.", bodySize: 13 });
 card(s, L, 4.0, 3.7, 1.85, { fill: C.text1, line: C.text1, title: "خارج الدوام", titleColor: C.background1, titleSize: 15, titleH: 0.34, body: "نقطة اتصال ومسار تصعيد وفق مستويات الاستجابة، دون افتراض تواجد دائم للفريق المقيم.", bodyColor: C.background1, bodySize: 13 });
@@ -460,23 +460,25 @@ T(s, "ومع كل مخرج: مراجعة لغوية وتحريرية وبصري�
 pres.addSection({ title: "الفريق والملحق" });
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "الفريق والملحق" });
 head(s, "11", "فريق العمل", "فريق مقيم في المركز، وخبرات تساند عند الحاجة");
-[["الفريق المقيم", "التشغيل اليومي: الحسابات، والمحتوى، والتصميم، والمتابعة، والتحليلات التشغيلية.", C.accent1, C.background1],
- ["مدير الحساب", "نقطة الاتصال، وترتيب الأولويات، ورفع أثر التعارض بين المجدول والعاجل.", C.text1, C.background1],
- ["المستشار المتخصص", "يقود التقرير السنوي من تحديد المدخلات إلى الإخراج.", C.accent2, C.text1],
- ["المصور", "التصوير الاعتيادي وفق الرصيد السنوي، والمعالجة والتسليم.", C.dk2 || HEX.deep, C.background1],
- ["خبرات 3,6T", "التحليلات المتقدمة، والحملات، والأعمال الموسمية، والطوارئ خارج الدوام.", HEX.slate, C.text1]].forEach(([t, b, f, tc], i) => {
+[["الفريق المقيم", "يوميًا من مقر المركز", "الحسابات، والمحتوى، والتصميم، والمتابعة، والتحليلات التشغيلية.", C.accent1, C.background1],
+ ["مدير الحساب", "نقطة الاتصال", "ترتيب الأولويات، ورفع أثر التعارض بين المجدول والعاجل.", C.text1, C.background1],
+ ["مستشار التقرير", "التقرير السنوي", "يقود التقرير من تحديد المدخلات إلى الإخراج.", C.accent2, C.text1],
+ ["المصور", "رصيد التصوير السنوي", "التصوير الاعتيادي، والمعالجة والتسليم.", HEX.deep, C.background1],
+ ["خبرات 3,6T", "عند الحاجة", "التحليلات المتقدمة، والحملات، والأعمال الموسمية، والطوارئ خارج الدوام.", HEX.slate, C.text1]].forEach(([t, k, b, f, tc], i) => {
   const { x, w } = colX(i, 5, 0.22);
-  s.addShape(SH.ROUNDED_RECTANGLE, { x, y: 1.95, w, h: 2.0, rectRadius: 0.12, fill: { color: f }, line: { color: f }, objectName: "role-photo" });
-  pattern(s, x + 0.15, 2.1, 4, 4, typeof tc === "string" && tc === C.text1 ? HEX.char : HEX.white, 82, 0.34, 0.08);
-  s.addShape(SH.OVAL, { x: x + w / 2 - 0.55, y: 2.4, w: 1.1, h: 1.1, fill: { color: HEX.white, transparency: 15 }, line: { color: HEX.white, width: 2 }, objectName: "avatar" });
-  card(s, x, 4.1, w, 2.2, { fill: C.background1, line: C.accent6, title: t, body: b, titleSize: 15, titleH: 0.62, bodySize: 13 });
+  s.addShape(SH.ROUNDED_RECTANGLE, { x, y: 1.95, w, h: 4.25, rectRadius: 0.12, fill: { color: C.background1 }, line: { color: HEX.slate, width: 0.75 }, objectName: "role" });
+  s.addShape(SH.ROUNDED_RECTANGLE, { x: x + 0.15, y: 2.1, w: w - 0.3, h: 1.75, rectRadius: 0.1, fill: { color: f }, line: { color: f }, objectName: "photo-slot" });
+  T(s, "صورة العضو", { x: x + 0.15, y: 2.75, w: w - 0.3, h: 0.4, fontSize: 12, color: tc, align: "center", valign: "middle" });
+  T(s, t, { x: x + 0.22, y: 4.0, w: w - 0.44, h: 0.42, fontSize: 16, bold: true });
+  T(s, k, { x: x + 0.22, y: 4.42, w: w - 0.44, h: 0.32, fontSize: 12, bold: true, color: HEX.deep });
+  T(s, b, { x: x + 0.22, y: 4.8, w: w - 0.44, h: 1.3, fontSize: 13 });
 });
 note(s, "تُستكمل أسماء الفريق وسيرهم وصورهم في النسخة النهائية من العرض.", 6.42, { h: 0.38 });
 
 // 25. ملحق أ: المطابقة
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "الفريق والملحق" });
 head(s, "أ", "ملحق · مطابقة نطاق العمل", "كل بند في نطاق العمل، وأين يجيب عنه العرض");
-const map = [["1", "تحليل الوضع الراهن والتأسيس", "6"], ["2", "الاستراتيجية الاتصالية للمركز", "7، 8"], ["3", "التسويق والاتصال بمنتجات المركز ومبادراته", "9، 10"], ["4", "إدارة الحسابات والتواصل الرقمي", "11"], ["5", "التحرير وصناعة المحتوى والتصميم", "12"], ["6", "التواصل المؤسسي والإعلامي والعلاقات العامة", "13"], ["7", "التواصل الداخلي والفعاليات الداخلية", "14"], ["8", "الفعاليات الخارجية والمعارض والمؤتمرات والورش", "15"]];
+const map = [["1", "تحليل الوضع الراهن والتأسيس", "6"], ["2", "الاستراتيجية الاتصالية للمركز", "7 و8"], ["3", "التسويق والاتصال بمنتجات المركز ومبادراته", "9 و10"], ["4", "إدارة الحسابات والتواصل الرقمي", "11"], ["5", "التحرير وصناعة المحتوى والتصميم", "12"], ["6", "التواصل المؤسسي والإعلامي والعلاقات العامة", "13"], ["7", "التواصل الداخلي والفعاليات الداخلية", "14"], ["8", "الفعاليات الخارجية والمعارض والمؤتمرات والورش", "15"]];
 const map2 = [["9", "تطوير الهوية البصرية للمركز وتطبيقاتها", "18"], ["10", "هوية منصة تكعيب والهويات الفرعية", "19"], ["11", "الرصد الإعلامي وإدارة القضايا الاتصالية", "20"], ["12", "التصوير الفوتوغرافي ومكتبة الصور والأصول", "22"], ["13", "التقرير السنوي", "23"], ["14", "الأعمال المجدولة والطلبات العاجلة", "21"], ["15", "لغة المخرجات والترجمة", "24"]];
 table(s, ["#", "بند نطاق العمل", "الشريحة"], map, 6.83, 1.95, 5.9, [0.5, 4.3, 1.1], { size: 13, rowH: 0.48, name: "map-1" });
 table(s, ["#", "بند نطاق العمل", "الشريحة"], map2, L, 1.95, 5.9, [0.5, 4.3, 1.1], { size: 13, rowH: 0.48, name: "map-2" });

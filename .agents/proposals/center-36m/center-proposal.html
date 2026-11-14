@@ -1,0 +1,868 @@
+<title>العرض الفني للمركز</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Readex+Pro:wght@400;500;700&display=swap">
+<style>
+/* Layout: a scrolling presentation in 3,6T identity. Full-bleed bands alternate off-white, white, charcoal and turquoise; the brand's slanted parallelogram is the structural motif (numerals, bars, dividers, pattern). Shihab's work sits in framed client surfaces in Shihab's wine and coral. Single light theme by brand decision. */
+:root{
+  --turq:#16a086; --turq-deep:#0f7a66; --turq-ink:#0b4f43; --turq-tint:#e3f4ef;
+  --char:#353535; --char-deep:#262626; --slate:#dde6ed; --slate-soft:#eef2f6; --page:#faf9ff; --white:#fff;
+  --ink:#353535; --ink-soft:#5f6670; --line:#d3dbe2;
+  --saffron:#f1c40f; --amber:#f39c11; --red:#e84c3d; --sky:#5dade2;
+  --sh-wine:#4a1a2e; --sh-deep:#260810; --sh-coral:#f47a4d; --sh-blush:#fcefe9; --sh-ink:#3d1a2b; --sh-line:#f1d9ce;
+  --pf-ink:#0f1419; --pf-muted:#536471; --pf-line:#e6ecf0; --pf-blue:#1d9bf0; --li-blue:#0a66c2;
+  --font:'Alexandria','Segoe UI',Tahoma,Arial,sans-serif; --font-sh:'Readex Pro','Alexandria',Tahoma,Arial,sans-serif;
+  --slant:-15deg; --shadow:0 1px 2px rgba(20,48,44,.06),0 12px 32px rgba(20,48,44,.10);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.85;direction:rtl;text-align:right;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--page)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+h1{font-weight:800;font-size:clamp(40px,7.5vw,96px);line-height:1.05;color:var(--white);letter-spacing:-.01em}
+h2{font-weight:700;font-size:clamp(26px,3.4vw,40px);color:var(--char)}
+h3{font-weight:600;font-size:19px;color:var(--char);margin-top:30px;margin-bottom:10px}
+h4{font-weight:600;font-size:15.5px;color:var(--char)}
+p{margin:0 0 12px}
+a{color:var(--turq-deep)}
+strong{font-weight:600;color:var(--char)}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.eyebrow{font-size:12.5px;letter-spacing:.1em;font-weight:600;color:var(--turq);text-transform:uppercase}
+
+/* slanted motif helpers */
+.para{display:inline-block;transform:skewX(var(--slant))}
+.para>*{display:inline-block;transform:skewX(15deg)}
+.hl{position:relative;z-index:0;white-space:nowrap}
+.hl::before{content:"";position:absolute;z-index:-1;inset-inline:-.12em;bottom:.08em;height:.42em;background:var(--saffron);transform:skewX(var(--slant));opacity:.9}
+.hl.turq::before{background:var(--turq-tint)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(250,249,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.top img{height:32px;width:auto;flex:none}
+.top .tag{font-size:12.5px;font-weight:600;color:var(--ink-soft);padding-inline-start:14px;border-inline-start:1px solid var(--line);white-space:nowrap}
+.top nav{margin-inline-start:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{font-size:13px;font-weight:600;color:var(--char);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:6px}
+.top nav a:hover{background:var(--turq-tint);color:var(--turq-deep)}
+@media (max-width:1600px){.top .tag{display:none}}
+.top nav{mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent);-webkit-mask-image:linear-gradient(to left,transparent,#000 28px,#000 calc(100% - 28px),transparent)}
+@media (min-width:1280px){.top nav{mask-image:none;-webkit-mask-image:none}}
+
+/* hero */
+.hero{background:var(--turq);color:var(--white);position:relative;overflow:hidden}
+.hero .pat{position:absolute;inset-inline-start:-40px;bottom:-30px;width:min(640px,80%);height:auto;pointer-events:none}
+.hero .slash{position:absolute;inset-inline-end:-80px;top:-40px;width:420px;height:auto;pointer-events:none;opacity:.6}
+.hero .wrap{position:relative;padding-block:clamp(44px,7vw,88px) clamp(48px,7vw,96px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:999px}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);max-width:34em;opacity:.95;margin-top:18px;font-weight:400}
+.hero .facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.35);font-size:13.5px}
+.hero .facts b{display:block;font-size:12px;opacity:.8;font-weight:500}
+.stack{position:relative;justify-self:end;width:min(360px,100%);aspect-ratio:4/5}
+.stack .cardx{position:absolute;inset:0;border-radius:14px;box-shadow:var(--shadow)}
+.stack .cardx.back{transform:rotate(6deg) translate(-18px,14px);background:var(--sh-blush);border:1px solid var(--sh-line)}
+.stack .cardx.back2{transform:rotate(-7deg) translate(16px,-10px);background:var(--sh-deep)}
+.stack .art{position:absolute;inset:0;border-radius:14px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.stack{justify-self:center;max-width:320px}}
+
+/* proof strip */
+.proof{background:var(--char);color:var(--white)}
+.proof .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding-block:24px}
+.proof b{display:block;font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.1;color:var(--white)}
+.proof span{font-size:13px;opacity:.8}
+.proof small{grid-column:1/-1;font-size:12px;opacity:.65}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:460px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* sections */
+.sec{padding-block:clamp(48px,7vw,88px)}
+.sec .wrap{display:grid;gap:18px}
+.band-white{background:var(--white);border-block:1px solid var(--line)}
+.band-char{background:var(--char);color:#eef2f3}
+.band-char h2,.band-char h3,.band-char h4,.band-char strong{color:var(--white)}
+.band-char .eyebrow{color:var(--saffron)}
+.band-char .muted{color:#c9d1d5}
+.band-turq{background:var(--turq);color:var(--white)}
+.band-turq h2,.band-turq h3,.band-turq h4,.band-turq strong{color:var(--white)}
+.band-turq .eyebrow{color:var(--saffron)}
+.head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;margin-bottom:8px}
+.num{display:grid;place-items:center;width:64px;height:56px;background:var(--turq);color:var(--white);font-weight:800;font-size:24px;transform:skewX(var(--slant));border-radius:6px;flex:none}
+.num span{transform:skewX(15deg)}
+.band-char .num,.band-turq .num{background:var(--saffron);color:var(--char)}
+.head .t{display:grid;gap:4px}
+.intro{font-size:clamp(16px,1.5vw,18px);line-height:1.8;max-width:62ch;font-weight:400;color:var(--char)}
+.band-char .intro,.band-turq .intro{color:#eef2f3}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 22px;min-width:0}
+.card.lift{box-shadow:var(--shadow);border-color:transparent}
+.card.tint{background:var(--turq-tint);border-color:transparent}
+.card.dark{background:var(--char-deep);color:#eef2f3;border-color:transparent}
+.card.dark h4,.card.dark strong{color:var(--white)}
+.card.deep{background:var(--turq-ink);color:#e6f3ef;border-color:transparent}
+.card.deep h4,.card.deep strong{color:var(--white)}
+.note{background:var(--slate);border-radius:10px;padding:14px 18px;font-size:14px}
+.note b{font-weight:600;color:var(--char)}
+.note.warn{background:#fff7e0;border:1px solid var(--saffron)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--slate-soft);color:var(--char);border:1px solid var(--line)}
+.chip.red{background:#fdeae7;color:#9c2f22;border-color:#f6c5bf}
+.chip.yellow{background:#fff8d6;color:#7a5c00;border-color:#f3dd7a}
+.chip.green{background:var(--turq-tint);color:var(--turq-ink);border-color:#bfe6da}
+.chip.wine{background:var(--sh-blush);color:var(--sh-wine);border-color:var(--sh-line)}
+.chip.sky{background:#e6f2fb;color:#1f5f8b;border-color:#bcdbf2}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kpi b{display:block;font-size:30px;font-weight:800;color:var(--turq);line-height:1.1}
+.kpi span{font-size:12.5px;color:var(--ink-soft)}
+.band-turq .kpi{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:var(--white)}
+.band-turq .kpi b{color:var(--white)}
+.band-turq .kpi span{color:rgba(255,255,255,.85)}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:11px 13px;vertical-align:top;border-bottom:1px solid var(--line);text-align:right}
+th{background:var(--char);color:var(--white);font-weight:600;white-space:nowrap;font-size:12.5px;letter-spacing:.02em}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;color:var(--char);white-space:nowrap}
+.tbl.wide td:first-child{white-space:normal}
+.tbl.gantt td{text-align:center;padding:9px 6px}
+.tbl.gantt td:first-child{text-align:right;white-space:nowrap}
+.tbl.gantt i{display:block;height:14px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.tbl.gantt i.lite{background:var(--slate)}
+.tbl.gantt i.gate{background:var(--saffron);width:14px;margin:0 auto;transform:rotate(45deg);border-radius:2px}
+.bar{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.bar i{display:inline-block;height:12px;background:var(--turq);transform:skewX(var(--slant));border-radius:2px}
+.bar.z span{color:var(--ink-soft)}
+
+/* audit cards */
+.audit{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.audit .card{display:grid;gap:10px;align-content:start}
+.audit .ch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.audit .ch h4{font-size:17px}
+.audit .ch small{font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.audit ul{margin:0;padding-inline-start:18px;font-size:14px}
+.audit .st{display:grid;gap:6px}
+.audit .st div{display:flex;gap:8px;align-items:flex-start;font-size:13.5px}
+.audit .st i{flex:none;width:10px;height:10px;border-radius:50%;margin-top:9px}
+.i-red{background:var(--red)} .i-yel{background:var(--saffron)} .i-grn{background:var(--turq)} .i-sky{background:var(--sky)}
+
+/* services icons row */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.svc .card{display:grid;gap:8px;padding:16px}
+.svc .ic{width:44px;height:44px;border-radius:10px;background:var(--turq-tint);display:grid;place-items:center;color:var(--turq-deep)}
+.svc .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h4{font-size:15px}
+.svc p{font-size:13px;color:var(--ink-soft);margin:0}
+
+/* needs */
+.needs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:n}
+.needs div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px;position:relative;padding-top:44px}
+.needs div::before{counter-increment:n;content:"0" counter(n);position:absolute;top:12px;inset-inline-start:16px;font-weight:800;font-size:22px;color:var(--turq);line-height:1}
+.needs b{display:block;font-weight:600;margin-bottom:4px}
+.needs span{font-size:13.5px;color:var(--ink-soft)}
+
+/* benchmark */
+.bench{display:grid;gap:14px}
+.bench .row{background:var(--white);border:1px solid var(--line);border-radius:12px;display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:0;overflow:hidden}
+.bench .row>div{padding:16px 18px;min-width:0}
+.bench .k{background:var(--char);color:var(--white);display:grid;gap:8px;align-content:start}
+.bench .k h4{color:var(--white);font-size:15.5px}
+.bench .k .chips .chip{background:rgba(255,255,255,.12);color:var(--white);border-color:rgba(255,255,255,.25)}
+.bench .o{border-inline-end:1px solid var(--line)}
+.bench .lbl{font-size:11.5px;font-weight:600;color:var(--turq);letter-spacing:.06em;margin-bottom:6px}
+.bench p{font-size:13.5px;margin:0}
+@media (max-width:760px){.bench .row{grid-template-columns:minmax(0,1fr)}.bench .o{border-inline-end:0;border-bottom:1px solid var(--line)}}
+
+/* idea */
+.formula{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
+.f-step{border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:20px;background:rgba(255,255,255,.04)}
+.f-step small{display:block;font-size:12px;font-weight:600;color:var(--saffron)}
+.f-step b{display:block;font-size:26px;font-weight:800;color:var(--white);margin-top:2px}
+.f-step span{display:block;font-size:14px;color:#c9d1d5;margin-top:6px}
+.f-arrow{align-self:center;font-size:30px;font-weight:800;color:var(--turq)}
+@media (max-width:640px){.formula{grid-template-columns:minmax(0,1fr)}.f-arrow{justify-self:center;transform:rotate(90deg)}}
+.band-char .tbl{background:transparent;border-color:rgba(255,255,255,.18)}
+.band-char table{color:#eef2f3}
+.band-char th{background:rgba(255,255,255,.08);color:var(--saffron)}
+.band-char td{border-color:rgba(255,255,255,.14)}
+.band-char td:first-child{color:var(--white)}
+.band-char .note{background:rgba(255,255,255,.08);color:#eef2f3}
+.band-char .note b{color:var(--white)}
+.band-char .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#eef2f3}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.pillar{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0;border-top:4px solid var(--turq)}
+.pillar .fn{font-size:12px;color:var(--turq);font-weight:600}
+.pillar .nm{font-weight:700;font-size:18px;color:var(--char);margin-top:2px}
+.pillar .sr{font-size:12.5px;color:var(--ink-soft);margin-top:4px}
+.pillar .ex{font-size:13.5px;margin-top:8px}
+
+/* platforms */
+.plat{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.plat .card{display:grid;gap:12px;align-content:start;padding:0;overflow:hidden}
+.plat .ph{display:flex;align-items:center;gap:12px;padding:16px 20px;color:var(--white)}
+.plat .ph.x{background:#0f1419}.plat .ph.li{background:var(--li-blue)}.plat .ph.tt{background:#111;background-image:linear-gradient(90deg,#111 60%,#25f4ee22,#fe2c5522)}
+.plat .ph .mark{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.14);display:grid;place-items:center;font-weight:800;font-size:18px;font-family:var(--font-sh)}
+.plat .ph h3{margin:0;color:var(--white);font-size:18px}
+.plat .ph small{display:block;font-size:12px;opacity:.85}
+.plat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px;padding:0 20px 18px}
+.plat dt{font-weight:600;color:var(--ink-soft);white-space:nowrap}
+.plat dd{margin:0}
+.plat .qty{margin:0 20px;background:var(--turq-tint);border-radius:8px;padding:8px 12px;font-weight:600;color:var(--turq-ink);font-size:13.5px}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.steps li{position:relative;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px;padding-top:50px;min-width:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:12px;inset-inline-start:14px;width:30px;height:30px;display:grid;place-items:center;background:var(--turq);color:#fff;font-weight:800;transform:skewX(var(--slant));border-radius:4px}
+.steps b{display:block;font-weight:600;margin-bottom:4px}
+.steps span{font-size:13.5px;color:var(--ink-soft)}
+
+/* scope rail */
+.rail{display:grid;gap:12px}
+.rail .tr{display:grid;grid-template-columns:72px minmax(0,1fr) 110px minmax(0,.8fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rail .tr>div{padding:16px 18px;min-width:0;font-size:13.5px}
+.rail .n{background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:26px}
+.rail .t b{display:block;font-size:15.5px;font-weight:700;color:var(--char);margin-bottom:4px}
+.rail .q{background:var(--slate-soft);display:grid;place-items:center;text-align:center;font-weight:700;color:var(--turq-ink);border-inline:1px solid var(--line)}
+.rail .q b{font-size:24px;display:block;line-height:1.1}
+.rail .q span{font-size:12px;font-weight:500;color:var(--ink-soft)}
+.rail .r{color:var(--ink-soft)}
+.rail .r b{display:block;font-size:11.5px;letter-spacing:.06em;color:var(--turq);font-weight:600;margin-bottom:4px}
+@media (max-width:760px){.rail .tr{grid-template-columns:56px minmax(0,1fr)}.rail .q,.rail .r{grid-column:2;border-inline:0;border-top:1px solid var(--line)}.rail .q{place-items:start;text-align:right}}
+
+/* Shihab surfaces */
+.sh{font-family:var(--font-sh)}
+.art{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;font-family:var(--font-sh);display:flex;flex-direction:column;justify-content:space-between;padding:7%;container-type:inline-size;border-radius:12px}
+.art.wide{aspect-ratio:1.25/1}
+.art-wine{background:var(--sh-wine);color:var(--white)}
+.art-blush{background:var(--sh-blush);color:var(--sh-ink)}
+.art-white{background:var(--white);color:var(--sh-ink);border:1px solid var(--sh-line)}
+.art-logo{height:clamp(14px,7cqi,26px);width:auto;align-self:flex-start;position:relative}
+.art h5{position:relative;margin:0;font:700 clamp(26px,13cqi,58px)/1.22 var(--font-sh)}
+.art .sm h5{font-size:clamp(20px,9cqi,40px);line-height:1.25}
+.art .cta{position:relative;align-self:flex-start;display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 clamp(13px,6cqi,24px)/1.3 var(--font-sh);padding:.15em .45em .25em;margin-top:5cqi}
+.art .meta{position:relative;font:500 clamp(10px,3.6cqi,14px)/1.5 var(--font-sh);opacity:.85}
+.art-list{display:grid;gap:2cqi;position:relative;padding:0;margin:0;list-style:none}
+.art-list li{font:500 clamp(11px,4.4cqi,16px)/1.35 var(--font-sh);background:var(--white);padding:2cqi 3.2cqi;border:1px solid var(--sh-line);margin:0;display:flex;gap:2.5cqi;align-items:center}
+.art-list li::before{content:"";width:2.4cqi;height:2.4cqi;background:var(--sh-coral);flex:none}
+.art-big{font:700 clamp(40px,24cqi,110px)/1 var(--font-sh);color:var(--sh-coral);direction:ltr;text-align:right}
+.art-q{position:relative;font:700 clamp(14px,5.6cqi,22px)/1.45 var(--font-sh)}
+.art-photo{position:relative;flex:1;margin:3cqi 0;background:linear-gradient(160deg,#5a3a46,#1f151a);display:grid;place-items:center;color:rgba(255,255,255,.65);font:500 clamp(10px,3.4cqi,13px) var(--font-sh);border:1px dashed rgba(255,255,255,.35);text-align:center;padding:4cqi;border-radius:8px}
+.swoosh{position:absolute;inset-inline-start:-18%;bottom:-20%;width:75%;height:auto;opacity:.12;pointer-events:none}
+.tpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tpl .art{box-shadow:var(--shadow)}
+.tpl-cap{margin-top:10px;font-size:13.5px;font-weight:600}
+.tpl-cap span{display:block;font-weight:400;font-size:12.5px;color:var(--ink-soft)}
+.mock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:start}
+.mock-col{display:grid;gap:20px;min-width:0}
+.mock-note{margin-top:8px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.mock-note b{color:var(--turq-deep)}
+.post{background:var(--white);color:var(--pf-ink);border:1px solid var(--pf-line);border-radius:14px;padding:14px 16px 8px;font-family:var(--font-sh);box-shadow:var(--shadow)}
+.x-row{display:flex;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--sh-wine);display:grid;place-items:center;flex:none;overflow:hidden}
+.av img{width:70%;height:auto}
+.x-main{min-width:0;flex:1}
+.x-id{font-size:14.5px;line-height:1.3}
+.x-id b{font-weight:700}
+.x-id span{color:var(--pf-muted);font-weight:400}
+.x-text{font-size:15px;line-height:1.65;margin-top:6px;white-space:pre-line}
+.x-text .tag{color:var(--pf-blue)}
+.x-media{margin-top:12px;border-radius:14px;overflow:hidden;border:1px solid var(--pf-line)}
+.x-media .art{border-radius:0}
+.x-actions{display:flex;justify-content:space-between;max-width:360px;color:var(--pf-muted);padding:10px 0 4px;font-size:12.5px}
+.poll{display:grid;gap:8px;margin-top:10px}
+.poll span{display:block;border:1.5px solid var(--pf-blue);color:var(--pf-blue);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;text-align:center}
+.poll small{color:var(--pf-muted);font-size:12.5px}
+.thread .x-row+.x-row{margin-top:12px}
+.li-id b{display:block;font-size:14.5px}
+.li-id span{display:block;font-size:12px;color:var(--pf-muted)}
+.li-text{font-size:14.5px;line-height:1.65;margin:12px 0;white-space:pre-line}
+.li-actions{display:flex;justify-content:space-around;color:var(--pf-muted);border-top:1px solid var(--pf-line);margin-top:4px;padding:8px 0 2px;font-size:13px;font-weight:600}
+.carousel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.carousel .art{aspect-ratio:1/1;padding:9%}
+@media (max-width:640px){.carousel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.phone-wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.phone-wrap{grid-template-columns:minmax(0,1fr)}}
+.phone{width:min(230px,70vw);aspect-ratio:9/18;background:#111;border-radius:36px;padding:9px;justify-self:center;box-shadow:var(--shadow)}
+.screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(170deg,#3a1226,#150509);color:#fff;font-family:var(--font-sh)}
+.screen .cap{position:absolute;inset-inline:14px 36px;top:48%;text-align:center}
+.screen .cap span{display:inline;background:#fff;color:#111;font:700 13px/1.8 var(--font-sh);padding:2px 7px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.screen .cta{position:absolute;inset-inline:14px 36px;top:64%;text-align:center}
+.screen .cta span{display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 12px/1.5 var(--font-sh);padding:3px 10px}
+.screen .meta{position:absolute;inset-inline:12px 36px;bottom:16px;font-size:11px;line-height:1.5}
+.screen .meta b{display:block;font-size:12px}
+.screen .logo{position:absolute;top:20px;inset-inline-start:14px;height:15px;width:auto}
+.screen .ic{position:absolute;top:26%;inset-inline:0;text-align:center;font-size:36px}
+.screen .prog{position:absolute;top:10px;inset-inline:10px;display:flex;gap:3px}
+.screen .prog i{flex:1;height:3px;background:rgba(255,255,255,.3)}
+.screen .prog i.on{background:#fff}
+
+/* community */
+.sla{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.sla div{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--turq);border-radius:10px;padding:12px 14px}
+.sla b{display:block;font-size:24px;font-weight:800;color:var(--char);line-height:1.2}
+.sla span{font-size:13px;color:var(--ink-soft)}
+.convo{display:grid;gap:8px;font-family:var(--font-sh)}
+.bubble{max-width:90%;padding:10px 14px;font-size:14px;line-height:1.6;border-radius:12px}
+.bubble small{display:block;font:600 11.5px var(--font);margin-bottom:2px;opacity:.75}
+.bubble.in{background:var(--slate-soft);border:1px solid var(--line);justify-self:start}
+.bubble.out{background:var(--sh-wine);color:var(--white);justify-self:end}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.member{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.member .ph{position:relative;background:var(--char);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.member .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.member .ph .init{width:52%;aspect-ratio:1;border-radius:50%;background:var(--turq);color:#fff;display:grid;place-items:center;font-weight:800;font-size:34px;border:4px solid rgba(255,255,255,.9);position:relative}
+.member .ph .pt{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'><polygon points='8,2 20,2 14,18 2,18' fill='%2316a086'/></svg>");background-size:26px 26px;opacity:.22;mask-image:linear-gradient(90deg,#000 20%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 20%,transparent 80%)}
+.member .ph .hint{position:absolute;bottom:8px;inset-inline:8px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
+.member .bd{padding:14px 16px;display:grid;gap:4px;align-content:start}
+.member .bd b{font-weight:700;font-size:15.5px;color:var(--char)}
+.member .bd .role{font-size:13px;color:var(--turq-deep);font-weight:600}
+.member .bd span{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+
+/* closing */
+.closing{background:var(--char);color:var(--white);position:relative;overflow:hidden}
+.closing .pat{position:absolute;inset-inline-end:-30px;top:-20px;width:min(520px,70%);height:auto;pointer-events:none;opacity:.5}
+.closing .wrap{position:relative;padding-block:56px;display:grid;gap:16px}
+.closing h2{color:var(--white);font-size:clamp(28px,4vw,44px)}
+.closing .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;font-weight:500}
+.closing img{width:130px;height:auto}
+footer{font-size:12px;color:var(--ink-soft);padding-block:18px}
+.check{list-style:none;padding:0;display:grid;gap:8px}
+.check li{display:flex;gap:10px;align-items:flex-start}
+.check li::before{content:"";flex:0 0 18px;height:18px;border:2px solid var(--turq);border-radius:4px;margin-top:4px}
+@keyframes sc1{0%{opacity:1}18%{opacity:1}20%{opacity:0}97%{opacity:0}100%{opacity:1}}
+@keyframes pg1{0%,0%{transform:scaleX(0)}20%,100%{transform:scaleX(1)}}
+@keyframes sc2{0%,20%{opacity:0}22%{opacity:1}38%{opacity:1}40%,100%{opacity:0}}
+@keyframes pg2{0%,20%{transform:scaleX(0)}40%,100%{transform:scaleX(1)}}
+@keyframes sc3{0%,40%{opacity:0}42%{opacity:1}58%{opacity:1}60%,100%{opacity:0}}
+@keyframes pg3{0%,40%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}
+@keyframes sc4{0%,60%{opacity:0}62%{opacity:1}78%{opacity:1}80%,100%{opacity:0}}
+@keyframes pg4{0%,60%{transform:scaleX(0)}80%,100%{transform:scaleX(1)}}
+@keyframes sc5{0%,80%{opacity:0}82%{opacity:1}97%{opacity:1}100%{opacity:0}}
+@keyframes pg5{0%,80%{transform:scaleX(0)}100%,100%{transform:scaleX(1)}}
+@keyframes blink{0%,4%{opacity:1;transform:scale(1)}6%{opacity:.35;transform:scale(.92)}8%{opacity:1;transform:scale(1.08)}10%{opacity:.35}12%,100%{opacity:1;transform:scale(1)}}
+@keyframes drive{0%,21%{transform:translateX(0)}37%,100%{transform:translateX(-118px)}}
+@keyframes bar1{0%,41%{transform:scaleX(0)}48%,100%{transform:scaleX(1)}}
+@keyframes bar2{0%,44%{transform:scaleX(0)}52%,100%{transform:scaleX(1)}}
+@keyframes bar3{0%,47%{transform:scaleX(0)}56%,100%{transform:scaleX(1)}}
+@keyframes ok1{0%,62%{opacity:0;transform:translateY(6px)}65%,100%{opacity:1;transform:none}}
+@keyframes ok2{0%,66%{opacity:0;transform:translateY(6px)}69%,100%{opacity:1;transform:none}}
+@keyframes ok3{0%,70%{opacity:0;transform:translateY(6px)}73%,100%{opacity:1;transform:none}}
+@keyframes swoop{0%,80%{transform:scale(.25) rotate(-20deg)}88%,100%{transform:scale(1) rotate(0)}}
+@keyframes reveal{0%,86%{opacity:0;transform:translateY(8px)}90%,100%{opacity:1;transform:none}}
+/* one-minute summary */
+.cover-tag{display:inline-block;background:var(--saffron);color:var(--char);font-weight:700;font-size:12.5px;padding:4px 12px;transform:skewX(var(--slant));margin-bottom:12px}
+.cover-tag span{display:inline-block;transform:skewX(15deg)}
+.minute{background:var(--white);border-bottom:1px solid var(--line)}
+.minute .wrap{padding-block:clamp(40px,6vw,72px);display:grid;gap:22px}
+.minute h2{font-size:clamp(24px,3vw,34px)}
+.m3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.m3 .mi{border-top:4px solid var(--turq);padding-top:14px}
+.m3 .mi:nth-child(2){border-top-color:var(--char)}
+.m3 .mi:nth-child(3){border-top-color:var(--saffron)}
+.m3 b{display:block;font-size:13px;letter-spacing:.06em;color:var(--turq-deep);margin-bottom:6px}
+.m3 p{font-size:16px;line-height:1.85;margin:0;color:var(--char)}
+.mnums{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;background:var(--char);border-radius:12px;overflow:hidden}
+.mnums div{padding:16px 12px;text-align:center;color:#fff;border-inline-start:1px solid rgba(255,255,255,.12)}
+.mnums div:first-child{border-inline-start:0}
+.mnums b{display:block;font-size:clamp(24px,2.6vw,32px);font-weight:800;line-height:1.15}
+.mnums span{font-size:12.5px;opacity:.8}
+.mlink{justify-self:start;display:inline-flex;gap:10px;align-items:center;font-weight:600;font-size:14px;color:var(--turq-deep);text-decoration:none;border:1px solid var(--turq);border-radius:999px;padding:8px 16px}
+.mlink:hover{background:var(--turq-tint)}
+@media (max-width:820px){.m3{grid-template-columns:minmax(0,1fr)}.mnums{grid-template-columns:repeat(3,minmax(0,1fr))}.mnums div:nth-child(4){border-inline-start:0}.mnums div:nth-child(n+4){border-top:1px solid rgba(255,255,255,.12)}}
+@media (max-width:420px){.mnums{grid-template-columns:repeat(2,minmax(0,1fr))}.mnums div{border-inline-start:0;border-top:1px solid rgba(255,255,255,.12)}}
+
+/* compliance annex */
+.num.ltr-a span{font-size:26px}
+.cmp-sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cmp-sum div{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.cmp-sum b{display:block;font-size:30px;font-weight:800;line-height:1.1}
+.cmp-sum span{font-size:13px;color:var(--ink-soft)}
+.cmp td a{font-weight:600;text-decoration:none;white-space:nowrap}
+.cmp td:nth-child(2){min-width:16em}
+.cmp td small{display:block;color:var(--ink-soft);font-size:12.5px;line-height:1.6;margin-top:3px}
+.cmp tr.grp td{background:var(--slate-soft);font-weight:700;color:var(--char);font-size:13px}
+@media (max-width:640px){.cmp-sum{grid-template-columns:minmax(0,1fr)}}
+
+/* animated motion preview */
+.mo .prog{z-index:3}
+.mo .sc{position:absolute;inset:0;opacity:0;animation-duration:10s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both}
+.mo .sc5{opacity:1}
+.mo .sc1{animation-name:sc1}.mo .sc2{animation-name:sc2}.mo .sc3{animation-name:sc3}.mo .sc4{animation-name:sc4}.mo .sc5{animation-name:sc5}
+.mo .prog i{position:relative;overflow:hidden;background:rgba(255,255,255,.3)}
+.mo .prog i::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:right;transform:scaleX(1);animation:10s linear infinite both}
+.mo .prog i:nth-child(1)::after{animation-name:pg1}.mo .prog i:nth-child(2)::after{animation-name:pg2}.mo .prog i:nth-child(3)::after{animation-name:pg3}.mo .prog i:nth-child(4)::after{animation-name:pg4}.mo .prog i:nth-child(5)::after{animation-name:pg5}
+.mo .anim{animation-duration:10s;animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:ease-out}
+.mo .cap{position:absolute;inset-inline:14px;top:auto;bottom:26%;text-align:center}
+.mo .dash{position:absolute;inset-inline:18px;top:20%;height:34%;border-radius:50% 50% 14px 14px / 70% 70% 14px 14px;background:#1d0a12;border:2px solid rgba(255,255,255,.18);display:grid;place-items:center}
+.mo .dash svg{width:44%;height:auto}
+.mo .warn{animation-name:blink;transform-origin:center}
+.mo .map{position:absolute;inset-inline:16px;top:22%;height:30%;border-radius:12px;background:#2b0f1b;overflow:hidden}
+.mo .road{position:absolute;inset-inline:18px;top:50%;border-top:3px dashed rgba(255,255,255,.35)}
+.mo .car{position:absolute;inset-inline-start:16px;top:calc(50% - 9px);width:22px;height:16px;background:#fff;border-radius:4px;animation-name:drive}
+.mo .pin{position:absolute;inset-inline-end:14px;top:calc(50% - 22px);width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--sh-coral);display:grid;place-items:center}
+.mo .pin::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--sh-wine)}
+.mo .diag{position:absolute;inset-inline:18px;top:20%;display:grid;gap:10px;background:#1d0a12;border-radius:12px;padding:14px 12px;border:1px solid rgba(255,255,255,.18)}
+.mo .diag small{font-size:10px;opacity:.75}
+.mo .diag i{display:block;height:8px;border-radius:4px;background:var(--sh-coral);transform-origin:right}
+.mo .diag i.b1{animation-name:bar1;width:92%}.mo .diag i.b2{animation-name:bar2;width:64%;background:#fff}.mo .diag i.b3{animation-name:bar3;width:78%}
+.mo .sheet{position:absolute;inset-inline:16px;top:20%;background:var(--sh-blush);color:var(--sh-wine);border-radius:12px;padding:12px;display:grid;gap:8px}
+.mo .sheet div{display:flex;justify-content:space-between;align-items:center;font:600 12px/1.4 var(--font-sh);background:#fff;padding:7px 9px;border-radius:7px}
+.mo .sheet div::after{content:"✓";color:var(--turq);font-weight:800}
+.mo .sheet .o1{animation-name:ok1}.mo .sheet .o2{animation-name:ok2}.mo .sheet .o3{animation-name:ok3}
+.mo .sc5{background:var(--sh-wine)}
+.mo .big{position:absolute;inset-inline-start:-30%;bottom:-25%;width:150%;height:auto;opacity:.22;transform-origin:20% 80%;animation-name:swoop}
+.mo .end{position:absolute;inset-inline:14px;top:32%;display:grid;justify-items:center;gap:12px;text-align:center;animation-name:reveal}
+.mo .end img{height:30px;width:auto}
+.mo .end b{font:700 17px/1.45 var(--font-sh)}
+.mo .end span{display:inline-block;background:var(--sh-coral);color:var(--sh-wine);font:700 13px/1.5 var(--font-sh);padding:3px 12px}
+.mo-note{display:flex;gap:8px;align-items:center;justify-content:center;font-size:12px;color:var(--ink-soft);margin-top:10px}
+.mo-note i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 2s infinite}
+@media (prefers-reduced-motion:reduce){.mo .sc5 .big{transform:none}.mo .end{opacity:1}}
+
+/* print / PDF */
+@media print{
+  @page{size:A4 landscape;margin:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;background:var(--page)}
+  html{scroll-behavior:auto}
+  .top,.mlink,.mo-note{display:none!important}
+  *{animation:none!important;transition:none!important}
+  .sec[id]{break-before:page}
+  .minute .wrap{padding-block:28px}
+  .wrap{max-width:none;padding-left:44px;padding-right:44px}
+  .sec .wrap{gap:12px}
+  .sec h3{margin-top:14px;margin-bottom:4px}
+  .sec,.minute{box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .sec{padding-block:30px}
+  .sec:not([id]){padding-top:0}
+  .hero{height:1015px;display:grid;align-items:center;break-after:page}
+  .minute{min-height:840px;display:grid;align-items:center}
+  .minute .wrap{gap:34px}
+  .m3 p{font-size:18px}
+  .minute h2{font-size:38px}
+  .proof .wrap{padding-block:18px}
+  .card,.post,.bench .row,.rail .tr,.member,.art,tr,.needs>div,.steps li,.kpi,.sla>div,.tpl>div,.phone-wrap,.convo,.note,.cmp-sum>div,.audit .card,.grid3>div,.grid2>div,.head{break-inside:avoid}
+  h2,h3,.head{break-after:avoid}
+  .closing{break-before:page;min-height:100vh;display:grid;align-items:center}
+  footer{display:none}
+  .card.lift,.post,.art,.tpl .art{box-shadow:none}
+}
+
+/* center proposal additions */
+.hero .pat{width:min(380px,40%)}
+.fields{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 18px;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.35);font-size:15px;align-items:center}
+.fields dt{font-weight:700;color:var(--saffron);margin:0}
+.fields dd{margin:0}
+.fill{display:inline-block;border:1.5px dashed var(--saffron);background:rgba(255,255,255,.12);padding:3px 10px;border-radius:6px;font-weight:600}
+.fill.dark{border-color:#b38f00;background:#fff7e0;color:var(--char)}
+.hero .big-card{position:absolute;inset:0;border-radius:14px;background:var(--white);color:var(--char);padding:9%;display:grid;align-content:center;gap:4px}
+.big-card b{font-size:clamp(56px,9vw,96px);font-weight:800;line-height:1;color:var(--turq)}
+.big-card b.d{color:var(--turq-deep)}
+.big-card span{font-size:17px;font-weight:700;margin-bottom:14px}
+.stack .cardx.back{background:var(--slate);border:0}
+.stack .cardx.back2{background:var(--char-deep)}
+.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;counter-reset:none}
+.toc a{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--char)}
+.toc a:hover b{color:var(--turq-deep)}
+.toc .n{display:grid;place-items:center;height:38px;background:var(--turq);color:#fff;font-weight:800;transform:skewX(var(--slant));border-radius:4px}
+.toc .n span{transform:skewX(15deg)}
+.toc .n.y{background:var(--saffron);color:var(--char)}
+.toc b{font-size:17px;font-weight:700}
+.toc small{color:var(--ink-soft);font-size:13px}
+@media (max-width:760px){.toc{grid-template-columns:minmax(0,1fr)}}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.duo.uneven{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}
+@media (max-width:760px){.duo,.duo.uneven{grid-template-columns:minmax(0,1fr)}}
+.panel{border-radius:14px;padding:24px 26px;display:grid;gap:10px;align-content:start}
+.panel.turq{background:var(--turq);color:#fff}
+.panel.char{background:var(--char);color:#eef2f3}
+.panel h3{margin:0;color:inherit;font-size:22px}
+.panel .k{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--saffron)}
+.panel ul{margin:0;padding-inline-start:20px;font-size:15px;line-height:1.9}
+.panel.light{background:var(--white);border:1px solid var(--line)}
+.panel.tint{background:var(--turq-tint)}
+.panel.warn{background:#fff7e0;border:1px solid #f3dd7a}
+.years{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.years div{background:var(--turq);color:#fff;font-weight:800;font-size:22px;text-align:center;padding:14px 0;transform:skewX(var(--slant));border-radius:4px}
+.years div span{display:inline-block;transform:skewX(15deg)}
+.years div.y{background:var(--saffron);color:var(--char)}
+@media (max-width:600px){.years{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.flow{display:grid;grid-template-columns:repeat(var(--n,6),minmax(0,1fr));gap:8px}
+.flow div{background:var(--turq);color:#fff;font-weight:700;font-size:14px;text-align:center;padding:12px 8px;transform:skewX(var(--slant));border-radius:4px;display:grid;place-items:center}
+.flow div span{display:block;transform:skewX(15deg)}
+.flow div:nth-child(even){background:var(--turq-deep)}
+.flow div.y{background:var(--saffron);color:var(--char)}
+@media (max-width:760px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.chipset{display:flex;flex-wrap:wrap;gap:8px}
+.chipset span{background:var(--white);border:1px solid var(--turq);color:var(--turq-ink);font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px}
+.panel.char .chipset span{background:var(--char-deep);color:#fff;border-color:var(--turq)}
+.tracks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.tracks div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:14px;display:grid;gap:10px;align-content:start;min-height:112px}
+.tracks i{font-style:normal;justify-self:start;background:var(--saffron);color:var(--char);font-weight:800;font-size:13px;padding:3px 12px;transform:skewX(var(--slant))}
+.tracks b{font-size:15px;line-height:1.5}
+@media (max-width:900px){.tracks{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.tracks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.swatches div{display:grid;gap:6px;font-weight:600;font-size:14px;text-align:center}
+.swatches i{display:block;aspect-ratio:4/3;border-radius:10px}
+.stat{background:var(--turq);color:#fff;border-radius:14px;padding:26px;display:grid;align-content:center;text-align:center;gap:6px}
+.stat b{font-size:84px;font-weight:800;line-height:1}
+.stat strong{color:#fff;font-size:18px}
+.stat p{margin:0;font-size:14px;opacity:.92}
+.cube{display:grid;place-items:center}
+.cube svg{width:min(240px,70%);height:auto}
+.roles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.roles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp td:first-child{font-weight:700;text-align:center;width:48px}
+@media print{ .toc a{break-inside:avoid} .panel,.tracks div,.roles .member{break-inside:avoid} }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="logo-dark.png" alt="3,6T">
+  <span class="tag">العرض الفني · المركز · نوفمبر 2026</span>
+  <nav>
+    <a href="#toc">المحتويات</a><a href="#s1">النموذج</a><a href="#s2">الفهم</a><a href="#s3">التشخيص</a><a href="#s4">الاستراتيجية</a><a href="#s5">المنتجات</a><a href="#s6">المبدأ</a><a href="#s7">القنوات</a><a href="#s8">النطاق</a><a href="#s9">الهوية</a><a href="#s10">الإدارة</a><a href="#s11">الفريق</a><a href="#annex">المطابقة</a>
+  </nav>
+</div></header>
+
+<section class="hero" id="start">
+  <svg class="slash" viewBox="0 0 420 300" aria-hidden="true"><polygon points="120,0 420,0 300,300 0,300" fill="#0f7a66" opacity=".55"/></svg>
+  <svg class="pat" viewBox="0 0 640 220" aria-hidden="true"><defs><pattern id="pp" width="30" height="30" patternUnits="userSpaceOnUse"><polygon points="9,0 24,0 15,22 0,22" fill="#ffffff"/></pattern><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk"><rect width="640" height="220" fill="url(#fade)"/></mask></defs><rect width="640" height="220" fill="url(#pp)" mask="url(#mk)" opacity=".32"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="kicker">العرض الفني لمشروع</span>
+      <h1 style="margin-top:20px;font-size:clamp(30px,4.2vw,52px);line-height:1.25">تشغيل التسويق والاتصال المؤسسي للمركز لمدة 36 شهرًا</h1>
+      <p class="lead">فريق تشغيل مقيم في المركز، تدعمه الخبرات التخصصية لدى 3,6T عند الحاجة، وفق الخطط والاعتمادات ومستويات الاستجابة المتفق عليها.</p>
+      <dl class="fields">
+        <dt>المقدم إلى:</dt><dd><span class="fill">[اسم الجهة كما في كراسة الشروط]</span></dd>
+        <dt>رقم المنافسة:</dt><dd><span class="fill">[رقم المنافسة في منصة اعتماد]</span></dd>
+        <dt>مقدم من:</dt><dd>شركة ثلاثمائة وستون درجة للدعاية والإعلان (3,6T)</dd>
+        <dt>تاريخ التقديم:</dt><dd>نوفمبر 2026</dd>
+      </dl>
+    </div>
+    <div class="stack">
+      <div class="cardx back"></div><div class="cardx back2"></div>
+      <div class="big-card"><b>36</b><span>شهرًا من التشغيل</span><b class="d">15</b><span>مسارًا في نطاق عمل واحد</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="proof"><div class="wrap">
+  <div><b>36</b><span>شهرًا مدة العقد</span></div>
+  <div><b>15</b><span>مسارًا في نطاق العمل</span></div>
+  <div><b>90</b><span>يومًا لأول خطة</span></div>
+  <div><b>24</b><span>جلسة تصوير سنويًا</span></div>
+  <div><b>2032</b><span>أفق الخطة الاتصالية</span></div>
+  <small>المصدر: نطاق العمل المرفوع من المركز. اللغتان العربية والإنجليزية مشمولتان في كل المخرجات عند الطلب.</small>
+</div></div>
+
+<section class="sec band-white" id="toc"><div class="wrap">
+  <div><span class="cover-tag"><span>جدول المحتويات</span></span><h2>ما يحويه العرض</h2></div>
+  <div class="toc">
+    <a href="#min"><div class="n y"><span>·</span></div><div><b>العرض في دقيقة</b></div><small>المطلوب والنموذج والمبدأ</small></a>
+    <a href="#s7"><div class="n"><span>07</span></div><div><b>التشغيل والقنوات</b></div><small>الحسابات، المحتوى، الإعلام، الداخلي، الفعاليات</small></a>
+    <a href="#s1"><div class="n"><span>01</span></div><div><b>نموذج التشغيل</b></div><small>فريق مقيم وخبرات عند الحاجة</small></a>
+    <a href="#s8"><div class="n"><span>08</span></div><div><b>نطاق العمل وحدوده</b></div><small>15 مسارًا، وما يُسعّر مستقلًا</small></a>
+    <a href="#s2"><div class="n"><span>02</span></div><div><b>فهمنا للمركز</b></div><small>ستة عوامل تحدد الاتصال</small></a>
+    <a href="#s9"><div class="n"><span>09</span></div><div><b>الهوية البصرية و«تكعيب»</b></div><small>نظام الهوية والهويات الفرعية</small></a>
+    <a href="#s3"><div class="n"><span>03</span></div><div><b>تحليل الوضع الراهن والتأسيس</b></div><small>تقرير التشخيص وخطة 90 يومًا</small></a>
+    <a href="#s10"><div class="n"><span>10</span></div><div><b>الإدارة والجودة</b></div><small>الرصد، العاجل، التصوير، التقرير السنوي، اللغة</small></a>
+    <a href="#s4"><div class="n"><span>04</span></div><div><b>الاستراتيجية الاتصالية</b></div><small>السردية والأدلة وخطة 2027–2032</small></a>
+    <a href="#s11"><div class="n"><span>11</span></div><div><b>فريق العمل</b></div><small>الأدوار والمسؤوليات</small></a>
+    <a href="#s5"><div class="n"><span>05</span></div><div><b>المنتجات والمبادرات</b></div><small>خطط الاتصال وحزم الإطلاق</small></a>
+    <a href="#annex"><div class="n y"><span>أ</span></div><div><b>ملحق: مطابقة نطاق العمل</b></div><small>كل بند وأين يجيب عنه العرض</small></a>
+    <a href="#s6"><div class="n"><span>06</span></div><div><b>مبدأ الكتابة</b></div><small>من المدخل الفني إلى رسالة مبسطة</small></a>
+  </div>
+</div></section>
+
+<section class="minute" id="min"><div class="wrap">
+  <div><span class="cover-tag"><span>العرض في دقيقة</span></span><h2>ما يطلبه المركز، وكيف نشغّله، في ثلاث جمل</h2></div>
+  <div class="m3">
+    <div class="mi"><b>المطلوب</b><p>تسويق واتصال مؤسسي لمنتجات المركز ومبادراته، من الاستراتيجية إلى المحتوى اليومي والإعلام والفعاليات والهوية، لمدة 36 شهرًا.</p></div>
+    <div class="mi"><b>النموذج</b><p>فريق مقيم في مقر المركز يتولى التشغيل اليومي، وخبرات 3,6T تسانده عند الحاجة في التحليل المتقدم والحملات والأعمال الموسمية.</p></div>
+    <div class="mi"><b>المبدأ</b><p>كل مدخل فني يتحول إلى رسالة مبسطة ودقيقة، دون تغيير المعنى العلمي أو استحداث معلومات غير معتمدة.</p></div>
+  </div>
+  <div class="mnums">
+    <div><b>36</b><span>شهرًا</span></div>
+    <div><b>15</b><span>مسارًا</span></div>
+    <div><b>90</b><span>يومًا لأول خطة</span></div>
+    <div><b>24</b><span>جلسة تصوير سنويًا</span></div>
+    <div><b>2032</b><span>أفق الخطة الاتصالية</span></div>
+    <div><b>2</b><span>لغتان</span></div>
+  </div>
+  <a class="mlink" href="#annex">كل بند في نطاق العمل، وأين يجيب عنه العرض ←</a>
+</div></section>
+
+<section class="sec" id="s1"><div class="wrap">
+  <div class="head"><div class="num"><span>01</span></div><div class="t"><div class="eyebrow">نموذج التشغيل</div><h2>فريق مقيم في المركز، وخبرات <span class="hl">تساند عند الحاجة</span></h2></div></div>
+  <div class="duo">
+    <div class="panel turq"><div class="k">يوميًا · من داخل مقر المركز</div><h3>الفريق المقيم</h3><ul><li>التشغيل اليومي لحسابات المركز المعتمدة</li><li>كتابة المحتوى والتصميم والجدولة والنشر</li><li>إدارة التفاعل وإحالة الاستفسارات الفنية والحساسة</li><li>التحليلات التشغيلية ومتابعة الأداء الرقمي</li><li>تحرير محتوى الموقع والصفحات التعريفية ضمن الصلاحيات</li></ul></div>
+    <div class="panel char"><div class="k">عند الحاجة · من فريق 3,6T غير المقيم</div><h3>خبرات الوكالة</h3><ul><li>التحليلات المتقدمة ودعم الحملات</li><li>الدعم المتخصص للأعمال الموسمية الإعلامية والمؤسسية</li><li>المستشار المتخصص للتقرير السنوي</li><li>التصوير والإنتاج المرئي وفق الرصيد المتفق عليه</li><li>الطلبات الطارئة خارج الدوام عبر نقطة اتصال ومسار تصعيد</li></ul></div>
+  </div>
+  <div class="note">يعمل الفريقان وفق الخطط والاعتمادات ومستويات الاستجابة المتفق عليها، ويظل تنسيق المركز الداخلي ومسؤولياته الأصلية لدى موظفيه المختصين.</div>
+</div></section>
+
+<section class="sec band-white" id="s2"><div class="wrap">
+  <div class="head"><div class="num"><span>02</span></div><div class="t"><div class="eyebrow">فهمنا للمركز</div><h2>ستة عوامل تحدد طبيعة الاتصال في المركز</h2></div></div>
+  <div class="needs">
+    <div><b>منتجات ومبادرات متعددة</b><span>منتجات وخدمات ومنصات ومبادرات ومخرجات تطوير، لكل منها مالك فني وجمهور وقيمة اتصالية.</span></div>
+    <div><b>محتوى فني دقيق</b><span>مدخلات تتصل بتطوير المناهج ونواتج التعلم، تُبسَّط دون تغيير المعنى العلمي.</span></div>
+    <div><b>علاقة مع الوزارة</b><span>موضوعات مشتركة تحتاج حدودًا واضحة للاتصال، وضوابط للاستخدام المشترك للهوية.</span></div>
+    <div><b>مواسم ثابتة</b><span>بداية العام الدراسي، والإصدارات، وتطوير المناهج، والأنشطة المرتبطة ببرامج المركز.</span></div>
+    <div><b>منصة «تكعيب»</b><span>منصة تحتاج شعارًا وهوية وتجربة مستخدم تنسجم مع هوية المركز وفئاتها المستهدفة.</span></div>
+    <div><b>أفق استراتيجي طويل</b><span>خطة اتصالية مساندة لاستراتيجية المركز من 2027 إلى 2032، بإطلاق في بداية 2027.</span></div>
+  </div>
+</div></section>
+
+<section class="sec" id="s3"><div class="wrap">
+  <div class="head"><div class="num"><span>03</span></div><div class="t"><div class="eyebrow">تحليل الوضع الراهن والتأسيس</div><h2>نبدأ بالتشخيص، وننتهي <span class="hl">بخطة أول 90 يومًا</span></h2></div></div>
+  <ol class="steps">
+    <li><b>جلسات استكشاف</b><span>مع قيادات المركز والقطاعات الفنية وأصحاب المصلحة الداخليين، ومراجعة الاستراتيجية والمنتجات والمبادرات والمواد السابقة.</span></li>
+    <li><b>تحليل الحضور</b><span>الحضور الإعلامي والرقمي، وأداء الحسابات والمحتوى، والصورة المؤسسية، وتطبيقات الهوية، وقنوات التواصل، وآليات الطلبات والاعتمادات.</span></li>
+    <li><b>أصحاب المصلحة</b><span>شرائحهم واحتياجاتهم الاتصالية بحسب طبيعة كل منتج أو مبادرة، مع مراجعة نماذج مرجعية ذات صلة.</span></li>
+    <li><b>تقرير التشخيص</b><span>يُسلَّم في نهاية التأسيس، ويحدد ما نعالجه أولًا وما نبني عليه.</span></li>
+  </ol>
+  <div class="panel tint"><h3 style="font-size:18px">يتضمن تقرير التشخيص</h3><div class="chipset"><span>الفجوات</span><span>الفرص</span><span>المخاطر الاتصالية</span><span>خط الأساس للمؤشرات</span><span>أولويات التحسين</span><span>خطة أول 90 يومًا</span></div></div>
+</div></section>
+
+<section class="sec band-white" id="s4"><div class="wrap">
+  <div class="head"><div class="num"><span>04</span></div><div class="t"><div class="eyebrow">الاستراتيجية الاتصالية للمركز</div><h2>استراتيجية واحدة، وسردية تشرح دور المركز</h2></div></div>
+  <div class="duo">
+    <div class="panel char"><div class="k">استراتيجية تسويق وتواصل مؤسسي متكاملة</div><h3>سبعة مكونات</h3><div class="chipset"><span>الأهداف</span><span>التموضع المؤسسي</span><span>الشرائح المستهدفة</span><span>الرسائل</span><span>القنوات</span><span>المبادرات</span><span>مؤشرات القياس</span></div></div>
+    <div style="display:grid;gap:12px">
+      <div class="card"><h4>السردية المؤسسية</h4><p style="margin:6px 0 0">إطار يوضح دور المركز واختصاصاته وقيمته للمنظومة، مع تحديد حدود الاتصال بالموضوعات المشتركة مع الوزارة.</p></div>
+      <div class="card"><h4>أدلة الاتصال</h4><p style="margin:6px 0 0">الرسائل الرئيسية، والأسئلة والأجوبة المتوقعة، ونبرة الخطاب، والموضوعات الحساسة، ومصفوفة قنوات وجماهير الاتصال.</p></div>
+      <div class="card"><h4>التحديث المستمر</h4><p style="margin:6px 0 0">تُحدّث الخطة عند اعتماد مستجدات الاستراتيجية أو أولويات المركز، مع خطة سنوية وتقويم تفعيل قابلين للتحديث الدوري.</p></div>
+    </div>
+  </div>
+  <h3>الخطة الاتصالية المساندة حتى 2032</h3>
+  <div class="years"><div class="y"><span>2027</span></div><div><span>2028</span></div><div><span>2029</span></div><div><span>2030</span></div><div><span>2031</span></div><div><span>2032</span></div></div>
+  <div class="duo">
+    <div class="card" style="border-color:var(--saffron)"><div class="eyebrow">2027</div><h4>الإطلاق والسنة الأولى</h4><p style="margin:6px 0 0">خطة إطلاق خاصة ببداية عام 2027، وتفصيل كامل للسنة التشغيلية الأولى.</p></div>
+    <div class="card" style="background:var(--slate-soft);border-color:transparent"><div class="eyebrow">2028 إلى 2032</div><h4>إطار الخطة المساندة</h4><p style="margin:6px 0 0">محاور ومسارات تتبع استراتيجية المركز، وتُفصَّل سنويًا عبر خطة سنوية وتقويم تفعيل.</p></div>
+  </div>
+  <div class="note warn"><b>ملاحظة:</b> امتداد الخطة حتى 2032 لا يعني التزامًا تشغيليًا خارج مدة العقد.</div>
+</div></section>
+
+<section class="sec" id="s5"><div class="wrap">
+  <div class="head"><div class="num"><span>05</span></div><div class="t"><div class="eyebrow">التسويق والاتصال بمنتجات المركز ومبادراته</div><h2>لكل منتج ومبادرة خطة اتصال وحزمة إطلاق</h2></div></div>
+  <ol class="steps">
+    <li><b>الحصر</b><span>منتجات المركز وخدماته ومنصاته ومبادراته ومخرجات تطوير المنتجات، مع المالك الفني والجمهور المستهدف والقيمة الاتصالية لكل منها.</span></li>
+    <li><b>خطط الأولوية</b><span>الهدف، والجمهور، والرسائل، وقنوات الوصول، وخطة الإطلاق، والمحتوى، والجدول، ومؤشرات النجاح.</span></li>
+    <li><b>المواسم</b><span>بداية العام الدراسي، والإصدارات، وتطوير المناهج، والمبادرات والأنشطة المرتبطة ببرامج المركز.</span></li>
+    <li><b>حزم الإطلاق</b><span>المواد التعريفية، وملفات الأسئلة الشائعة، ورسائل أصحاب المصلحة، ومحتوى التوعية والإيضاح.</span></li>
+  </ol>
+  <div class="note">محتوى المواسم والإصدارات يُعَد بعد التحقق من المعلومات واعتمادها فنيًا.</div>
+</div></section>
+
+<section class="sec band-char" id="s6"><div class="wrap">
+  <div class="head"><div class="num"><span>06</span></div><div class="t"><div class="eyebrow">مبدأ الكتابة</div><h2>من المدخل الفني إلى رسالة يفهمها الجميع</h2></div></div>
+  <div class="formula">
+    <div class="f-step"><small>نبدأ بـ</small><b>مدخل فني معتمد</b><span>من القطاعات الفنية ومالكي المنتجات</span></div>
+    <div class="f-arrow">←</div>
+    <div class="f-step"><small>نكتب</small><b>قصة ورسالة مبسطة</b><span>دقيقة، وتوضح قيمة المنتج أو المبادرة</span></div>
+    <div class="f-arrow">←</div>
+    <div class="f-step"><small>وننشر بعد</small><b>تحقق واعتماد فني</b><span>من ممثلي المركز المخولين</span></div>
+  </div>
+  <div class="grid3">
+    <div class="card dark"><h4>لا تغيير في المعنى العلمي</h4></div>
+    <div class="card dark"><h4>لا معلومات غير معتمدة</h4></div>
+    <div class="card dark"><h4>الاستفسار الفني أو الحساس يُحال إلى ممثلي المركز المخولين</h4></div>
+  </div>
+</div></section>
+
+<section class="sec" id="s7"><div class="wrap">
+  <div class="head"><div class="num"><span>07</span></div><div class="t"><div class="eyebrow">التشغيل والقنوات</div><h2>خمس قنوات تشغيل، <span class="hl">بفريق واحد</span></h2></div></div>
+
+  <h3>إدارة الحسابات والتواصل الرقمي</h3>
+  <div class="flow" style="--n:6"><div><span>تقويم النشر</span></div><div><span>الكتابة</span></div><div><span>التصميم</span></div><div><span>الجدولة</span></div><div><span>النشر</span></div><div><span>التفاعل والمتابعة</span></div></div>
+  <div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+    <div class="card"><h4>تكييف لكل منصة</h4><p style="margin:6px 0 0">المحتوى حسب خصائص كل منصة والجمهور، ونصوص الردود والتفاعل جاهزة ومعتمدة.</p></div>
+    <div class="card"><h4>إحالة منضبطة</h4><p style="margin:6px 0 0">الاستفسارات الفنية أو الحساسة تُحال إلى ممثلي المركز المخولين.</p></div>
+    <div class="card"><h4>خطة شهرية مرنة</h4><p style="margin:6px 0 0">مراجعة أسبوعية، وتحديث كلما ظهرت مبادرات أو مستجدات معتمدة، دون عدد ثابت من المنشورات.</p></div>
+    <div class="card"><h4>متابعة الأداء</h4><p style="margin:6px 0 0">تحليلات تشغيلية من الفريق المقيم، وتحليلات متقدمة ودعم حملات من 3,6T عند الحاجة.</p></div>
+  </div>
+  <div class="note">الموقع الإلكتروني: تحرير وتحديث المحتوى والصفحات التعريفية ضمن الصلاحيات، دون التطوير البرمجي أو الاستضافة أو الصيانة التقنية.</div>
+
+  <h3>التحرير وصناعة المحتوى والتصميم</h3>
+  <div class="grid3">
+    <div class="panel turq"><h3>الكتابة</h3><ul><li>الأخبار والبيانات الصحفية</li><li>التصريحات المعتمدة والرسائل الرسمية</li><li>الخطابات والعروض</li><li>الملفات التعريفية والكتيبات والنشرات</li><li>المحتوى الداخلي</li></ul></div>
+    <div class="panel char"><h3>التصميم</h3><ul><li>التصاميم اليومية للمنصات</li><li>العروض والمواد التعريفية</li><li>المطبوعات الاعتيادية</li><li>الإنفوجرافيك الثابت</li><li>قوالب الحملات</li></ul></div>
+    <div class="panel light"><h3>المرئي</h3><ul><li>التصوير الاعتيادي وفق الرصيد السنوي</li><li>الأفلام والموشن جرافيك</li><li>المحتوى المرئي، بما فيه المولّد بالذكاء الاصطناعي</li></ul></div>
+  </div>
+  <div class="duo">
+    <div class="note">مراجعة لغوية وتحريرية وبصرية لكل مخرج، مع النسخ النهائية وملفات المصدر القابلة للتعديل.</div>
+    <div class="note warn">الإنتاج المرئي الضخم يُسعّر مستقلًا، وإعداد النصوص والأفكار لا يُعد تكليفًا تلقائيًا بالإنتاج.</div>
+  </div>
+
+  <h3>التواصل المؤسسي والإعلامي والعلاقات العامة</h3>
+  <div class="grid2">
+    <div class="card"><h4>المواد الإعلامية</h4><p style="margin:6px 0 0">الأخبار والملفات الإعلامية ونقاط الحديث والكلمات ومواد المتحدثين، وخطط التغطية عند الحاجة.</p></div>
+    <div class="card"><h4>العلاقات الإعلامية</h4><p style="margin:6px 0 0">قوائم الجهات والصحفيين والشركاء، وتنسيق اللقاءات والتصريحات والإحاطات والتغطيات عند طلبها واعتمادها.</p></div>
+    <div class="card"><h4>أصحاب المصلحة</h4><p style="margin:6px 0 0">خطط التواصل مع الجهات ذات العلاقة وفق الاستراتيجية المعتمدة، ورسائل الزيارات والتعاون والشراكات.</p></div>
+    <div class="card"><h4>الأعمال الموسمية</h4><p style="margin:6px 0 0">دعم متخصص للأعمال الموسمية الإعلامية والمؤسسية من فريق 3,6T غير المقيم.</p></div>
+  </div>
+
+  <h3>التواصل الداخلي والفعاليات الداخلية</h3>
+  <div class="grid3">
+    <div class="card"><div class="eyebrow">الاستراتيجية والخطة</div><h4>استراتيجية موحدة لمدة العقد</h4><p style="margin:6px 0 10px">وخطة تشغيلية مستقلة لكل سنة، مع إمكانية تعديل الخطط لما بعد 2027 استنادًا إلى قياس أداء السنة الأولى.</p><div class="chipset"><span>أهداف الارتباط والوعي</span><span>الشرائح</span><span>المحاور</span><span>المبادرات والفعاليات</span><span>الجدول</span><span>مؤشرات الأثر</span></div></div>
+    <div class="card"><div class="eyebrow">من الفكرة إلى التقييم</div><div class="flow" style="--n:1;margin-top:10px"><div><span>الأفكار</span></div><div><span>المواد والتصاميم</span></div><div><span>التنسيق والتجهيز</span></div><div><span>الإشراف والتنفيذ الميداني</span></div><div class="y"><span>التقييم</span></div></div></div>
+    <div class="panel char"><div class="k">ضمن السعر الأساسي</div><h3>بند مالي سنوي</h3><p style="margin:0">يُوزّع على الفعاليات وفق الاستراتيجية والخطة المعتمدتين، دون مقابل خارج المخصص، ولا يُتجاوز إلا بإجراء تعاقدي مناسب.</p><p style="margin:0;color:#c9d1d5">تقرير لكل فعالية: الهدف، والفئة، والحضور، والمخرجات، والأثر، ومستوى الاستفادة من المخصص.</p></div>
+  </div>
+
+  <h3>الفعاليات الخارجية والمعارض والمؤتمرات والورش</h3>
+  <ol class="steps">
+    <li><b>الإطار والمعايير</b><span>ربط قرار المشاركة بالأهداف الاستراتيجية والجمهور والرسائل والقيمة المتوقعة والملاءمة والتكلفة.</span></li>
+    <li><b>نموذج التقييم</b><span>سبب المشاركة، وشكل الحضور الأنسب، والجمهور، والمخرجات، والأدوار، والرسائل، واحتياجات الإنتاج والتغطية، ومؤشرات النجاح.</span></li>
+    <li><b>الملف والخطة</b><span>التصور الإبداعي الأولي ثم التفصيلي للجناح وتشغيله ميدانيًا، والمحتوى والمواد، والتنسيق والإشراف، وقياس النتائج.</span></li>
+  </ol>
+  <div class="duo">
+    <div class="panel tint"><div class="k" style="color:var(--turq-deep)">ضمن الخدمات الأساسية</div><h3 style="font-size:18px">التخطيط والتصور والإشراف</h3><p style="margin:0">ملفات وخطط المشاركات المعتمدة، والتصور الإبداعي، والتشغيل الميداني، وقياس النتائج.</p></div>
+    <div class="panel warn"><div class="k" style="color:#9a7a00">يُسعّر مستقلًا بعد الموافقة</div><h3 style="font-size:18px">التصنيع والتوريد والطباعة</h3><p style="margin:0">تجهيز الأجنحة والمنصات، والخدمات الميدانية، وطباعة أو تصنيع المواد التسويقية التعريفية.</p></div>
+  </div>
+</div></section>
+
+<section class="sec band-turq" id="s8"><div class="wrap">
+  <div class="head"><div class="num"><span>08</span></div><div class="t"><div class="eyebrow">نطاق العمل</div><h2>خمسة عشر مسارًا في عقد واحد</h2></div></div>
+  <div class="tracks">
+    <div><i>1</i><b>تحليل الوضع الراهن والتأسيس</b></div><div><i>2</i><b>الاستراتيجية الاتصالية</b></div><div><i>3</i><b>المنتجات والمبادرات</b></div><div><i>4</i><b>الحسابات والتواصل الرقمي</b></div><div><i>5</i><b>التحرير والمحتوى والتصميم</b></div>
+    <div><i>6</i><b>الإعلام والعلاقات العامة</b></div><div><i>7</i><b>التواصل الداخلي</b></div><div><i>8</i><b>الفعاليات الخارجية</b></div><div><i>9</i><b>الهوية البصرية للمركز</b></div><div><i>10</i><b>هوية «تكعيب» والهويات الفرعية</b></div>
+    <div><i>11</i><b>الرصد وإدارة القضايا</b></div><div><i>12</i><b>التصوير ومكتبة الأصول</b></div><div><i>13</i><b>التقرير السنوي</b></div><div><i>14</i><b>الأعمال المجدولة والعاجلة</b></div><div><i>15</i><b>لغة المخرجات والترجمة</b></div>
+  </div>
+</div></section>
+<section class="sec band-white" style="padding-top:36px"><div class="wrap">
+  <h3 style="margin-top:0">ما يشمله السعر الأساسي، وما يُسعّر مستقلًا</h3>
+  <div class="duo">
+    <div class="panel turq"><h3>ضمن السعر الأساسي</h3><ul><li>التصوير الاعتيادي وفق رصيد 24 جلسة سنويًا أو ما يعادلها</li><li>الأفلام والموشن جرافيك والمحتوى المرئي، بما فيه المولّد بالذكاء الاصطناعي</li><li>إعداد النصوص والأفكار الإبداعية</li><li>بند مالي سنوي لفعاليات التواصل الداخلي</li><li>ملفات وخطط المشاركات الخارجية وتصورها والإشراف عليها</li><li>الشعارات والهويات الفرعية المستقبلية مع تطبيقاتها المعتادة</li><li>التقارير السنوية اللاحقة، بما فيها دور المستشار المتخصص</li><li>الترجمة والتحرير والمراجعة اللغوية باللغتين</li></ul></div>
+    <div class="panel light"><h3>يُسعّر مستقلًا</h3><ul><li>التقرير السنوي لعام 2026: مشروع مستقل في العرض المالي</li><li>طباعة التقرير السنوي وفق المواصفات والنسخ واللغات</li><li>الإنتاج المرئي الضخم</li><li>تصنيع الأجنحة والمنصات وتوريدها وتجهيزها، والخدمات الميدانية، وطباعة مواد الفعاليات الخارجية</li><li>إعادة تصميم الشعار الأساسي للمركز، بتكليف صريح مستقل</li><li>التطوير البرمجي والاستضافة والتكاملات التقنية للموقع ومنصة «تكعيب»</li><li>بناء علامة تجارية مستقلة بالكامل عن هوية المركز من الصفر</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec" id="s9"><div class="wrap">
+  <div class="head"><div class="num"><span>09</span></div><div class="t"><div class="eyebrow">الهوية البصرية للمركز و«تكعيب»</div><h2>نطوّر نظام الهوية، <span class="hl">ونحافظ على الشعار</span></h2></div></div>
+  <div class="duo">
+    <div class="card"><div class="eyebrow">نظام الهوية التطبيقي</div>
+      <div class="swatches" style="margin-top:12px"><div><i style="background:var(--turq)"></i>عناصر التصميم</div><div><i style="background:var(--saffron)"></i>الألوان المساندة</div><div><i style="background:var(--char)"></i>الطباعة</div><div><i style="background:var(--turq-deep)"></i>الصور</div><div><i style="background:var(--sky)"></i>الأيقونات</div><div><i style="background:var(--turq-ink);background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><polygon points='7,3 20,3 14,17 1,17' fill='%23ffffff' fill-opacity='.45'/></svg>&quot;)"></i>الأنماط</div><div><i style="background:var(--slate)"></i>القوالب</div></div></div>
+    <div style="display:grid;gap:12px">
+      <div class="card"><h4>دليل تطبيقي محدث وقوالب قابلة للتعديل</h4><p style="margin:6px 0 0">للحسابات الرقمية، والعروض، والتقارير، والمراسلات، والمطبوعات، والفعاليات، بما يتوافق مع الهوية المعتمدة. تبدأ الخدمة بتقييم الهوية الحالية.</p></div>
+      <div class="card dark"><h4>ضوابط ثابتة</h4><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:14px"><li>لا تغيير في الشعار الأساسي؛ إعادة تصميمه بتكليف صريح مستقل</li><li>ضوابط الاستخدام المشترك مع هويات الوزارة والجهات الشريكة</li></ul></div>
+    </div>
+  </div>
+  <h3>هوية منصة «تكعيب» والهويات الفرعية</h3>
+  <div class="duo uneven">
+    <div class="card cube"><svg viewBox="0 0 200 210" aria-hidden="true"><polygon points="100,10 190,60 100,110 10,60" fill="#f1c40f" stroke="#fff" stroke-width="3"/><polygon points="10,60 100,110 100,205 10,155" fill="#16a086" stroke="#fff" stroke-width="3"/><polygon points="100,110 190,60 190,155 100,205" fill="#353535" stroke="#fff" stroke-width="3"/></svg><small style="color:var(--ink-soft)">رسم توضيحي، وليس مقترح شعار</small></div>
+    <div class="grid2">
+      <div class="card"><h4>الشعار والهوية البصرية</h4><p style="margin:6px 0 0">تنسجم مع هوية المركز، وتعكس طبيعة المنتجات ونواتج التعلم والفئات المستهدفة من الجهات والأفراد.</p></div>
+      <div class="card"><h4>الدليل والهوية التطبيقية</h4><p style="margin:6px 0 0">دليل استخدام مختصر، وهوية تطبيقية للمنصة.</p></div>
+      <div class="card"><h4>الواجهات وتجربة المستخدم</h4><p style="margin:6px 0 0">للمسارات والشاشات المتفق عليها، بنماذج قابلة للمراجعة وملفات مصدر نهائية.</p></div>
+      <div class="card"><h4>الهويات الفرعية المستقبلية</h4><p style="margin:6px 0 0">شعارات وهويات للمنصات والمنتجات الجديدة، مستمدة من هوية المركز، ضمن السعر الأساسي.</p></div>
+    </div>
+  </div>
+  <div class="note warn">خارج هذه الخدمة: تطوير منصة برمجية، والاستضافة، والتكاملات التقنية، وبناء علامة مستقلة بالكامل من الصفر؛ وتخضع لنطاق مستقل إذا طُلبت.</div>
+</div></section>
+
+<section class="sec band-white" id="s10"><div class="wrap">
+  <div class="head"><div class="num"><span>10</span></div><div class="t"><div class="eyebrow">الإدارة والجودة</div><h2>رصد، وأولويات، وأصول، <span class="hl">وتقرير سنوي</span></h2></div></div>
+
+  <h3>الرصد الإعلامي وإدارة القضايا الاتصالية</h3>
+  <ol class="steps">
+    <li><b>الرصد</b><span>التغطيات والأخبار والمحتوى الرقمي عن المركز ومبادراته وتطوير المناهج، مع الفصل بين ذكر المركز وأخبار القطاع العامة.</span></li>
+    <li><b>التحليل</b><span>اتجاهات التغطية وجودتها والرسائل المتداولة، مع ملخصات رصد وتقارير دورية وتوصيات.</span></li>
+    <li><b>التنبيه والتصعيد</b><span>للحالات الحساسة: توثيق المصدر والوقائع، وتقدير أولي للموقف، ومسودات خيارات اتصالية.</span></li>
+    <li><b>قرار الجهة المخولة</b><span>قرارات الرد والنشر تبقى لدى الجهة المخولة في المركز.</span></li>
+  </ol>
+  <div class="card dark"><h4>بروتوكول القضايا والأزمات</h4><p style="margin:6px 0 0">تصنيف القضايا والأزمات الإعلامية، ومسار التنسيق مع المركز والوزارة عند ارتباط الموضوع بهما.</p></div>
+
+  <h3>الأعمال المجدولة والطلبات العاجلة</h3>
+  <div class="grid3">
+    <div class="panel turq"><h3>المسار المجدول</h3><p style="margin:0">ما ورد في الخطط والتقاويم المعتمدة.</p><h3 style="margin-top:10px">المسار العاجل</h3><p style="margin:0">طلبات غير مجدولة تنشأ عن مستجدات أعمال المركز.</p></div>
+    <div class="card"><div class="eyebrow">السجل الموحد</div><div class="chipset" style="margin-top:10px"><span>الجهة الطالبة</span><span>الوصف</span><span>الأولوية</span><span>المدخلات</span><span>مسؤول التنفيذ</span><span>مواعيد التسليم</span><span>حالة الاعتماد</span><span>الأثر على المهام الأخرى</span></div></div>
+    <div style="display:grid;gap:12px">
+      <div class="card"><h4>عند التعارض</h4><p style="margin:6px 0 0">يرفع مدير الحساب الأثر وتوصية بإعادة ترتيب الأولويات لاعتمادها من الممثل المختص.</p></div>
+      <div class="card dark"><h4>خارج الدوام</h4><p style="margin:6px 0 0">نقطة اتصال ومسار تصعيد وفق مستويات الاستجابة، دون افتراض تواجد دائم للفريق المقيم.</p></div>
+    </div>
+  </div>
+  <div class="note warn">لا عدد شهري ثابت للمنشورات أو التصاميم؛ التنفيذ ضمن الطاقة والموارد المشمولة. ووصف الطلب بالعاجل لا يُعد موافقة على مصروفات إضافية أو تجاوزًا للاعتمادات.</div>
+
+  <h3>التصوير الفوتوغرافي ومكتبة الصور والأصول</h3>
+  <div class="grid3">
+    <div class="stat"><b>24</b><strong>جلسة تصوير سنويًا أو ما يعادلها من الساعات</strong><p>رصيد مرن يُرحّل المتبقي منه إلى الأعوام التالية ضمن مدة العقد، دون إلغائه بنهاية السنة.</p></div>
+    <div style="display:grid;gap:12px">
+      <div class="card"><h4>الخدمة</h4><p style="margin:6px 0 0">المصور والمعدات الأساسية، والانتقاء والمعالجة والتسليم، لتغطية أنشطة المركز عند الحاجة.</p></div>
+      <div class="card"><h4>التسليم</h4><p style="margin:6px 0 0">صور مختارة معالجة للنشر والأرشفة، وآلية لتسليم الأصول وحقوقها، دون عدد ثابت لكل جلسة قبل الاتفاق على المواصفات.</p></div>
+    </div>
+    <div class="panel char"><h3>المكتبة المركزية</h3><ul><li>قابلة للبحث</li><li>صور وفيديوهات وتصاميم ومواد وملفات مصدر</li><li>فهرسة وتصنيف</li><li>بيانات الحقوق والموافقات</li><li>تُحدّث طوال مدة التعاقد</li></ul></div>
+  </div>
+
+  <h3>التقرير السنوي</h3>
+  <div class="flow" style="--n:7"><div><span>تحديد المدخلات</span></div><div><span>طلبها وتجميعها</span></div><div><span>اللقاءات اللازمة</span></div><div><span>بناء القصة والسردية</span></div><div><span>الهيكلة والصياغة والتدقيق</span></div><div><span>التصميم والإخراج</span></div><div class="y"><span>نسخ رقمية وجاهزة للطباعة</span></div></div>
+  <div class="grid3">
+    <div class="panel warn"><h3 style="font-size:18px">تقرير 2026</h3><p style="margin:0">مشروع مستقل في العرض المالي، شاملًا المستشار المتخصص والمفهوم والسردية والتصميم والإخراج.</p></div>
+    <div class="panel tint"><h3 style="font-size:18px">التقارير اللاحقة</h3><p style="margin:0">ضمن الخدمة الأساسية متى حل موعدها خلال التعاقد، بما فيها دور المستشار، دون إعادة تسعير.</p></div>
+    <div class="panel light"><h3 style="font-size:18px">الطباعة</h3><p style="margin:0">تُسعّر مستقلًا وفق المواصفات وعدد الصفحات والنسخ واللغات المعتمدة.</p></div>
+  </div>
+  <div class="note">يوفر المركز البيانات والأرقام والمعلومات المصدرية ويعتمدها أصحاب الصلاحية فيه، ويحتفظ المشغل بسجل للمحتوى المستلم والملاحظات والاعتمادات.</div>
+
+  <h3>لغة المخرجات والترجمة</h3>
+  <div class="duo">
+    <div class="panel turq"><h3>بالعربية والإنجليزية، دون تكلفة إضافية</h3><ul><li>جميع المخرجات والأعمال المطلوبة باللغتين عند الطلب</li><li>الترجمة والتحرير والمراجعة اللغوية باللغتين</li><li>دقة المحتوى وسلامته اللغوية</li><li>الاتساق مع الهوية المؤسسية وأسلوب التواصل المعتمد</li><li>مشمولة ضمن نطاق العمل والعرض المالي</li></ul></div>
+    <div class="panel char"><h3>ومع كل مخرج</h3><ul><li>مراجعة لغوية وتحريرية وبصرية</li><li>نسخ نهائية</li><li>ملفات مصدر قابلة للتعديل</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec" id="s11"><div class="wrap">
+  <div class="head"><div class="num"><span>11</span></div><div class="t"><div class="eyebrow">فريق العمل</div><h2>فريق مقيم في المركز، وخبرات تساند عند الحاجة</h2></div></div>
+  <div class="roles">
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">م</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>الفريق المقيم</b><span class="role">يوميًا من مقر المركز</span><span>الحسابات، والمحتوى، والتصميم، والمتابعة، والتحليلات التشغيلية.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ح</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>مدير الحساب</b><span class="role">نقطة الاتصال</span><span>ترتيب الأولويات، ورفع أثر التعارض بين المجدول والعاجل.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">س</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>المستشار المتخصص</b><span class="role">التقرير السنوي</span><span>يقود التقرير من تحديد المدخلات إلى الإخراج.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">ص</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>المصور</b><span class="role">رصيد التصوير السنوي</span><span>التصوير الاعتيادي، والمعالجة والتسليم.</span></div></div>
+    <div class="member"><div class="ph"><div class="pt"></div><div class="init">خ</div><div class="hint">صورة الفريق</div></div><div class="bd"><b>خبرات 3,6T</b><span class="role">عند الحاجة</span><span>التحليلات المتقدمة، والحملات، والأعمال الموسمية، والطوارئ خارج الدوام.</span></div></div>
+  </div>
+  <div class="note warn">تُستكمل أسماء الفريق وسيرهم الذاتية وصورهم في النسخة النهائية من العرض.</div>
+</div></section>
+
+<section class="sec band-white" id="annex"><div class="wrap">
+  <div class="head"><div class="num ltr-a"><span>أ</span></div><div class="t"><div class="eyebrow">ملحق · مطابقة نطاق العمل</div><h2>كل بند في نطاق العمل، <span class="hl">وأين نجيب عنه</span></h2></div></div>
+  <div class="tbl wide cmp"><table>
+    <thead><tr><th>#</th><th>بند نطاق العمل</th><th>القسم في العرض</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>تحليل الوضع الراهن والتأسيس</td><td><a href="#s3">03 · التشخيص</a></td></tr>
+      <tr><td>2</td><td>الاستراتيجية الاتصالية للمركز</td><td><a href="#s4">04 · الاستراتيجية</a></td></tr>
+      <tr><td>3</td><td>التسويق والاتصال بمنتجات المركز ومبادراته</td><td><a href="#s5">05 · المنتجات</a> و<a href="#s6">06 · المبدأ</a></td></tr>
+      <tr><td>4</td><td>إدارة الحسابات والتواصل الرقمي</td><td><a href="#s7">07 · القنوات</a></td></tr>
+      <tr><td>5</td><td>التحرير وصناعة المحتوى والتصميم</td><td><a href="#s7">07 · القنوات</a></td></tr>
+      <tr><td>6</td><td>التواصل المؤسسي والإعلامي والعلاقات العامة</td><td><a href="#s7">07 · القنوات</a></td></tr>
+      <tr><td>7</td><td>التواصل الداخلي والفعاليات الداخلية</td><td><a href="#s7">07 · القنوات</a></td></tr>
+      <tr><td>8</td><td>الفعاليات الخارجية والمعارض والمؤتمرات والورش</td><td><a href="#s7">07 · القنوات</a></td></tr>
+      <tr><td>9</td><td>تطوير الهوية البصرية للمركز وتطبيقاتها</td><td><a href="#s9">09 · الهوية</a></td></tr>
+      <tr><td>10</td><td>هوية منصة تكعيب والهويات الفرعية</td><td><a href="#s9">09 · الهوية</a></td></tr>
+      <tr><td>11</td><td>الرصد الإعلامي وإدارة القضايا الاتصالية</td><td><a href="#s10">10 · الإدارة</a></td></tr>
+      <tr><td>12</td><td>التصوير الفوتوغرافي ومكتبة الصور والأصول</td><td><a href="#s10">10 · الإدارة</a></td></tr>
+      <tr><td>13</td><td>التقرير السنوي</td><td><a href="#s10">10 · الإدارة</a></td></tr>
+      <tr><td>14</td><td>الأعمال المجدولة والطلبات العاجلة غير المجدولة</td><td><a href="#s10">10 · الإدارة</a></td></tr>
+      <tr><td>15</td><td>لغة المخرجات والترجمة</td><td><a href="#s10">10 · الإدارة</a></td></tr>
+    </tbody></table></div>
+  <p style="font-size:13.5px;color:var(--ink-soft)">حدود النطاق بين السعر الأساسي والتسعير المستقل في القسم 08.</p>
+</div></section>
+
+<div class="closing">
+  <svg class="pat" viewBox="0 0 520 170" aria-hidden="true"><defs><pattern id="pp2" width="28" height="28" patternUnits="userSpaceOnUse"><polygon points="8,0 22,0 14,20 0,20" fill="#16a086"/></pattern><linearGradient id="fade2" x1="1" x2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="mk2"><rect width="520" height="170" fill="url(#fade2)"/></mask></defs><rect width="520" height="170" fill="url(#pp2)" mask="url(#mk2)" opacity=".7"/></svg>
+  <div class="wrap">
+    <img src="logo-white.png" alt="3,6T">
+    <h2>شكرًا لكم</h2>
+    <p style="max-width:42em;color:#c9d1d5">تسويق ثلاثمائة وستين درجة: استراتيجية ومحتوى وإنتاج وقياس تحت إدارة واحدة.</p>
+    <div class="contact"><span>www.360.sa</span><span>Business@360.sa</span><span class="ltr">+966 592 360 360</span><span>طريق الدائري الشمالي، النفل، الرياض 13312</span></div>
+  </div>
+</div>
+<footer><div class="wrap">© جميع الحقوق الإبداعية لشركة ثلاثمائة وستون درجة للدعاية والإعلان · عرض فني للمركز · نوفمبر 2026</div></footer>
+</body>
+</html>
