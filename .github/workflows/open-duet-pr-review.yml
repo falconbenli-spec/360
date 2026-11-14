@@ -1,0 +1,40 @@
+# Sends each opened or updated pull request to the Open Duet PR-reviewer routine.
+# Needs two repository secrets: OPEN_DUET_HOOK_URL and OPEN_DUET_HOOK_SECRET
+# (see deploy/open-duet/agents/pr-reviewer.md). Does nothing until both are set.
+name: Open Duet PR review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send the PR to Open Duet
+        env:
+          HOOK_URL: ${{ secrets.OPEN_DUET_HOOK_URL }}
+          HOOK_SECRET: ${{ secrets.OPEN_DUET_HOOK_SECRET }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          TITLE: ${{ github.event.pull_request.title }}
+          URL: ${{ github.event.pull_request.html_url }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ -z "$HOOK_URL" ] || [ -z "$HOOK_SECRET" ]; then
+            echo "OPEN_DUET_HOOK_URL / OPEN_DUET_HOOK_SECRET not set; skipping."
+            exit 0
+          fi
+          body=$(jq -n --arg repo "$REPO" --argjson number "$NUMBER" --arg title "$TITLE" \
+                       --arg url "$URL" --arg author "$AUTHOR" --arg head_sha "$HEAD_SHA" \
+                       '{event:"pull_request", repo:$repo, number:$number, title:$title, url:$url, author:$author, head_sha:$head_sha}')
+          curl --fail --silent --show-error -X POST "$HOOK_URL" \
+            -H "Authorization: Bearer $HOOK_SECRET" \
+            -H "Content-Type: application/json" \
+            -H "Idempotency-Key: pr-$NUMBER-$HEAD_SHA" \
+            -d "$body"
